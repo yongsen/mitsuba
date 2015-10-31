@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<scene version="0.5.0">
+
+        <bsdf type="cooktorrance" id="blue-acrylic-cook-torrance">
+                <rgb name="diffuseReflectance" value="0.0143, 0.033, 0.0639"/>
+                <rgb name="specularReflectance" value="0.0291, 0.0193, 0.0118"/>
+                <float name="F0" value="0.117"/>
+                <float name="roughness" value="0.0137"/>
+        </bsdf>
+
+        <bsdf type="merl" id="blue-acrylic">
+                <string name="binary" value="./merlmit/blue-acrylic.binary"/>
+                <ref id="blue-acrylic-cook-torrance"/>
+        </bsdf>
+
+	<shape type="sphere">
+		<float name="radius" value="1"/>
+                <ref id="blue-acrylic"/>
+	</shape>
+
+	<sensor type="perspective" id="Camera-camera">
+		<string name="fovAxis" value="smaller"/>
+		<float name="focusDistance" value="6.0"/>
+		<float name="fov" value="28.8415"/>
+		<transform name="toWorld">
+			<lookAt target="0.0, 0.0, 0.0" origin="0.0 0.0 5.0" up="0.0 -1.0 0.0"/>
+		</transform>
+
+		<sampler type="ldsampler">
+			<integer name="sampleCount" value="256"/>
+		</sampler>
+
+		<film type="hdrfilm" id="film">
+			<integer name="width" value="512"/>
+			<integer name="height" value="512"/>
+			<string name="pixelFormat" value="rgb"/>
+			<boolean name="banner" value="false"/>
+
+			<rfilter type="gaussian"/>
+		</film>
+	</sensor>
+
+	<emitter type="envmap" id="Area_002-light">
+		<string name="filename" value="grace.exr"/>
+		<transform name="toWorld">
+                        <rotate y="1" angle="-180"/>
+                </transform>
+
+	</emitter>
+
+</scene>
