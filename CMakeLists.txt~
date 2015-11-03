@@ -189,4 +189,3 @@ add_subdirectory(data/cmake/packaging)
 # ===== Adding BRDF algorithms =====
 add_bsdf(merl MERL.cpp)
 add_bsdf(cooktorrance cooktorrance.cpp)
-add_bsdf(smooth smooth.cpp)

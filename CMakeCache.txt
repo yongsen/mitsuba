@@ -1484,6 +1484,9 @@ shapegroup_LIB_DEPENDS:STATIC=general;mitsuba-core;general;mitsuba-render;
 sky_LIB_DEPENDS:STATIC=general;mitsuba-core;general;mitsuba-render;
 
 //Dependencies for the target
+smooth_LIB_DEPENDS:STATIC=general;mitsuba-core;general;mitsuba-render;general;mitsuba-hw;
+
+//Dependencies for the target
 sobol_LIB_DEPENDS:STATIC=general;mitsuba-core;general;mitsuba-render;
 
 //Dependencies for the target

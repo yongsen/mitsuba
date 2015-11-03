@@ -124,6 +124,7 @@
 /home/pony/mitsuba/src/shapes/CMakeFiles/shapegroup.dir
 /home/pony/mitsuba/src/emitters/CMakeFiles/sky.dir
 /home/pony/mitsuba/src/emitters/CMakeFiles/sky_pch.dir
+/home/pony/mitsuba/CMakeFiles/smooth.dir
 /home/pony/mitsuba/src/samplers/CMakeFiles/sobol.dir
 /home/pony/mitsuba/src/samplers/CMakeFiles/sobol_pch.dir
 /home/pony/mitsuba/src/shapes/CMakeFiles/sphere.dir

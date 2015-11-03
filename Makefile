@@ -166,6 +166,19 @@ merl/fast:
 .PHONY : merl/fast
 
 #=============================================================================
+# Target rules for targets named smooth
+
+# Build rule for target.
+smooth: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 smooth
+.PHONY : smooth
+
+# fast build rule for target.
+smooth/fast:
+	$(MAKE) -f CMakeFiles/smooth.dir/build.make CMakeFiles/smooth.dir/build
+.PHONY : smooth/fast
+
+#=============================================================================
 # Target rules for targets named scene_schema
 
 # Build rule for target.
@@ -2280,6 +2293,30 @@ cooktorrance.cpp.s:
 	$(MAKE) -f CMakeFiles/cooktorrance.dir/build.make CMakeFiles/cooktorrance.dir/cooktorrance.cpp.s
 .PHONY : cooktorrance.cpp.s
 
+smooth.o: smooth.cpp.o
+.PHONY : smooth.o
+
+# target to build an object file
+smooth.cpp.o:
+	$(MAKE) -f CMakeFiles/smooth.dir/build.make CMakeFiles/smooth.dir/smooth.cpp.o
+.PHONY : smooth.cpp.o
+
+smooth.i: smooth.cpp.i
+.PHONY : smooth.i
+
+# target to preprocess a source file
+smooth.cpp.i:
+	$(MAKE) -f CMakeFiles/smooth.dir/build.make CMakeFiles/smooth.dir/smooth.cpp.i
+.PHONY : smooth.cpp.i
+
+smooth.s: smooth.cpp.s
+.PHONY : smooth.s
+
+# target to generate assembly for a file
+smooth.cpp.s:
+	$(MAKE) -f CMakeFiles/smooth.dir/build.make CMakeFiles/smooth.dir/smooth.cpp.s
+.PHONY : smooth.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -2294,6 +2331,7 @@ help:
 	@echo "... list_install_components"
 	@echo "... merl"
 	@echo "... rebuild_cache"
+	@echo "... smooth"
 	@echo "... scene_schema"
 	@echo "... ior_database"
 	@echo "... microfacet_data"
@@ -2459,6 +2497,9 @@ help:
 	@echo "... cooktorrance.o"
 	@echo "... cooktorrance.i"
 	@echo "... cooktorrance.s"
+	@echo "... smooth.o"
+	@echo "... smooth.i"
+	@echo "... smooth.s"
 .PHONY : help
 
 
