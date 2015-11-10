@@ -166,17 +166,30 @@ merl/fast:
 .PHONY : merl/fast
 
 #=============================================================================
-# Target rules for targets named smooth
+# Target rules for targets named microfacet
 
 # Build rule for target.
-smooth: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 smooth
-.PHONY : smooth
+microfacet: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 microfacet
+.PHONY : microfacet
 
 # fast build rule for target.
-smooth/fast:
-	$(MAKE) -f CMakeFiles/smooth.dir/build.make CMakeFiles/smooth.dir/build
-.PHONY : smooth/fast
+microfacet/fast:
+	$(MAKE) -f CMakeFiles/microfacet.dir/build.make CMakeFiles/microfacet.dir/build
+.PHONY : microfacet/fast
+
+#=============================================================================
+# Target rules for targets named smoothsurface
+
+# Build rule for target.
+smoothsurface: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 smoothsurface
+.PHONY : smoothsurface
+
+# fast build rule for target.
+smoothsurface/fast:
+	$(MAKE) -f CMakeFiles/smoothsurface.dir/build.make CMakeFiles/smoothsurface.dir/build
+.PHONY : smoothsurface/fast
 
 #=============================================================================
 # Target rules for targets named scene_schema
@@ -2293,29 +2306,53 @@ cooktorrance.cpp.s:
 	$(MAKE) -f CMakeFiles/cooktorrance.dir/build.make CMakeFiles/cooktorrance.dir/cooktorrance.cpp.s
 .PHONY : cooktorrance.cpp.s
 
-smooth.o: smooth.cpp.o
-.PHONY : smooth.o
+microfacet.o: microfacet.cpp.o
+.PHONY : microfacet.o
 
 # target to build an object file
-smooth.cpp.o:
-	$(MAKE) -f CMakeFiles/smooth.dir/build.make CMakeFiles/smooth.dir/smooth.cpp.o
-.PHONY : smooth.cpp.o
+microfacet.cpp.o:
+	$(MAKE) -f CMakeFiles/microfacet.dir/build.make CMakeFiles/microfacet.dir/microfacet.cpp.o
+.PHONY : microfacet.cpp.o
 
-smooth.i: smooth.cpp.i
-.PHONY : smooth.i
+microfacet.i: microfacet.cpp.i
+.PHONY : microfacet.i
 
 # target to preprocess a source file
-smooth.cpp.i:
-	$(MAKE) -f CMakeFiles/smooth.dir/build.make CMakeFiles/smooth.dir/smooth.cpp.i
-.PHONY : smooth.cpp.i
+microfacet.cpp.i:
+	$(MAKE) -f CMakeFiles/microfacet.dir/build.make CMakeFiles/microfacet.dir/microfacet.cpp.i
+.PHONY : microfacet.cpp.i
 
-smooth.s: smooth.cpp.s
-.PHONY : smooth.s
+microfacet.s: microfacet.cpp.s
+.PHONY : microfacet.s
 
 # target to generate assembly for a file
-smooth.cpp.s:
-	$(MAKE) -f CMakeFiles/smooth.dir/build.make CMakeFiles/smooth.dir/smooth.cpp.s
-.PHONY : smooth.cpp.s
+microfacet.cpp.s:
+	$(MAKE) -f CMakeFiles/microfacet.dir/build.make CMakeFiles/microfacet.dir/microfacet.cpp.s
+.PHONY : microfacet.cpp.s
+
+smoothsurface.o: smoothsurface.cpp.o
+.PHONY : smoothsurface.o
+
+# target to build an object file
+smoothsurface.cpp.o:
+	$(MAKE) -f CMakeFiles/smoothsurface.dir/build.make CMakeFiles/smoothsurface.dir/smoothsurface.cpp.o
+.PHONY : smoothsurface.cpp.o
+
+smoothsurface.i: smoothsurface.cpp.i
+.PHONY : smoothsurface.i
+
+# target to preprocess a source file
+smoothsurface.cpp.i:
+	$(MAKE) -f CMakeFiles/smoothsurface.dir/build.make CMakeFiles/smoothsurface.dir/smoothsurface.cpp.i
+.PHONY : smoothsurface.cpp.i
+
+smoothsurface.s: smoothsurface.cpp.s
+.PHONY : smoothsurface.s
+
+# target to generate assembly for a file
+smoothsurface.cpp.s:
+	$(MAKE) -f CMakeFiles/smoothsurface.dir/build.make CMakeFiles/smoothsurface.dir/smoothsurface.cpp.s
+.PHONY : smoothsurface.cpp.s
 
 # Help Target
 help:
@@ -2330,8 +2367,9 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... merl"
+	@echo "... microfacet"
 	@echo "... rebuild_cache"
-	@echo "... smooth"
+	@echo "... smoothsurface"
 	@echo "... scene_schema"
 	@echo "... ior_database"
 	@echo "... microfacet_data"
@@ -2497,9 +2535,12 @@ help:
 	@echo "... cooktorrance.o"
 	@echo "... cooktorrance.i"
 	@echo "... cooktorrance.s"
-	@echo "... smooth.o"
-	@echo "... smooth.i"
-	@echo "... smooth.s"
+	@echo "... microfacet.o"
+	@echo "... microfacet.i"
+	@echo "... microfacet.s"
+	@echo "... smoothsurface.o"
+	@echo "... smoothsurface.i"
+	@echo "... smoothsurface.s"
 .PHONY : help
 
 

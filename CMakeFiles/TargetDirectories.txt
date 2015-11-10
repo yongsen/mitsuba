@@ -67,6 +67,7 @@
 /home/pony/mitsuba/CMakeFiles/merl.dir
 /home/pony/mitsuba/src/films/CMakeFiles/mfilm.dir
 /home/pony/mitsuba/src/films/CMakeFiles/mfilm_pch.dir
+/home/pony/mitsuba/CMakeFiles/microfacet.dir
 /home/pony/mitsuba/data/microfacet/CMakeFiles/microfacet_data.dir
 /home/pony/mitsuba/src/phase/CMakeFiles/microflake.dir
 /home/pony/mitsuba/src/rfilters/CMakeFiles/mitchell.dir
@@ -124,7 +125,7 @@
 /home/pony/mitsuba/src/shapes/CMakeFiles/shapegroup.dir
 /home/pony/mitsuba/src/emitters/CMakeFiles/sky.dir
 /home/pony/mitsuba/src/emitters/CMakeFiles/sky_pch.dir
-/home/pony/mitsuba/CMakeFiles/smooth.dir
+/home/pony/mitsuba/CMakeFiles/smoothsurface.dir
 /home/pony/mitsuba/src/samplers/CMakeFiles/sobol.dir
 /home/pony/mitsuba/src/samplers/CMakeFiles/sobol_pch.dir
 /home/pony/mitsuba/src/shapes/CMakeFiles/sphere.dir
