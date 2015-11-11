@@ -233,10 +233,9 @@ private:
 
 	// attribtues
         Float m_F0;
-        Float m_B;
-        Float m_C;
+        Float m_roughness;
         Spectrum m_diffuseReflectance;
-        Spectrum m_A;
+        Spectrum m_specularReflectance;
 
         Float m_specularSamplingWeight;
 };
