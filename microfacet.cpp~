@@ -208,8 +208,8 @@ public:
 
 		m_diffuseReflectance.serialize(stream);
 		m_A.serialize(stream);
-		stream->writeFloat( m_B );
-		stream->writeFloat( m_C );
+		stream->WriteFloat( m_B );
+		stream->WriteFloat( m_C );
 		stream->writeFloat( m_F0 );
 	}
 
