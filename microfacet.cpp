@@ -76,13 +76,13 @@ public:
 			  const Float F = fresnel(m_F0, Hwi);
 
 			  // evaluate the microfacet model
-			  result += m_specularReflectance * INV_PI * S * G * F / Frame::cosTheta(bRec.wi);
+			  result += INV_PI * S * G * F / (Frame::cosTheta(bRec.wi)*Frame::cosTheta(bRec.wo));
 			}
 		}
 
 		/* eval diffuse */
 		if (hasDiffuse)
-		  result += m_diffuseReflectance * INV_PI * Frame::cosTheta(bRec.wo);
+		  result += m_diffuseReflectance * INV_PI;
 
 		// Done.
 		return result;
@@ -113,7 +113,7 @@ public:
 			if (m_C == 1)
 				MhA = m_B/(2.0f*M_PI*math::fastlog(1.0f+m_B));
 			else
-				MhA = m_B/(2.0f*M_PI*(1.0f-std::pow(1.0f+m_B, 1.0f-m_C)));
+				MhA = m_B*(m_C-1)/(2.0f*M_PI*(1.0f-std::pow(1.0f+m_B, 1.0f-m_C)));
 
 			Vector H = bRec.wo+bRec.wi;   Float Hlen = H.length();
 			if(Hlen == 0.0f) specProb = 0.0f;
