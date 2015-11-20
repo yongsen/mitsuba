@@ -9,10 +9,10 @@ public:
 	MicroFacet(const Properties &props)
 		: BSDF(props) { 
 	    m_diffuseReflectance = props.getSpectrum("diffuseReflectance", Spectrum(0.02f));
-	    m_A = props.getSpectrum("A", Spectrum(40.0f));
-	    m_B = props.getFloat("B", 10482.133785f);
-        m_C = props.getFloat("C", 0.816737f);
-	    m_F0 = props.getFloat("F0", 2.36565f);
+	    m_A = props.getSpectrum("A", Spectrum(10.0f));
+	    m_B = props.getFloat("B", 10.0f);
+        m_C = props.getFloat("C", 0.5f);
+	    m_F0 = props.getFloat("F0", 1.0f);
 	}
 
 	MicroFacet(Stream *stream, InstanceManager *manager)
@@ -40,6 +40,8 @@ public:
 		m_specularSamplingWeight = sAvg / (dAvg + sAvg);
 
 		BSDF::configure();
+
+		std::cout << toString();
 	}
 
 	Spectrum eval(const BSDFSamplingRecord &bRec, EMeasure measure) const {
@@ -67,7 +69,7 @@ public:
 			  const Float Hwo = dot(bRec.wo, H);
 			  const Float f2 = 1.0f-cosThetaH;
 
-			  const Spectrum S = m_A/(pow(1+m_B*f2, m_C)); 
+			  const Spectrum S = m_A/(pow(1+m_B*f2, m_C));
 
 			  // compute shadowing and masking
 			  const Float G = std::min(1.0f, std::min( 
@@ -112,10 +114,10 @@ public:
 		/* specular pdf */
 		if (hasSpecular) {
 			Float MhA = 0.0f;
-			if (m_C == 1)
+			if (m_C == 1.0f)
 				MhA = m_B/(2.0f*M_PI*math::fastlog(1.0f+m_B));
 			else
-				MhA = m_B*(m_C-1)/(2.0f*M_PI*(1.0f-pow(1.0f+m_B, 1.0f-m_C)));
+				MhA = m_B*(m_C-1.0f)/(2.0f*M_PI*(1.0f-pow(1.0f+m_B, 1.0f-m_C)));
 
 			Vector H = bRec.wo+bRec.wi;   Float Hlen = H.length();
 			if(Hlen == 0.0f) specProb = 0.0f;
@@ -123,7 +125,7 @@ public:
 			{
 			  H /= Hlen;
 			  const Float f2 = 1-Frame::cosTheta(H);
-			  specProb = (MhA / pow(1+m_B*f2, m_C)) / (4.0f * absDot(bRec.wo, H));
+			  specProb = INV_PI * Frame::cosTheta(H) * (MhA / pow(1+m_B*f2, m_C)) / (4.0f * absDot(bRec.wo, H));
 			}
 		}
 
@@ -150,7 +152,6 @@ public:
 		if (!hasSpecular && !hasDiffuse)
 			return Spectrum(0.0f);
 
-
 		// determine which component to sample
 		bool choseSpecular = hasSpecular;
 		if (hasDiffuse && hasSpecular) {
@@ -167,7 +168,7 @@ public:
 		/* sample specular */
 		if (choseSpecular) {
 			Float cosThetaM = 0.0f, phiM = (2.0f * M_PI) * sample.y;
-			if (m_C == 1)
+			if (m_C == 1.0f)
 				cosThetaM = (1.0f + m_B - math::fastexp(sample.x*math::fastlog(1.0f+m_B)))/m_B;
 			else
 				cosThetaM = (1.0f + m_B - pow(1.0f+sample.x*(pow(1.0f+m_B, 1.0f-m_C) - 1.0f), -1.0f/(m_C-1.0f)))/m_B;
@@ -185,7 +186,7 @@ public:
 
 	        /* sample diffuse */
 		} else {
-	   	        bRec.wo = warp::squareToCosineHemisphere(sample);
+	   	    bRec.wo = warp::squareToCosineHemisphere(sample);
 			bRec.sampledComponent = 1;
 			bRec.sampledType = EDiffuseReflection;
 		}
