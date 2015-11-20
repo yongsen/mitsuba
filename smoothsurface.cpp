@@ -8,16 +8,20 @@ class SmoothSurface : public BSDF {
 public:
 	SmoothSurface(const Properties &props)
 		: BSDF(props) { 
-	    m_diffuseReflectance = props.getSpectrum("diffuseReflectance", Spectrum(0.5f));
-	    m_specularReflectance = props.getSpectrum("specularReflectance", Spectrum(0.2f));
+	    m_diffuseReflectance = props.getSpectrum("diffuseReflectance", Spectrum(0.02f));
+	    m_A = props.getSpectrum("A", Spectrum(40.0f));
+	    m_B = props.getFloat("B", 10482.133785f);
+        m_C = props.getFloat("C", 0.816737f);
 	    m_roughness = props.getFloat("roughness", 0.1f);
-	    m_F0 = props.getFloat("F0", 0.1f);
+	    m_F0 = props.getFloat("F0", 2.36565f);
 	}
 
 	SmoothSurface(Stream *stream, InstanceManager *manager)
 		: BSDF(stream, manager) {
 	    m_diffuseReflectance = Spectrum(stream);
-	    m_specularReflectance = Spectrum(stream);
+	    m_A = Spectrum(stream);
+	    m_B = stream->readFloat();
+	    m_C = stream->readFloat();
 	    m_roughness = stream->readFloat();
 	    m_F0 = stream->readFloat();
 
@@ -29,6 +33,8 @@ public:
 		m_components.push_back(EGlossyReflection | EFrontSide );
 		m_components.push_back(EDiffuseReflection | EFrontSide );
 		m_usesRayDifferentials = false;
+
+		m_specularReflectance = m_A;
 
 		Float dAvg = m_diffuseReflectance.getLuminance(),
 		      sAvg = m_specularReflectance.getLuminance();
@@ -57,13 +63,11 @@ public:
 			if(Frame::cosTheta(H) > 0.0f)
 			{
 			  // evaluate NDF
-			  const Float roughness2 = m_roughness*m_roughness;
-			  const Float cosTheta2 = Frame::cosTheta2(H);
 			  const Float Hwi = dot(bRec.wi, H);
 			  const Float Hwo = dot(bRec.wo, H);
+			  const Float dP2 = 1-Frame::cosTheta(H);
 
-			  const Float D = math::fastexp(-Frame::tanTheta2(H)/roughness2) / (roughness2 * cosTheta2*cosTheta2); 
-
+			  const Spectrum S = m_A/(pow(1+m_B*dP2, m_C));
 
 			  // compute shadowing and masking
 			  const Float G = std::min(1.0f, std::min( 
@@ -74,7 +78,7 @@ public:
 			  const Float F = fresnel(m_F0, Hwi);
 
 			  // evaluate the microfacet model
-			  result += m_specularReflectance * INV_PI * D * G * F / Frame::cosTheta(bRec.wi);
+			  result += S * INV_PI * G * F / Frame::cosTheta(bRec.wi);
 			}
 		}
 
@@ -198,6 +202,9 @@ public:
 
 		m_diffuseReflectance.serialize(stream);
 		m_specularReflectance.serialize(stream);
+		m_A.serialize(stream);
+		stream->writeFloat( m_B );
+		stream->writeFloat( m_C );
 		stream->writeFloat( m_roughness );
 		stream->writeFloat( m_F0 );
 	}
@@ -212,6 +219,9 @@ public:
 	           << " id = \"" << getID() << "\"," << endl
 		   << " diffuseReflectance = " << indent(m_diffuseReflectance.toString()) << ", " << endl
 		   << " specularReflectance = " << indent(m_specularReflectance.toString()) << ", " << endl
+		   << " A = " << indent(m_A.toString()) << ", " << endl
+		   << " B = " << m_B << ", " << endl
+		   << " C = " << m_C << ", " << endl		   
 		   << " F0 = " << m_F0 << ", " << endl
 		   << " roughness = " << m_roughness << endl
 		   << "]";
@@ -231,6 +241,9 @@ private:
 	// attribtues
         Float m_F0;
         Float m_roughness;
+        Float m_C;
+        Float m_B;
+        Spectrum m_A;
         Spectrum m_diffuseReflectance;
         Spectrum m_specularReflectance;
 

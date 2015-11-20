@@ -8,12 +8,11 @@ class MicroFacet : public BSDF {
 public:
 	MicroFacet(const Properties &props)
 		: BSDF(props) { 
-	    m_diffuseReflectance = props.getSpectrum("diffuseReflectance", Spectrum(0.5f));
-	    m_A = props.getSpectrum("A", Spectrum(0.2f));
-	    m_B = props.getFloat("B", 0.1f);
-            m_C = props.getFloat("C", 0.1f);
-	    m_F0 = props.getFloat("F0", 0.1f);
-	    m_specularReflectance = m_A;
+	    m_diffuseReflectance = props.getSpectrum("diffuseReflectance", Spectrum(0.02f));
+	    m_A = props.getSpectrum("A", Spectrum(40.0f));
+	    m_B = props.getFloat("B", 10482.133785f);
+        m_C = props.getFloat("C", 0.816737f);
+	    m_F0 = props.getFloat("F0", 2.36565f);
 	}
 
 	MicroFacet(Stream *stream, InstanceManager *manager)
@@ -23,7 +22,6 @@ public:
 	    m_B = stream->readFloat();
 	    m_C = stream->readFloat();
 	    m_F0 = stream->readFloat();
-	    m_specularReflectance = m_A;
 
 	    configure();
 	}
@@ -34,6 +32,9 @@ public:
 		m_components.push_back(EDiffuseReflection | EFrontSide );
 		m_usesRayDifferentials = false;
 
+		// m_A serves as m_specularReflectance
+		m_specularReflectance = m_A;
+
 		Float dAvg = m_diffuseReflectance.getLuminance(),
 		      sAvg = m_specularReflectance.getLuminance();
 		m_specularSamplingWeight = sAvg / (dAvg + sAvg);
@@ -42,13 +43,13 @@ public:
 	}
 
 	Spectrum eval(const BSDFSamplingRecord &bRec, EMeasure measure) const {
-	        /* sanity check */
-	        if(measure != ESolidAngle || 
+	    /* sanity check */
+	    if(measure != ESolidAngle || 
 		   Frame::cosTheta(bRec.wi) <= 0 ||
-	           Frame::cosTheta(bRec.wo) <= 0)
-		  return Spectrum(0.0f);
+	       Frame::cosTheta(bRec.wo) <= 0)
+		return Spectrum(0.0f);
 
-  	        /* which components to eval */
+  	    /* which components to eval */
 		bool hasSpecular = (bRec.typeMask & EGlossyReflection)
 				&& (bRec.component == -1 || bRec.component == 0);
 		bool hasDiffuse  = (bRec.typeMask & EDiffuseReflection)
@@ -63,9 +64,9 @@ public:
 			  // evaluate NDF
 			  const Float Hwi = dot(bRec.wi, H);
 			  const Float Hwo = dot(bRec.wo, H);
-			  const Float f2 = 1+Frame::cosTheta(H);
+			  const Float f2 = 1.0f-Frame::cosTheta(H);
 
-			  const Spectrum S = m_A/(std::pow(1+m_B*f2, m_C)); 
+			  const Spectrum S = m_A/(pow(1+m_B*f2, m_C)); 
 
 			  // compute shadowing and masking
 			  const Float G = std::min(1.0f, std::min( 
@@ -75,14 +76,14 @@ public:
 			  // compute Fresnel
 			  const Float F = fresnel(m_F0, Hwi);
 
-			  // evaluate the microfacet model
-			  result += INV_PI * S * G * F / (Frame::cosTheta(bRec.wi)*Frame::cosTheta(bRec.wo));
+			  // evaluate the MicroFacet model
+			  result += S * INV_PI * G * F / Frame::cosTheta(bRec.wi);
 			}
 		}
 
 		/* eval diffuse */
 		if (hasDiffuse)
-		  result += m_diffuseReflectance * INV_PI;
+		  result += m_diffuseReflectance * INV_PI * Frame::cosTheta(bRec.wo);
 
 		// Done.
 		return result;
@@ -113,15 +114,15 @@ public:
 			if (m_C == 1)
 				MhA = m_B/(2.0f*M_PI*math::fastlog(1.0f+m_B));
 			else
-				MhA = m_B*(m_C-1)/(2.0f*M_PI*(1.0f-std::pow(1.0f+m_B, 1.0f-m_C)));
+				MhA = m_B*(m_C-1)/(2.0f*M_PI*(1.0f-pow(1.0f+m_B, 1.0f-m_C)));
 
 			Vector H = bRec.wo+bRec.wi;   Float Hlen = H.length();
 			if(Hlen == 0.0f) specProb = 0.0f;
 			else
 			{
 			  H /= Hlen;
-			  const Float f2 = 1+Frame::cosTheta(H);
-			  specProb = (MhA / std::pow(1+m_B*f2, m_C)) / (4.0f * absDot(bRec.wo, H));
+			  const Float f2 = 1-Frame::cosTheta(H);
+			  specProb = (MhA / pow(1+m_B*f2, m_C)) / (4.0f * absDot(bRec.wo, H));
 			}
 		}
 
@@ -168,7 +169,7 @@ public:
 			if (m_C == 1)
 				cosThetaM = (1.0f + m_B - math::fastexp(sample.x*math::fastlog(1.0f+m_B)))/m_B;
 			else
-				cosThetaM = (1.0f + m_B - std::pow(1.0f+sample.x*(std::pow(1.0f+m_B, 1.0f-m_C) - 1.0f), -1.0f/(m_C-1.0f)))/m_B;
+				cosThetaM = (1.0f + m_B - pow(1.0f+sample.x*(pow(1.0f+m_B, 1.0f-m_C) - 1.0f), -1.0f/(m_C-1.0f)))/m_B;
 
 			const Float sinThetaM = std::sqrt(std::max((Float) 0.0f, 1.0f - cosThetaM*cosThetaM));
 			Float sinPhiM, cosPhiM;
@@ -215,9 +216,10 @@ public:
 
 	std::string toString() const {
 	       std::ostringstream oss;
- 	       oss << "Microfacet[" << endl
+ 	       oss << "MicroFacet[" << endl
 	           << " id = \"" << getID() << "\"," << endl
 		   << " diffuseReflectance = " << indent(m_diffuseReflectance.toString()) << ", " << endl
+		   << " specularReflectance = " << indent(m_specularReflectance.toString()) << ", " << endl
 		   << " A = " << indent(m_A.toString()) << ", " << endl
 		   << " B = " << m_B << ", " << endl
 		   << " C = " << m_C << ", " << endl
@@ -237,14 +239,14 @@ private:
 	}
 
 	// attribtues
-        Float m_F0;
-        Float m_C;
-        Float m_B;
-	Spectrum m_specularReflectance;
-        Spectrum m_A;
-        Spectrum m_diffuseReflectance;
+    Float m_F0;
+    Float m_C;
+    Float m_B;
+    Spectrum m_A;
+    Spectrum m_specularReflectance;
+    Spectrum m_diffuseReflectance;
 
-        Float m_specularSamplingWeight;
+    Float m_specularSamplingWeight;
 };
 
 // ================ Hardware shader implementation ================
