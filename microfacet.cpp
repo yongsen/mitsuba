@@ -58,13 +58,14 @@ public:
 		/* eval spec */
 		Spectrum result(0.0f);
 		if (hasSpecular) {
-		        Vector H = normalize(bRec.wo+bRec.wi);
-			if(Frame::cosTheta(H) > 0.0f)
+		    Vector H = normalize(bRec.wo+bRec.wi);
+		    const Float cosThetaH = Frame::cosTheta(H);
+			if(cosThetaH > 0.0f)
 			{
 			  // evaluate NDF
 			  const Float Hwi = dot(bRec.wi, H);
 			  const Float Hwo = dot(bRec.wo, H);
-			  const Float f2 = 1.0f-Frame::cosTheta(H);
+			  const Float f2 = 1.0f-cosThetaH;
 
 			  const Spectrum S = m_A/(pow(1+m_B*f2, m_C)); 
 
@@ -74,7 +75,7 @@ public:
 						   2.0f * Frame::cosTheta(H) * Frame::cosTheta(bRec.wo) / Hwo          ));
 
 			  // compute Fresnel
-			  const Float F = fresnel(m_F0, Hwi);
+			  const Float F = fresnel(m_F0, cosThetaH);
 
 			  // evaluate the MicroFacet model
 			  result += S * INV_PI * G * F / Frame::cosTheta(bRec.wi);

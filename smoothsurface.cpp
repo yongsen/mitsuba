@@ -63,22 +63,25 @@ public:
 			if(Frame::cosTheta(H) > 0.0f)
 			{
 			  // evaluate NDF
-			  const Float Hwi = dot(bRec.wi, H);
-			  const Float Hwo = dot(bRec.wo, H);
-			  const Float dP2 = 1-Frame::cosTheta(H);
+			  //const Float Hwi = dot(bRec.wi, H);
+			  //const Float Hwo = dot(bRec.wo, H);
+
+			  const Float ri = Frame::sinTheta(bRec.wi);
+			  const Float ro = Frame::sinTheta(bRec.wo);
+			  const Float cosPhiD = Frame::cosPhi(bRec.wi)*Frame::cosPhi(bRec.wo) + Frame::sinPhi(bRec.wi)*Frame::sinPhi(bRec.wo);
+			  const Float dP2 = ri*ri +2.0f*ri*ro*cosPhiD + ro*ro;
 
 			  const Spectrum S = m_A/(pow(1+m_B*dP2, m_C));
 
 			  // compute shadowing and masking
-			  const Float G = std::min(1.0f, std::min( 
-						   2.0f * Frame::cosTheta(H) * Frame::cosTheta(bRec.wi) / Hwi, 
-						   2.0f * Frame::cosTheta(H) * Frame::cosTheta(bRec.wo) / Hwo          ));
+			  const Float G = 1.0f;
 
 			  // compute Fresnel
-			  const Float F = fresnel(m_F0, Hwi);
+			  //const Float F = fresnel(m_F0, Hwi);
+			  const Float F = 1.0f;
 
 			  // evaluate the microfacet model
-			  result += S * INV_PI * G * F / Frame::cosTheta(bRec.wi);
+			  result += INV_PI * S * G * F / Frame::cosTheta(bRec.wi);
 			}
 		}
 
