@@ -41,6 +41,8 @@ public:
 		m_specularSamplingWeight = sAvg / (dAvg + sAvg);
 
 		BSDF::configure();
+		
+		std::cout << toString();
 	}
 
 	Spectrum eval(const BSDFSamplingRecord &bRec, EMeasure measure) const {
@@ -69,7 +71,7 @@ public:
 			  const Float ri = Frame::sinTheta(bRec.wi);
 			  const Float ro = Frame::sinTheta(bRec.wo);
 			  const Float cosPhiD = Frame::cosPhi(bRec.wi)*Frame::cosPhi(bRec.wo) + Frame::sinPhi(bRec.wi)*Frame::sinPhi(bRec.wo);
-			  const Float dP2 = ri*ri +2.0f*ri*ro*cosPhiD + ro*ro;
+			  const Float dP2 = ri*ri + 2.0f*ri*ro*cosPhiD + ro*ro;
 
 			  const Spectrum S = m_A/(pow(1+m_B*dP2, m_C));
 
@@ -77,8 +79,8 @@ public:
 			  const Float G = 1.0f;
 
 			  // compute Fresnel
-			  //const Float F = fresnel(m_F0, Hwi);
-			  const Float F = 1.0f;
+			  const Float cosThetaD = std::sqrt(1.0f - (ri*ri - 2.0f*ri*ro*cosPhiD + ro*ro)/4);
+			  const Float F = fresnel(m_F0, cosThetaD);
 
 			  // evaluate the microfacet model
 			  result += INV_PI * S * G * F / Frame::cosTheta(bRec.wi);
