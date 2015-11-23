@@ -124,7 +124,7 @@ public:
 			  const Float cosPhiD = Frame::cosPhi(bRec.wi)*Frame::cosPhi(bRec.wo) + Frame::sinPhi(bRec.wi)*Frame::sinPhi(bRec.wo);
 			  const Float dP2 = ri*ri + 2.0f*ri*ro*cosPhiD + ro*ro;
 			  const Float MdTail = std::sqrt(1.0f + 2.0f * m_B *(1.0f+ro*ro) + m_B*m_B*(1.0f-ro*ro)*(1.0f-ro*ro));
-			  const Float MdA = m_B * INV_PI / (-math::fastlog(2.0f) + math::fastlog(1.0f+m_B-m_B*ro*ro+MdTail));
+			  const Float MdA = m_B * INV_PI / (-log10(2.0f) + log10(1.0f+m_B-m_B*ro*ro+MdTail));
 			  specProb = Frame::cosTheta(bRec.wo) * MdA / (1.0f + m_B*dP2);
 			}
 		}
@@ -167,8 +167,8 @@ public:
 			const Float ri = Frame::sinTheta(bRec.wo);
 			const Float ro = Frame::sinTheta(bRec.wi);
 			const Float MdTail = std::sqrt(1.0f + 2.0f * m_B *(1.0f+ro*ro) + m_B*m_B*(1.0f-ro*ro)*(1.0f-ro*ro));
-			const Float MdA = m_B * INV_PI / (-math::fastlog(2.0f) + math::fastlog(1.0f+m_B-m_B*ro*ro+MdTail));
-			const Float E = math::fastexp(sample.x*m_B*INV_PI/MdA + math::fastlog(2.0f));
+			const Float MdA = m_B * INV_PI / (-log10(2.0f) + log10(1.0f+m_B-m_B*ro*ro+MdTail));
+			const Float E = math::fastexp(sample.x*m_B*INV_PI/MdA + log10(2.0f));
 			const Float sinThetaM = std::sqrt(std::max((Float) 0.0f, (E-2.0f)*(E+2.0f*m_B*ro*ro)/(2.0f*E*m_B)));
 			Float cosThetaM = std::sqrt(std::max((Float) 0.0f, 1.0f - sinThetaM*sinThetaM));
 			if (sample.x<0.0f) cosThetaM = -cosThetaM;

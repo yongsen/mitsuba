@@ -117,8 +117,8 @@ public:
 			{
 			  H /= Hlen;
 			  Float MhA = 0.0f;
-			  if (m_C - 1.0f < 0.000001)
-				MhA = m_B/(2.0f*M_PI*math::fastlog(1.0f+m_B));
+			  if (m_C - 1.0f < 0.0001)
+				MhA = m_B/(2.0f*M_PI*log10(1.0f+m_B));
 			  else
 				MhA = m_B*(m_C-1.0f)/(2.0f*M_PI*(1.0f-pow(1.0f+m_B, 1.0f-m_C)));
 
@@ -166,8 +166,8 @@ public:
 		/* sample specular */
 		if (choseSpecular) {
 			Float cosThetaM = 0.0f, phiM = (2.0f * M_PI) * sample.y;
-			if (m_C - 1.0f < 0.000001)
-				cosThetaM = (1.0f + m_B - math::fastexp(sample.x*math::fastlog(1.0f+m_B)))/m_B;
+			if (m_C - 1.0f < 0.0001)
+				cosThetaM = (1.0f + m_B - math::fastexp(sample.x*log10(1.0f+m_B)))/m_B;
 			else
 				cosThetaM = (1.0f + m_B - pow(1.0f+sample.x*(pow(1.0f+m_B, 1.0f-m_C) - 1.0f), -1.0f/(m_C-1.0f)))/m_B;
 
