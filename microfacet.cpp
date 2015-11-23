@@ -9,6 +9,7 @@ public:
 	MicroFacet(const Properties &props)
 		: BSDF(props) { 
 	    m_diffuseReflectance = props.getSpectrum("diffuseReflectance", Spectrum(0.02f));
+	    m_specularReflectance = props.getSpectrum("specularReflectance", Spectrum(0.02f));
 	    m_A = props.getSpectrum("A", Spectrum(10.0f));
 	    m_B = props.getFloat("B", 10.0f);
         m_C = props.getFloat("C", 0.5f);
@@ -18,6 +19,7 @@ public:
 	MicroFacet(Stream *stream, InstanceManager *manager)
 		: BSDF(stream, manager) {
 	    m_diffuseReflectance = Spectrum(stream);
+	    m_specularReflectance = Spectrum(stream);
 	    m_A = Spectrum(stream);
 	    m_B = stream->readFloat();
 	    m_C = stream->readFloat();
@@ -31,9 +33,6 @@ public:
 		m_components.push_back(EGlossyReflection | EFrontSide );
 		m_components.push_back(EDiffuseReflection | EFrontSide );
 		m_usesRayDifferentials = false;
-
-		// m_A serves as m_specularReflectance
-		m_specularReflectance = m_A;
 
 		Float dAvg = m_diffuseReflectance.getLuminance(),
 		      sAvg = m_specularReflectance.getLuminance();
@@ -64,23 +63,22 @@ public:
 		    const Float cosThetaH = Frame::cosTheta(H);
 			if(cosThetaH > 0.0f)
 			{
-			  // evaluate NDF
-			  const Float Hwi = dot(bRec.wi, H);
-			  const Float Hwo = dot(bRec.wo, H);
+			  // compute the S(f) function
 			  const Float f2 = 1.0f-cosThetaH;
-
-			  const Spectrum S = m_A/(pow(1+m_B*f2, m_C));
+			  const Spectrum S = m_A/(pow(1.0f+m_B*f2, m_C));
 
 			  // compute shadowing and masking
+			  const Float Hwi = dot(bRec.wi, H);
+			  const Float Hwo = dot(bRec.wo, H);
 			  const Float G = std::min(1.0f, std::min( 
-						   2.0f * Frame::cosTheta(H) * Frame::cosTheta(bRec.wi) / Hwi, 
-						   2.0f * Frame::cosTheta(H) * Frame::cosTheta(bRec.wo) / Hwo          ));
+						   2.0f * cosThetaH * Frame::cosTheta(bRec.wi) / Hwi, 
+						   2.0f * cosThetaH * Frame::cosTheta(bRec.wo) / Hwo          ));
 
 			  // compute Fresnel
 			  const Float F = fresnel(m_F0, cosThetaH);
 
 			  // evaluate the MicroFacet model
-			  result += S * INV_PI * G * F / Frame::cosTheta(bRec.wi);
+			  result += S * G * F / (Frame::cosTheta(bRec.wi));
 			}
 		}
 
@@ -113,19 +111,19 @@ public:
 
 		/* specular pdf */
 		if (hasSpecular) {
-			Float MhA = 0.0f;
-			if (m_C == 1.0f)
-				MhA = m_B/(2.0f*M_PI*math::fastlog(1.0f+m_B));
-			else
-				MhA = m_B*(m_C-1.0f)/(2.0f*M_PI*(1.0f-pow(1.0f+m_B, 1.0f-m_C)));
-
 			Vector H = bRec.wo+bRec.wi;   Float Hlen = H.length();
 			if(Hlen == 0.0f) specProb = 0.0f;
 			else
 			{
 			  H /= Hlen;
-			  const Float f2 = 1-Frame::cosTheta(H);
-			  specProb = INV_PI * Frame::cosTheta(H) * (MhA / pow(1+m_B*f2, m_C)) / (4.0f * absDot(bRec.wo, H));
+			  Float MhA = 0.0f;
+			  if (m_C - 1.0f < 0.000001)
+				MhA = m_B/(2.0f*M_PI*math::fastlog(1.0f+m_B));
+			  else
+				MhA = m_B*(m_C-1.0f)/(2.0f*M_PI*(1.0f-pow(1.0f+m_B, 1.0f-m_C)));
+
+			  const Float f2 = 1.0f-Frame::cosTheta(H);
+			  specProb = (MhA / pow(1.0f+m_B*f2, m_C)) / (4.0f * absDot(bRec.wo, H));
 			}
 		}
 
@@ -168,7 +166,7 @@ public:
 		/* sample specular */
 		if (choseSpecular) {
 			Float cosThetaM = 0.0f, phiM = (2.0f * M_PI) * sample.y;
-			if (m_C == 1.0f)
+			if (m_C - 1.0f < 0.000001)
 				cosThetaM = (1.0f + m_B - math::fastexp(sample.x*math::fastlog(1.0f+m_B)))/m_B;
 			else
 				cosThetaM = (1.0f + m_B - pow(1.0f+sample.x*(pow(1.0f+m_B, 1.0f-m_C) - 1.0f), -1.0f/(m_C-1.0f)))/m_B;
@@ -198,7 +196,10 @@ public:
 		if (pdf == 0 || Frame::cosTheta(bRec.wo) <= 0)
 			return Spectrum(0.0f);
 		else
-			return eval(bRec, ESolidAngle) / pdf;
+		{
+			Spectrum brdf = eval(bRec, ESolidAngle)/pdf;
+			return brdf;
+		}
 	}
 
 	Spectrum sample(BSDFSamplingRecord &bRec, const Point2 &sample) const {
@@ -210,6 +211,7 @@ public:
 		BSDF::serialize(stream, manager);
 
 		m_diffuseReflectance.serialize(stream);
+		m_specularReflectance.serialize(stream);
 		m_A.serialize(stream);
 		stream->writeFloat( m_B );
 		stream->writeFloat( m_C );

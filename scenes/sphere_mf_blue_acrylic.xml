@@ -4,6 +4,7 @@
 
         <bsdf type="microfacet" id="blue-acrylic-micro-facet">
                 <rgb name="diffuseReflectance" value="0.0111, 0.0351, 0.1043"/>
+                <rgb name="specularReflectance" value="0.0291, 0.0193, 0.0118"/>
                 <rgb name="A" value="1191.397279, 1099.257252, 1082.125405"/>
                 <float name="B" value="255868.959838"/>
 				<float name="C" value="1.084736"/>

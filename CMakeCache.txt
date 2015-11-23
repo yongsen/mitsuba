@@ -1364,6 +1364,9 @@ merl_LIB_DEPENDS:STATIC=general;mitsuba-core;general;mitsuba-render;general;mits
 mfilm_LIB_DEPENDS:STATIC=general;mitsuba-core;general;mitsuba-render;
 
 //Dependencies for the target
+micro_LIB_DEPENDS:STATIC=general;mitsuba-core;general;mitsuba-render;general;mitsuba-hw;
+
+//Dependencies for the target
 microfacet_LIB_DEPENDS:STATIC=general;mitsuba-core;general;mitsuba-render;general;mitsuba-hw;
 
 //Dependencies for the target
@@ -1479,6 +1482,9 @@ scale_LIB_DEPENDS:STATIC=general;mitsuba-core;general;mitsuba-render;general;mit
 
 //Dependencies for the target
 serialized_LIB_DEPENDS:STATIC=general;mitsuba-core;general;mitsuba-render;
+
+//Dependencies for the target
+sgd_LIB_DEPENDS:STATIC=general;mitsuba-core;general;mitsuba-render;general;mitsuba-hw;
 
 //Dependencies for the target
 shapegroup_LIB_DEPENDS:STATIC=general;mitsuba-core;general;mitsuba-render;

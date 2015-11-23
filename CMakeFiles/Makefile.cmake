@@ -136,6 +136,8 @@ SET(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/cooktorrance.dir/DependInfo.cmake"
   "CMakeFiles/merl.dir/DependInfo.cmake"
   "CMakeFiles/microfacet.dir/DependInfo.cmake"
+  "CMakeFiles/sgd.dir/DependInfo.cmake"
+  "CMakeFiles/smooth.dir/DependInfo.cmake"
   "CMakeFiles/smoothsurface.dir/DependInfo.cmake"
   "data/schema/CMakeFiles/scene_schema.dir/DependInfo.cmake"
   "data/ior/CMakeFiles/ior_database.dir/DependInfo.cmake"

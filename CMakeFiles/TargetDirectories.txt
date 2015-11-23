@@ -122,9 +122,11 @@
 /home/pony/mitsuba/src/textures/CMakeFiles/scale.dir
 /home/pony/mitsuba/data/schema/CMakeFiles/scene_schema.dir
 /home/pony/mitsuba/src/shapes/CMakeFiles/serialized.dir
+/home/pony/mitsuba/CMakeFiles/sgd.dir
 /home/pony/mitsuba/src/shapes/CMakeFiles/shapegroup.dir
 /home/pony/mitsuba/src/emitters/CMakeFiles/sky.dir
 /home/pony/mitsuba/src/emitters/CMakeFiles/sky_pch.dir
+/home/pony/mitsuba/CMakeFiles/smooth.dir
 /home/pony/mitsuba/CMakeFiles/smoothsurface.dir
 /home/pony/mitsuba/src/samplers/CMakeFiles/sobol.dir
 /home/pony/mitsuba/src/samplers/CMakeFiles/sobol_pch.dir

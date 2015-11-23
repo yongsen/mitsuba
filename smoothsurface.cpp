@@ -9,6 +9,7 @@ public:
 	SmoothSurface(const Properties &props)
 		: BSDF(props) { 
 	    m_diffuseReflectance = props.getSpectrum("diffuseReflectance", Spectrum(0.02f));
+	    m_specularReflectance = props.getSpectrum("specularReflectance", Spectrum(0.02f));
 	    m_A = props.getSpectrum("A", Spectrum(40.0f));
 	    m_B = props.getFloat("B", 10482.133785f);
         m_C = props.getFloat("C", 0.816737f);
@@ -19,6 +20,7 @@ public:
 	SmoothSurface(Stream *stream, InstanceManager *manager)
 		: BSDF(stream, manager) {
 	    m_diffuseReflectance = Spectrum(stream);
+	    m_specularReflectance = Spectrum(stream);
 	    m_A = Spectrum(stream);
 	    m_B = stream->readFloat();
 	    m_C = stream->readFloat();
@@ -34,15 +36,13 @@ public:
 		m_components.push_back(EDiffuseReflection | EFrontSide );
 		m_usesRayDifferentials = false;
 
-		m_specularReflectance = m_A;
-
 		Float dAvg = m_diffuseReflectance.getLuminance(),
 		      sAvg = m_specularReflectance.getLuminance();
 		m_specularSamplingWeight = sAvg / (dAvg + sAvg);
 
 		BSDF::configure();
-		
-		std::cout << toString();
+
+		std::cout << toString() << endl;
 	}
 
 	Spectrum eval(const BSDFSamplingRecord &bRec, EMeasure measure) const {
@@ -61,29 +61,27 @@ public:
 		/* eval spec */
 		Spectrum result(0.0f);
 		if (hasSpecular) {
-		        Vector H = normalize(bRec.wo+bRec.wi);
+		    Vector H = normalize(bRec.wo+bRec.wi);
 			if(Frame::cosTheta(H) > 0.0f)
 			{
 			  // evaluate NDF
-			  //const Float Hwi = dot(bRec.wi, H);
-			  //const Float Hwo = dot(bRec.wo, H);
-
-			  const Float ri = Frame::sinTheta(bRec.wi);
-			  const Float ro = Frame::sinTheta(bRec.wo);
+			  const Float ri = Frame::sinTheta(bRec.wo);
+			  const Float ro = Frame::sinTheta(bRec.wi);
 			  const Float cosPhiD = Frame::cosPhi(bRec.wi)*Frame::cosPhi(bRec.wo) + Frame::sinPhi(bRec.wi)*Frame::sinPhi(bRec.wo);
 			  const Float dP2 = ri*ri + 2.0f*ri*ro*cosPhiD + ro*ro;
 
-			  const Spectrum S = m_A/(pow(1+m_B*dP2, m_C));
+			  const Spectrum S = m_A/(pow(1.0f+m_B*dP2, m_C));
 
 			  // compute shadowing and masking
 			  const Float G = 1.0f;
 
 			  // compute Fresnel
-			  const Float cosThetaD = std::sqrt(1.0f - (ri*ri - 2.0f*ri*ro*cosPhiD + ro*ro)/4);
-			  const Float F = fresnel(m_F0, cosThetaD);
+			  const Float sinThetaD2 = (ri*ri - 2.0f*ri*ro*cosPhiD + ro*ro)/4.0f;
+			  const Float cosThetaD = std::sqrt(std::max((Float) 0.0f, 1.0f - sinThetaD2));
+			  const Float Q = fresnel(m_F0, cosThetaD);
 
 			  // evaluate the microfacet model
-			  result += INV_PI * S * G * F / Frame::cosTheta(bRec.wi);
+			  result += S * G * Q * Frame::cosTheta(bRec.wo);
 			}
 		}
 
@@ -121,9 +119,13 @@ public:
 			else
 			{
 			  H /= Hlen;
-			  const Float roughness2 = m_roughness*m_roughness;
-			  const Float cosTheta2 = Frame::cosTheta2(H);
-			  specProb = INV_PI * Frame::cosTheta(H) * math::fastexp(-Frame::tanTheta2(H)/roughness2) / (roughness2 * cosTheta2*cosTheta2) / (4.0f * absDot(bRec.wo, H));
+			  const Float ri = Frame::sinTheta(bRec.wo);
+			  const Float ro = Frame::sinTheta(bRec.wi);
+			  const Float cosPhiD = Frame::cosPhi(bRec.wi)*Frame::cosPhi(bRec.wo) + Frame::sinPhi(bRec.wi)*Frame::sinPhi(bRec.wo);
+			  const Float dP2 = ri*ri + 2.0f*ri*ro*cosPhiD + ro*ro;
+			  const Float MdTail = std::sqrt(1.0f + 2.0f * m_B *(1.0f+ro*ro) + m_B*m_B*(1.0f-ro*ro)*(1.0f-ro*ro));
+			  const Float MdA = m_B * INV_PI / (-math::fastlog(2.0f) + math::fastlog(1.0f+m_B-m_B*ro*ro+MdTail));
+			  specProb = Frame::cosTheta(bRec.wo) * MdA / (1.0f + m_B*dP2);
 			}
 		}
 
@@ -140,16 +142,13 @@ public:
 	Spectrum sample(BSDFSamplingRecord &bRec, Float &pdf, const Point2 &_sample) const {
 	        Point2 sample(_sample);
 
-
 		bool hasSpecular = (bRec.typeMask & EGlossyReflection)
 				&& (bRec.component == -1 || bRec.component == 0);
 		bool hasDiffuse  = (bRec.typeMask & EDiffuseReflection)
 				&& (bRec.component == -1 || bRec.component == 1);
 
-
 		if (!hasSpecular && !hasDiffuse)
 			return Spectrum(0.0f);
-
 
 		// determine which component to sample
 		bool choseSpecular = hasSpecular;
@@ -163,16 +162,24 @@ public:
 			}
 		}
 
-
 		/* sample specular */
 		if (choseSpecular) {
-			Float cosThetaM = 0.0f, phiM = (2.0f * M_PI) * sample.y;
-			Float tanThetaMSqr = -m_roughness*m_roughness * math::fastlog(1.0f - sample.x);
-			cosThetaM = 1.0f / std::sqrt(1.0f + tanThetaMSqr);
-			const Float sinThetaM = std::sqrt(std::max((Float) 0.0f, 1.0f - cosThetaM*cosThetaM));
-			Float sinPhiM, cosPhiM;
-			math::sincos(phiM, &sinPhiM, &cosPhiM);
+			const Float ri = Frame::sinTheta(bRec.wo);
+			const Float ro = Frame::sinTheta(bRec.wi);
+			const Float MdTail = std::sqrt(1.0f + 2.0f * m_B *(1.0f+ro*ro) + m_B*m_B*(1.0f-ro*ro)*(1.0f-ro*ro));
+			const Float MdA = m_B * INV_PI / (-math::fastlog(2.0f) + math::fastlog(1.0f+m_B-m_B*ro*ro+MdTail));
+			const Float E = math::fastexp(sample.x*m_B*INV_PI/MdA + math::fastlog(2.0f));
+			const Float sinThetaM = std::sqrt(std::max((Float) 0.0f, (E-2.0f)*(E+2.0f*m_B*ro*ro)/(2.0f*E*m_B)));
+			Float cosThetaM = std::sqrt(std::max((Float) 0.0f, 1.0f - sinThetaM*sinThetaM));
+			if (sample.x<0.0f) cosThetaM = -cosThetaM;
 
+			const Float tanPhiT = std::tan(sample.y*M_PI)*std::sqrt((1.0f+m_B*(ri+ro)*(ri+ro))/(1.0f+m_B*(ri-ro)*(ri-ro)));
+			const Float tan2PhiT = 2.0f*tanPhiT/(1.0f-tanPhiT*tanPhiT);
+			const Float tanPhiO = Frame::sinPhi(bRec.wi)/Frame::cosPhi(bRec.wi);
+			const Float tanPhiM = (tan2PhiT+tanPhiO)/(1.0f-tan2PhiT*tanPhiO);
+			const Float cosPhiM = 1.0f / std::sqrt(1.0f + tanPhiM);
+			const Float sinPhiM = std::sqrt(std::max((Float) 0.0f, 1.0f - cosPhiM*cosPhiM));
+			
 			const Normal m = Vector(sinThetaM * cosPhiM,sinThetaM * sinPhiM,cosThetaM);
 
 			// Perfect specular reflection based on the microsurface normal
@@ -182,7 +189,7 @@ public:
 
 	        /* sample diffuse */
 		} else {
-	   	        bRec.wo = warp::squareToCosineHemisphere(sample);
+	   	    bRec.wo = warp::squareToCosineHemisphere(sample);
 			bRec.sampledComponent = 1;
 			bRec.sampledType = EDiffuseReflection;
 		}
@@ -220,7 +227,7 @@ public:
 
 	std::string toString() const {
 	       std::ostringstream oss;
- 	       oss << "Cook-Torrance[" << endl
+ 	       oss << "Smooth Surface[" << endl
 	           << " id = \"" << getID() << "\"," << endl
 		   << " diffuseReflectance = " << indent(m_diffuseReflectance.toString()) << ", " << endl
 		   << " specularReflectance = " << indent(m_specularReflectance.toString()) << ", " << endl

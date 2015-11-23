@@ -4,6 +4,7 @@
 
         <bsdf type="smoothsurface" id="blue-acrylic-smooth-surface">
                 <rgb name="diffuseReflectance" value="0.0123, 0.0362, 0.1054"/>
+                <rgb name="specularReflectance" value="0.0291, 0.0193, 0.0118"/>
                 <rgb name="A" value="1094.259321, 1006.546586, 986.518119"/>
                 <float name="B" value="72099.226713"/>
 				<float name="C" value="1.098781"/>
