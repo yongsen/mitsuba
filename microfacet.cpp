@@ -165,13 +165,14 @@ public:
 
 		/* sample specular */
 		if (choseSpecular) {
-			Float cosThetaM = 0.0f, phiM = (2.0f * M_PI) * sample.y;
+			Float cosThetaM = 0.0f;
 			if (m_C - 1.0f < 0.0001)
 				cosThetaM = (1.0f + m_B - math::fastexp(sample.x*log10(1.0f+m_B)))/m_B;
 			else
 				cosThetaM = (1.0f + m_B - pow(1.0f+sample.x*(pow(1.0f+m_B, 1.0f-m_C) - 1.0f), -1.0f/(m_C-1.0f)))/m_B;
-
 			const Float sinThetaM = std::sqrt(std::max((Float) 0.0f, 1.0f - cosThetaM*cosThetaM));
+
+			Float phiM = (2.0f * M_PI) * sample.y;
 			Float sinPhiM, cosPhiM;
 			math::sincos(phiM, &sinPhiM, &cosPhiM);
 

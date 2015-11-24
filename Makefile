@@ -192,19 +192,6 @@ sgd/fast:
 .PHONY : sgd/fast
 
 #=============================================================================
-# Target rules for targets named smooth
-
-# Build rule for target.
-smooth: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 smooth
-.PHONY : smooth
-
-# fast build rule for target.
-smooth/fast:
-	$(MAKE) -f CMakeFiles/smooth.dir/build.make CMakeFiles/smooth.dir/build
-.PHONY : smooth/fast
-
-#=============================================================================
 # Target rules for targets named smoothsurface
 
 # Build rule for target.
@@ -2380,30 +2367,6 @@ microfacet.cpp.s:
 	$(MAKE) -f CMakeFiles/microfacet.dir/build.make CMakeFiles/microfacet.dir/microfacet.cpp.s
 .PHONY : microfacet.cpp.s
 
-smooth.o: smooth.cpp.o
-.PHONY : smooth.o
-
-# target to build an object file
-smooth.cpp.o:
-	$(MAKE) -f CMakeFiles/smooth.dir/build.make CMakeFiles/smooth.dir/smooth.cpp.o
-.PHONY : smooth.cpp.o
-
-smooth.i: smooth.cpp.i
-.PHONY : smooth.i
-
-# target to preprocess a source file
-smooth.cpp.i:
-	$(MAKE) -f CMakeFiles/smooth.dir/build.make CMakeFiles/smooth.dir/smooth.cpp.i
-.PHONY : smooth.cpp.i
-
-smooth.s: smooth.cpp.s
-.PHONY : smooth.s
-
-# target to generate assembly for a file
-smooth.cpp.s:
-	$(MAKE) -f CMakeFiles/smooth.dir/build.make CMakeFiles/smooth.dir/smooth.cpp.s
-.PHONY : smooth.cpp.s
-
 smoothsurface.o: smoothsurface.cpp.o
 .PHONY : smoothsurface.o
 
@@ -2444,7 +2407,6 @@ help:
 	@echo "... microfacet"
 	@echo "... rebuild_cache"
 	@echo "... sgd"
-	@echo "... smooth"
 	@echo "... smoothsurface"
 	@echo "... scene_schema"
 	@echo "... ior_database"
@@ -2617,9 +2579,6 @@ help:
 	@echo "... microfacet.o"
 	@echo "... microfacet.i"
 	@echo "... microfacet.s"
-	@echo "... smooth.o"
-	@echo "... smooth.i"
-	@echo "... smooth.s"
 	@echo "... smoothsurface.o"
 	@echo "... smoothsurface.i"
 	@echo "... smoothsurface.s"

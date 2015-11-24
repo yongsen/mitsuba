@@ -12,8 +12,7 @@ public:
 	    m_specularReflectance = props.getSpectrum("specularReflectance", Spectrum(0.02f));
 	    m_A = props.getSpectrum("A", Spectrum(40.0f));
 	    m_B = props.getFloat("B", 10482.133785f);
-        m_C = props.getFloat("C", 0.816737f);
-	    m_roughness = props.getFloat("roughness", 0.1f);
+	    m_C = props.getFloat("C", 0.816737f);
 	    m_F0 = props.getFloat("F0", 2.36565f);
 	}
 
@@ -24,7 +23,6 @@ public:
 	    m_A = Spectrum(stream);
 	    m_B = stream->readFloat();
 	    m_C = stream->readFloat();
-	    m_roughness = stream->readFloat();
 	    m_F0 = stream->readFloat();
 
 	    configure();
@@ -46,11 +44,11 @@ public:
 	}
 
 	Spectrum eval(const BSDFSamplingRecord &bRec, EMeasure measure) const {
-	        /* sanity check */
-	        if(measure != ESolidAngle || 
+	    /* sanity check */
+	    if(measure != ESolidAngle || 
 		   Frame::cosTheta(bRec.wi) <= 0 ||
-	           Frame::cosTheta(bRec.wo) <= 0)
-		  return Spectrum(0.0f);
+	       Frame::cosTheta(bRec.wo) <= 0)
+		    return Spectrum(0.0f);
 
   	        /* which components to eval */
 		bool hasSpecular = (bRec.typeMask & EGlossyReflection)
@@ -94,12 +92,12 @@ public:
 	}
 
 	Float pdf(const BSDFSamplingRecord &bRec, EMeasure measure) const {
-	        if (measure != ESolidAngle ||
+	    if (measure != ESolidAngle ||
 			Frame::cosTheta(bRec.wi) <= 0 ||
 			Frame::cosTheta(bRec.wo) <= 0 ||
 			((bRec.component != -1 && bRec.component != 0) ||
 			!(bRec.typeMask & EGlossyReflection)))
-			return 0.0f;
+		    return 0.0f;
 
 		bool hasSpecular = (bRec.typeMask & EGlossyReflection)
 				&& (bRec.component == -1 || bRec.component == 0);
@@ -170,8 +168,7 @@ public:
 			const Float MdA = m_B * INV_PI / (-log10(2.0f) + log10(1.0f+m_B-m_B*ro*ro+MdTail));
 			const Float E = math::fastexp(sample.x*m_B*INV_PI/MdA + log10(2.0f));
 			const Float sinThetaM = std::sqrt(std::max((Float) 0.0f, (E-2.0f)*(E+2.0f*m_B*ro*ro)/(2.0f*E*m_B)));
-			Float cosThetaM = std::sqrt(std::max((Float) 0.0f, 1.0f - sinThetaM*sinThetaM));
-			if (sample.x<0.0f) cosThetaM = -cosThetaM;
+			const Float cosThetaM = std::sqrt(std::max((Float) 0.0f, 1.0f - sinThetaM*sinThetaM));
 
 			const Float tanPhiT = std::tan(sample.y*M_PI)*std::sqrt((1.0f+m_B*(ri+ro)*(ri+ro))/(1.0f+m_B*(ri-ro)*(ri-ro)));
 			const Float tan2PhiT = 2.0f*tanPhiT/(1.0f-tanPhiT*tanPhiT);
@@ -190,8 +187,8 @@ public:
 	        /* sample diffuse */
 		} else {
 	   	    bRec.wo = warp::squareToCosineHemisphere(sample);
-			bRec.sampledComponent = 1;
-			bRec.sampledType = EDiffuseReflection;
+		    bRec.sampledComponent = 1;
+		    bRec.sampledType = EDiffuseReflection;
 		}
 		bRec.eta = 1.0f;
 
@@ -217,12 +214,7 @@ public:
 		m_A.serialize(stream);
 		stream->writeFloat( m_B );
 		stream->writeFloat( m_C );
-		stream->writeFloat( m_roughness );
 		stream->writeFloat( m_F0 );
-	}
-
-	Float getRoughness(const Intersection &its, int component) const {
-	       return m_roughness;
 	}
 
 	std::string toString() const {
@@ -235,7 +227,6 @@ public:
 		   << " B = " << m_B << ", " << endl
 		   << " C = " << m_C << ", " << endl		   
 		   << " F0 = " << m_F0 << ", " << endl
-		   << " roughness = " << m_roughness << endl
 		   << "]";
 	       return oss.str();
 	}
@@ -252,7 +243,6 @@ private:
 
 	// attribtues
         Float m_F0;
-        Float m_roughness;
         Float m_C;
         Float m_B;
         Spectrum m_A;

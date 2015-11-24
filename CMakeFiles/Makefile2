@@ -56,9 +56,9 @@ CMAKE_BINARY_DIR = /home/pony/mitsuba
 # Target rules for target CMakeFiles/cooktorrance.dir
 
 # All Build rule for target.
+CMakeFiles/cooktorrance.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 CMakeFiles/cooktorrance.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 CMakeFiles/cooktorrance.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
-CMakeFiles/cooktorrance.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 	$(MAKE) -f CMakeFiles/cooktorrance.dir/build.make CMakeFiles/cooktorrance.dir/depend
 	$(MAKE) -f CMakeFiles/cooktorrance.dir/build.make CMakeFiles/cooktorrance.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -93,9 +93,9 @@ clean: CMakeFiles/cooktorrance.dir/clean
 # Target rules for target CMakeFiles/merl.dir
 
 # All Build rule for target.
+CMakeFiles/merl.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 CMakeFiles/merl.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 CMakeFiles/merl.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
-CMakeFiles/merl.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 	$(MAKE) -f CMakeFiles/merl.dir/build.make CMakeFiles/merl.dir/depend
 	$(MAKE) -f CMakeFiles/merl.dir/build.make CMakeFiles/merl.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  21
@@ -130,9 +130,9 @@ clean: CMakeFiles/merl.dir/clean
 # Target rules for target CMakeFiles/microfacet.dir
 
 # All Build rule for target.
+CMakeFiles/microfacet.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 CMakeFiles/microfacet.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 CMakeFiles/microfacet.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
-CMakeFiles/microfacet.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 	$(MAKE) -f CMakeFiles/microfacet.dir/build.make CMakeFiles/microfacet.dir/depend
 	$(MAKE) -f CMakeFiles/microfacet.dir/build.make CMakeFiles/microfacet.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -167,12 +167,12 @@ clean: CMakeFiles/microfacet.dir/clean
 # Target rules for target CMakeFiles/sgd.dir
 
 # All Build rule for target.
+CMakeFiles/sgd.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 CMakeFiles/sgd.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 CMakeFiles/sgd.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
-CMakeFiles/sgd.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 	$(MAKE) -f CMakeFiles/sgd.dir/build.make CMakeFiles/sgd.dir/depend
 	$(MAKE) -f CMakeFiles/sgd.dir/build.make CMakeFiles/sgd.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  88
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
 	@echo "Built target sgd"
 .PHONY : CMakeFiles/sgd.dir/all
 
@@ -182,7 +182,7 @@ all: CMakeFiles/sgd.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/sgd.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 28
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 27
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/sgd.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : CMakeFiles/sgd.dir/rule
@@ -201,49 +201,12 @@ clean: CMakeFiles/sgd.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/smooth.dir
-
-# All Build rule for target.
-CMakeFiles/smooth.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
-CMakeFiles/smooth.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
-CMakeFiles/smooth.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
-	$(MAKE) -f CMakeFiles/smooth.dir/build.make CMakeFiles/smooth.dir/depend
-	$(MAKE) -f CMakeFiles/smooth.dir/build.make CMakeFiles/smooth.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
-	@echo "Built target smooth"
-.PHONY : CMakeFiles/smooth.dir/all
-
-# Include target in all.
-all: CMakeFiles/smooth.dir/all
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/smooth.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 27
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/smooth.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
-.PHONY : CMakeFiles/smooth.dir/rule
-
-# Convenience name for target.
-smooth: CMakeFiles/smooth.dir/rule
-.PHONY : smooth
-
-# clean rule for target.
-CMakeFiles/smooth.dir/clean:
-	$(MAKE) -f CMakeFiles/smooth.dir/build.make CMakeFiles/smooth.dir/clean
-.PHONY : CMakeFiles/smooth.dir/clean
-
-# clean rule for target.
-clean: CMakeFiles/smooth.dir/clean
-.PHONY : clean
-
-#=============================================================================
 # Target rules for target CMakeFiles/smoothsurface.dir
 
 # All Build rule for target.
+CMakeFiles/smoothsurface.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 CMakeFiles/smoothsurface.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 CMakeFiles/smoothsurface.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
-CMakeFiles/smoothsurface.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 	$(MAKE) -f CMakeFiles/smoothsurface.dir/build.make CMakeFiles/smoothsurface.dir/depend
 	$(MAKE) -f CMakeFiles/smoothsurface.dir/build.make CMakeFiles/smoothsurface.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -432,8 +395,8 @@ src/libcore/preinstall:
 # Target rules for target src/libcore/CMakeFiles/mitsuba-core.dir
 
 # All Build rule for target.
-src/libcore/CMakeFiles/mitsuba-core.dir/all: data/microfacet/CMakeFiles/microfacet_data.dir/all
 src/libcore/CMakeFiles/mitsuba-core.dir/all: data/ior/CMakeFiles/ior_database.dir/all
+src/libcore/CMakeFiles/mitsuba-core.dir/all: data/microfacet/CMakeFiles/microfacet_data.dir/all
 src/libcore/CMakeFiles/mitsuba-core.dir/all: src/libcore/CMakeFiles/mitsuba-core_pch.dir/all
 	$(MAKE) -f src/libcore/CMakeFiles/mitsuba-core.dir/build.make src/libcore/CMakeFiles/mitsuba-core.dir/depend
 	$(MAKE) -f src/libcore/CMakeFiles/mitsuba-core.dir/build.make src/libcore/CMakeFiles/mitsuba-core.dir/build
@@ -600,12 +563,12 @@ src/libhw/preinstall:
 # Target rules for target src/libhw/CMakeFiles/mitsuba-hw.dir
 
 # All Build rule for target.
-src/libhw/CMakeFiles/mitsuba-hw.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/libhw/CMakeFiles/mitsuba-hw.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/libhw/CMakeFiles/mitsuba-hw.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/libhw/CMakeFiles/mitsuba-hw.dir/all: src/libhw/CMakeFiles/mitsuba-hw_pch.dir/all
 	$(MAKE) -f src/libhw/CMakeFiles/mitsuba-hw.dir/build.make src/libhw/CMakeFiles/mitsuba-hw.dir/depend
 	$(MAKE) -f src/libhw/CMakeFiles/mitsuba-hw.dir/build.make src/libhw/CMakeFiles/mitsuba-hw.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  40 41 42 43 44
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  40 41 42 43 44 45
 	@echo "Built target mitsuba-hw"
 .PHONY : src/libhw/CMakeFiles/mitsuba-hw.dir/all
 
@@ -640,13 +603,13 @@ clean: src/libhw/CMakeFiles/mitsuba-hw.dir/clean
 src/libhw/CMakeFiles/mitsuba-hw_pch.dir/all:
 	$(MAKE) -f src/libhw/CMakeFiles/mitsuba-hw_pch.dir/build.make src/libhw/CMakeFiles/mitsuba-hw_pch.dir/depend
 	$(MAKE) -f src/libhw/CMakeFiles/mitsuba-hw_pch.dir/build.make src/libhw/CMakeFiles/mitsuba-hw_pch.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  45
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
 	@echo "Built target mitsuba-hw_pch"
 .PHONY : src/libhw/CMakeFiles/mitsuba-hw_pch.dir/all
 
 # Build rule for subdir invocation for target.
 src/libhw/CMakeFiles/mitsuba-hw_pch.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 src/libhw/CMakeFiles/mitsuba-hw_pch.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/libhw/CMakeFiles/mitsuba-hw_pch.dir/rule
@@ -684,8 +647,8 @@ src/libbidir/preinstall:
 # Target rules for target src/libbidir/CMakeFiles/mitsuba-bidir.dir
 
 # All Build rule for target.
-src/libbidir/CMakeFiles/mitsuba-bidir.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/libbidir/CMakeFiles/mitsuba-bidir.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/libbidir/CMakeFiles/mitsuba-bidir.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/libbidir/CMakeFiles/mitsuba-bidir.dir/all: src/libbidir/CMakeFiles/mitsuba-bidir_pch.dir/all
 	$(MAKE) -f src/libbidir/CMakeFiles/mitsuba-bidir.dir/build.make src/libbidir/CMakeFiles/mitsuba-bidir.dir/depend
 	$(MAKE) -f src/libbidir/CMakeFiles/mitsuba-bidir.dir/build.make src/libbidir/CMakeFiles/mitsuba-bidir.dir/build
@@ -767,8 +730,8 @@ src/libpython/preinstall:
 # Target rules for target src/libpython/CMakeFiles/PyMitsuba.dir
 
 # All Build rule for target.
-src/libpython/CMakeFiles/PyMitsuba.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/libpython/CMakeFiles/PyMitsuba.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/libpython/CMakeFiles/PyMitsuba.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/libpython/CMakeFiles/PyMitsuba.dir/build.make src/libpython/CMakeFiles/PyMitsuba.dir/depend
 	$(MAKE) -f src/libpython/CMakeFiles/PyMitsuba.dir/build.make src/libpython/CMakeFiles/PyMitsuba.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -825,8 +788,8 @@ src/mitsuba/preinstall:
 # Target rules for target src/mitsuba/CMakeFiles/mitsuba.dir
 
 # All Build rule for target.
-src/mitsuba/CMakeFiles/mitsuba.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/mitsuba/CMakeFiles/mitsuba.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/mitsuba/CMakeFiles/mitsuba.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/mitsuba/CMakeFiles/mitsuba.dir/all: src/mitsuba/CMakeFiles/mitsuba_pch.dir/all
 	$(MAKE) -f src/mitsuba/CMakeFiles/mitsuba.dir/build.make src/mitsuba/CMakeFiles/mitsuba.dir/depend
 	$(MAKE) -f src/mitsuba/CMakeFiles/mitsuba.dir/build.make src/mitsuba/CMakeFiles/mitsuba.dir/build
@@ -893,12 +856,12 @@ clean: src/mitsuba/CMakeFiles/mitsuba_pch.dir/clean
 # Target rules for target src/mitsuba/CMakeFiles/mtssrv.dir
 
 # All Build rule for target.
-src/mitsuba/CMakeFiles/mtssrv.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/mitsuba/CMakeFiles/mtssrv.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/mitsuba/CMakeFiles/mtssrv.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/mitsuba/CMakeFiles/mtssrv.dir/all: src/mitsuba/CMakeFiles/mtssrv_pch.dir/all
 	$(MAKE) -f src/mitsuba/CMakeFiles/mtssrv.dir/build.make src/mitsuba/CMakeFiles/mtssrv.dir/depend
 	$(MAKE) -f src/mitsuba/CMakeFiles/mtssrv.dir/build.make src/mitsuba/CMakeFiles/mtssrv.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  77
 	@echo "Built target mtssrv"
 .PHONY : src/mitsuba/CMakeFiles/mtssrv.dir/all
 
@@ -933,13 +896,13 @@ clean: src/mitsuba/CMakeFiles/mtssrv.dir/clean
 src/mitsuba/CMakeFiles/mtssrv_pch.dir/all:
 	$(MAKE) -f src/mitsuba/CMakeFiles/mtssrv_pch.dir/build.make src/mitsuba/CMakeFiles/mtssrv_pch.dir/depend
 	$(MAKE) -f src/mitsuba/CMakeFiles/mtssrv_pch.dir/build.make src/mitsuba/CMakeFiles/mtssrv_pch.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  77
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
 	@echo "Built target mtssrv_pch"
 .PHONY : src/mitsuba/CMakeFiles/mtssrv_pch.dir/all
 
 # Build rule for subdir invocation for target.
 src/mitsuba/CMakeFiles/mtssrv_pch.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 src/mitsuba/CMakeFiles/mtssrv_pch.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/mitsuba/CMakeFiles/mtssrv_pch.dir/rule
@@ -961,8 +924,8 @@ clean: src/mitsuba/CMakeFiles/mtssrv_pch.dir/clean
 # Target rules for target src/mitsuba/CMakeFiles/mtsutil.dir
 
 # All Build rule for target.
-src/mitsuba/CMakeFiles/mtsutil.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/mitsuba/CMakeFiles/mtsutil.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/mitsuba/CMakeFiles/mtsutil.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/mitsuba/CMakeFiles/mtsutil.dir/all: src/mitsuba/CMakeFiles/mtsutil_pch.dir/all
 	$(MAKE) -f src/mitsuba/CMakeFiles/mtsutil.dir/build.make src/mitsuba/CMakeFiles/mtsutil.dir/depend
 	$(MAKE) -f src/mitsuba/CMakeFiles/mtsutil.dir/build.make src/mitsuba/CMakeFiles/mtsutil.dir/build
@@ -976,7 +939,7 @@ all: src/mitsuba/CMakeFiles/mtsutil.dir/all
 
 # Build rule for subdir invocation for target.
 src/mitsuba/CMakeFiles/mtsutil.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 src/mitsuba/CMakeFiles/mtsutil.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/mitsuba/CMakeFiles/mtsutil.dir/rule
@@ -1001,13 +964,13 @@ clean: src/mitsuba/CMakeFiles/mtsutil.dir/clean
 src/mitsuba/CMakeFiles/mtsutil_pch.dir/all:
 	$(MAKE) -f src/mitsuba/CMakeFiles/mtsutil_pch.dir/build.make src/mitsuba/CMakeFiles/mtsutil_pch.dir/depend
 	$(MAKE) -f src/mitsuba/CMakeFiles/mtsutil_pch.dir/build.make src/mitsuba/CMakeFiles/mtsutil_pch.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  78
 	@echo "Built target mtsutil_pch"
 .PHONY : src/mitsuba/CMakeFiles/mtsutil_pch.dir/all
 
 # Build rule for subdir invocation for target.
 src/mitsuba/CMakeFiles/mtsutil_pch.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 src/mitsuba/CMakeFiles/mtsutil_pch.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/mitsuba/CMakeFiles/mtsutil_pch.dir/rule
@@ -1048,9 +1011,9 @@ src/mtsgui/preinstall:
 # Target rules for target src/mtsgui/CMakeFiles/mtsgui.dir
 
 # All Build rule for target.
+src/mtsgui/CMakeFiles/mtsgui.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 src/mtsgui/CMakeFiles/mtsgui.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 src/mtsgui/CMakeFiles/mtsgui.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
-src/mtsgui/CMakeFiles/mtsgui.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 src/mtsgui/CMakeFiles/mtsgui.dir/all: src/mtsgui/CMakeFiles/mtsgui_pch.dir/all
 	$(MAKE) -f src/mtsgui/CMakeFiles/mtsgui.dir/build.make src/mtsgui/CMakeFiles/mtsgui.dir/depend
 	$(MAKE) -f src/mtsgui/CMakeFiles/mtsgui.dir/build.make src/mtsgui/CMakeFiles/mtsgui.dir/build
@@ -1117,8 +1080,8 @@ clean: src/mtsgui/CMakeFiles/mtsgui_pch.dir/clean
 # Target rules for target src/mtsgui/CMakeFiles/test_simdtonemap.dir
 
 # All Build rule for target.
-src/mtsgui/CMakeFiles/test_simdtonemap.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/mtsgui/CMakeFiles/test_simdtonemap.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/mtsgui/CMakeFiles/test_simdtonemap.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/mtsgui/CMakeFiles/test_simdtonemap.dir/all: src/mtsgui/CMakeFiles/test_simdtonemap_pch.dir/all
 	$(MAKE) -f src/mtsgui/CMakeFiles/test_simdtonemap.dir/build.make src/mtsgui/CMakeFiles/test_simdtonemap.dir/depend
 	$(MAKE) -f src/mtsgui/CMakeFiles/test_simdtonemap.dir/build.make src/mtsgui/CMakeFiles/test_simdtonemap.dir/build
@@ -1208,8 +1171,8 @@ src/utils/preinstall:
 # Target rules for target src/utils/CMakeFiles/addimages.dir
 
 # All Build rule for target.
-src/utils/CMakeFiles/addimages.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/utils/CMakeFiles/addimages.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/utils/CMakeFiles/addimages.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/utils/CMakeFiles/addimages.dir/build.make src/utils/CMakeFiles/addimages.dir/depend
 	$(MAKE) -f src/utils/CMakeFiles/addimages.dir/build.make src/utils/CMakeFiles/addimages.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  1
@@ -1244,9 +1207,9 @@ clean: src/utils/CMakeFiles/addimages.dir/clean
 # Target rules for target src/utils/CMakeFiles/cylclip.dir
 
 # All Build rule for target.
+src/utils/CMakeFiles/cylclip.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 src/utils/CMakeFiles/cylclip.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 src/utils/CMakeFiles/cylclip.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
-src/utils/CMakeFiles/cylclip.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 	$(MAKE) -f src/utils/CMakeFiles/cylclip.dir/build.make src/utils/CMakeFiles/cylclip.dir/depend
 	$(MAKE) -f src/utils/CMakeFiles/cylclip.dir/build.make src/utils/CMakeFiles/cylclip.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -1281,8 +1244,8 @@ clean: src/utils/CMakeFiles/cylclip.dir/clean
 # Target rules for target src/utils/CMakeFiles/joinrgb.dir
 
 # All Build rule for target.
-src/utils/CMakeFiles/joinrgb.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/utils/CMakeFiles/joinrgb.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/utils/CMakeFiles/joinrgb.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/utils/CMakeFiles/joinrgb.dir/build.make src/utils/CMakeFiles/joinrgb.dir/depend
 	$(MAKE) -f src/utils/CMakeFiles/joinrgb.dir/build.make src/utils/CMakeFiles/joinrgb.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -1317,8 +1280,8 @@ clean: src/utils/CMakeFiles/joinrgb.dir/clean
 # Target rules for target src/utils/CMakeFiles/kdbench.dir
 
 # All Build rule for target.
-src/utils/CMakeFiles/kdbench.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/utils/CMakeFiles/kdbench.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/utils/CMakeFiles/kdbench.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/utils/CMakeFiles/kdbench.dir/build.make src/utils/CMakeFiles/kdbench.dir/depend
 	$(MAKE) -f src/utils/CMakeFiles/kdbench.dir/build.make src/utils/CMakeFiles/kdbench.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -1353,8 +1316,8 @@ clean: src/utils/CMakeFiles/kdbench.dir/clean
 # Target rules for target src/utils/CMakeFiles/tonemap.dir
 
 # All Build rule for target.
-src/utils/CMakeFiles/tonemap.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/utils/CMakeFiles/tonemap.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/utils/CMakeFiles/tonemap.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/utils/CMakeFiles/tonemap.dir/build.make src/utils/CMakeFiles/tonemap.dir/depend
 	$(MAKE) -f src/utils/CMakeFiles/tonemap.dir/build.make src/utils/CMakeFiles/tonemap.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -1448,9 +1411,9 @@ src/bsdfs/preinstall:
 # Target rules for target src/bsdfs/CMakeFiles/blendbsdf.dir
 
 # All Build rule for target.
+src/bsdfs/CMakeFiles/blendbsdf.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 src/bsdfs/CMakeFiles/blendbsdf.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 src/bsdfs/CMakeFiles/blendbsdf.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
-src/bsdfs/CMakeFiles/blendbsdf.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 	$(MAKE) -f src/bsdfs/CMakeFiles/blendbsdf.dir/build.make src/bsdfs/CMakeFiles/blendbsdf.dir/depend
 	$(MAKE) -f src/bsdfs/CMakeFiles/blendbsdf.dir/build.make src/bsdfs/CMakeFiles/blendbsdf.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -1485,9 +1448,9 @@ clean: src/bsdfs/CMakeFiles/blendbsdf.dir/clean
 # Target rules for target src/bsdfs/CMakeFiles/bumpmap.dir
 
 # All Build rule for target.
+src/bsdfs/CMakeFiles/bumpmap.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 src/bsdfs/CMakeFiles/bumpmap.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 src/bsdfs/CMakeFiles/bumpmap.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
-src/bsdfs/CMakeFiles/bumpmap.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 	$(MAKE) -f src/bsdfs/CMakeFiles/bumpmap.dir/build.make src/bsdfs/CMakeFiles/bumpmap.dir/depend
 	$(MAKE) -f src/bsdfs/CMakeFiles/bumpmap.dir/build.make src/bsdfs/CMakeFiles/bumpmap.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -1522,9 +1485,9 @@ clean: src/bsdfs/CMakeFiles/bumpmap.dir/clean
 # Target rules for target src/bsdfs/CMakeFiles/coating.dir
 
 # All Build rule for target.
+src/bsdfs/CMakeFiles/coating.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 src/bsdfs/CMakeFiles/coating.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 src/bsdfs/CMakeFiles/coating.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
-src/bsdfs/CMakeFiles/coating.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 	$(MAKE) -f src/bsdfs/CMakeFiles/coating.dir/build.make src/bsdfs/CMakeFiles/coating.dir/depend
 	$(MAKE) -f src/bsdfs/CMakeFiles/coating.dir/build.make src/bsdfs/CMakeFiles/coating.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -1559,9 +1522,9 @@ clean: src/bsdfs/CMakeFiles/coating.dir/clean
 # Target rules for target src/bsdfs/CMakeFiles/conductor.dir
 
 # All Build rule for target.
+src/bsdfs/CMakeFiles/conductor.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 src/bsdfs/CMakeFiles/conductor.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 src/bsdfs/CMakeFiles/conductor.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
-src/bsdfs/CMakeFiles/conductor.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 	$(MAKE) -f src/bsdfs/CMakeFiles/conductor.dir/build.make src/bsdfs/CMakeFiles/conductor.dir/depend
 	$(MAKE) -f src/bsdfs/CMakeFiles/conductor.dir/build.make src/bsdfs/CMakeFiles/conductor.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  5
@@ -1596,9 +1559,9 @@ clean: src/bsdfs/CMakeFiles/conductor.dir/clean
 # Target rules for target src/bsdfs/CMakeFiles/dielectric.dir
 
 # All Build rule for target.
+src/bsdfs/CMakeFiles/dielectric.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 src/bsdfs/CMakeFiles/dielectric.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 src/bsdfs/CMakeFiles/dielectric.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
-src/bsdfs/CMakeFiles/dielectric.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 	$(MAKE) -f src/bsdfs/CMakeFiles/dielectric.dir/build.make src/bsdfs/CMakeFiles/dielectric.dir/depend
 	$(MAKE) -f src/bsdfs/CMakeFiles/dielectric.dir/build.make src/bsdfs/CMakeFiles/dielectric.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  7
@@ -1633,9 +1596,9 @@ clean: src/bsdfs/CMakeFiles/dielectric.dir/clean
 # Target rules for target src/bsdfs/CMakeFiles/difftrans.dir
 
 # All Build rule for target.
+src/bsdfs/CMakeFiles/difftrans.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 src/bsdfs/CMakeFiles/difftrans.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 src/bsdfs/CMakeFiles/difftrans.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
-src/bsdfs/CMakeFiles/difftrans.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 	$(MAKE) -f src/bsdfs/CMakeFiles/difftrans.dir/build.make src/bsdfs/CMakeFiles/difftrans.dir/depend
 	$(MAKE) -f src/bsdfs/CMakeFiles/difftrans.dir/build.make src/bsdfs/CMakeFiles/difftrans.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -1670,9 +1633,9 @@ clean: src/bsdfs/CMakeFiles/difftrans.dir/clean
 # Target rules for target src/bsdfs/CMakeFiles/diffuse.dir
 
 # All Build rule for target.
+src/bsdfs/CMakeFiles/diffuse.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 src/bsdfs/CMakeFiles/diffuse.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 src/bsdfs/CMakeFiles/diffuse.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
-src/bsdfs/CMakeFiles/diffuse.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 	$(MAKE) -f src/bsdfs/CMakeFiles/diffuse.dir/build.make src/bsdfs/CMakeFiles/diffuse.dir/depend
 	$(MAKE) -f src/bsdfs/CMakeFiles/diffuse.dir/build.make src/bsdfs/CMakeFiles/diffuse.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -1707,9 +1670,9 @@ clean: src/bsdfs/CMakeFiles/diffuse.dir/clean
 # Target rules for target src/bsdfs/CMakeFiles/hk.dir
 
 # All Build rule for target.
+src/bsdfs/CMakeFiles/hk.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 src/bsdfs/CMakeFiles/hk.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 src/bsdfs/CMakeFiles/hk.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
-src/bsdfs/CMakeFiles/hk.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 	$(MAKE) -f src/bsdfs/CMakeFiles/hk.dir/build.make src/bsdfs/CMakeFiles/hk.dir/depend
 	$(MAKE) -f src/bsdfs/CMakeFiles/hk.dir/build.make src/bsdfs/CMakeFiles/hk.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -1744,9 +1707,9 @@ clean: src/bsdfs/CMakeFiles/hk.dir/clean
 # Target rules for target src/bsdfs/CMakeFiles/irawan.dir
 
 # All Build rule for target.
+src/bsdfs/CMakeFiles/irawan.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 src/bsdfs/CMakeFiles/irawan.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 src/bsdfs/CMakeFiles/irawan.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
-src/bsdfs/CMakeFiles/irawan.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 	$(MAKE) -f src/bsdfs/CMakeFiles/irawan.dir/build.make src/bsdfs/CMakeFiles/irawan.dir/depend
 	$(MAKE) -f src/bsdfs/CMakeFiles/irawan.dir/build.make src/bsdfs/CMakeFiles/irawan.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -1781,9 +1744,9 @@ clean: src/bsdfs/CMakeFiles/irawan.dir/clean
 # Target rules for target src/bsdfs/CMakeFiles/mask.dir
 
 # All Build rule for target.
+src/bsdfs/CMakeFiles/mask.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 src/bsdfs/CMakeFiles/mask.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 src/bsdfs/CMakeFiles/mask.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
-src/bsdfs/CMakeFiles/mask.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 	$(MAKE) -f src/bsdfs/CMakeFiles/mask.dir/build.make src/bsdfs/CMakeFiles/mask.dir/depend
 	$(MAKE) -f src/bsdfs/CMakeFiles/mask.dir/build.make src/bsdfs/CMakeFiles/mask.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -1818,9 +1781,9 @@ clean: src/bsdfs/CMakeFiles/mask.dir/clean
 # Target rules for target src/bsdfs/CMakeFiles/mixturebsdf.dir
 
 # All Build rule for target.
+src/bsdfs/CMakeFiles/mixturebsdf.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 src/bsdfs/CMakeFiles/mixturebsdf.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 src/bsdfs/CMakeFiles/mixturebsdf.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
-src/bsdfs/CMakeFiles/mixturebsdf.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 	$(MAKE) -f src/bsdfs/CMakeFiles/mixturebsdf.dir/build.make src/bsdfs/CMakeFiles/mixturebsdf.dir/depend
 	$(MAKE) -f src/bsdfs/CMakeFiles/mixturebsdf.dir/build.make src/bsdfs/CMakeFiles/mixturebsdf.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -1855,9 +1818,9 @@ clean: src/bsdfs/CMakeFiles/mixturebsdf.dir/clean
 # Target rules for target src/bsdfs/CMakeFiles/normalmap.dir
 
 # All Build rule for target.
+src/bsdfs/CMakeFiles/normalmap.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 src/bsdfs/CMakeFiles/normalmap.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 src/bsdfs/CMakeFiles/normalmap.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
-src/bsdfs/CMakeFiles/normalmap.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 	$(MAKE) -f src/bsdfs/CMakeFiles/normalmap.dir/build.make src/bsdfs/CMakeFiles/normalmap.dir/depend
 	$(MAKE) -f src/bsdfs/CMakeFiles/normalmap.dir/build.make src/bsdfs/CMakeFiles/normalmap.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -1892,9 +1855,9 @@ clean: src/bsdfs/CMakeFiles/normalmap.dir/clean
 # Target rules for target src/bsdfs/CMakeFiles/null.dir
 
 # All Build rule for target.
+src/bsdfs/CMakeFiles/null.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 src/bsdfs/CMakeFiles/null.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 src/bsdfs/CMakeFiles/null.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
-src/bsdfs/CMakeFiles/null.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 	$(MAKE) -f src/bsdfs/CMakeFiles/null.dir/build.make src/bsdfs/CMakeFiles/null.dir/depend
 	$(MAKE) -f src/bsdfs/CMakeFiles/null.dir/build.make src/bsdfs/CMakeFiles/null.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -1929,12 +1892,12 @@ clean: src/bsdfs/CMakeFiles/null.dir/clean
 # Target rules for target src/bsdfs/CMakeFiles/phong.dir
 
 # All Build rule for target.
+src/bsdfs/CMakeFiles/phong.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 src/bsdfs/CMakeFiles/phong.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 src/bsdfs/CMakeFiles/phong.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
-src/bsdfs/CMakeFiles/phong.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 	$(MAKE) -f src/bsdfs/CMakeFiles/phong.dir/build.make src/bsdfs/CMakeFiles/phong.dir/depend
 	$(MAKE) -f src/bsdfs/CMakeFiles/phong.dir/build.make src/bsdfs/CMakeFiles/phong.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  80
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
 	@echo "Built target phong"
 .PHONY : src/bsdfs/CMakeFiles/phong.dir/all
 
@@ -1944,7 +1907,7 @@ all: src/bsdfs/CMakeFiles/phong.dir/all
 
 # Build rule for subdir invocation for target.
 src/bsdfs/CMakeFiles/phong.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 28
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 27
 	$(MAKE) -f CMakeFiles/Makefile2 src/bsdfs/CMakeFiles/phong.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/bsdfs/CMakeFiles/phong.dir/rule
@@ -1966,9 +1929,9 @@ clean: src/bsdfs/CMakeFiles/phong.dir/clean
 # Target rules for target src/bsdfs/CMakeFiles/plastic.dir
 
 # All Build rule for target.
+src/bsdfs/CMakeFiles/plastic.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 src/bsdfs/CMakeFiles/plastic.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 src/bsdfs/CMakeFiles/plastic.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
-src/bsdfs/CMakeFiles/plastic.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 	$(MAKE) -f src/bsdfs/CMakeFiles/plastic.dir/build.make src/bsdfs/CMakeFiles/plastic.dir/depend
 	$(MAKE) -f src/bsdfs/CMakeFiles/plastic.dir/build.make src/bsdfs/CMakeFiles/plastic.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -2003,12 +1966,12 @@ clean: src/bsdfs/CMakeFiles/plastic.dir/clean
 # Target rules for target src/bsdfs/CMakeFiles/roughcoating.dir
 
 # All Build rule for target.
+src/bsdfs/CMakeFiles/roughcoating.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 src/bsdfs/CMakeFiles/roughcoating.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 src/bsdfs/CMakeFiles/roughcoating.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
-src/bsdfs/CMakeFiles/roughcoating.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 	$(MAKE) -f src/bsdfs/CMakeFiles/roughcoating.dir/build.make src/bsdfs/CMakeFiles/roughcoating.dir/depend
 	$(MAKE) -f src/bsdfs/CMakeFiles/roughcoating.dir/build.make src/bsdfs/CMakeFiles/roughcoating.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  86
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
 	@echo "Built target roughcoating"
 .PHONY : src/bsdfs/CMakeFiles/roughcoating.dir/all
 
@@ -2018,7 +1981,7 @@ all: src/bsdfs/CMakeFiles/roughcoating.dir/all
 
 # Build rule for subdir invocation for target.
 src/bsdfs/CMakeFiles/roughcoating.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 28
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 27
 	$(MAKE) -f CMakeFiles/Makefile2 src/bsdfs/CMakeFiles/roughcoating.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/bsdfs/CMakeFiles/roughcoating.dir/rule
@@ -2040,9 +2003,9 @@ clean: src/bsdfs/CMakeFiles/roughcoating.dir/clean
 # Target rules for target src/bsdfs/CMakeFiles/roughconductor.dir
 
 # All Build rule for target.
+src/bsdfs/CMakeFiles/roughconductor.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 src/bsdfs/CMakeFiles/roughconductor.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 src/bsdfs/CMakeFiles/roughconductor.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
-src/bsdfs/CMakeFiles/roughconductor.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 	$(MAKE) -f src/bsdfs/CMakeFiles/roughconductor.dir/build.make src/bsdfs/CMakeFiles/roughconductor.dir/depend
 	$(MAKE) -f src/bsdfs/CMakeFiles/roughconductor.dir/build.make src/bsdfs/CMakeFiles/roughconductor.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -2077,9 +2040,9 @@ clean: src/bsdfs/CMakeFiles/roughconductor.dir/clean
 # Target rules for target src/bsdfs/CMakeFiles/roughdielectric.dir
 
 # All Build rule for target.
+src/bsdfs/CMakeFiles/roughdielectric.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 src/bsdfs/CMakeFiles/roughdielectric.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 src/bsdfs/CMakeFiles/roughdielectric.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
-src/bsdfs/CMakeFiles/roughdielectric.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 	$(MAKE) -f src/bsdfs/CMakeFiles/roughdielectric.dir/build.make src/bsdfs/CMakeFiles/roughdielectric.dir/depend
 	$(MAKE) -f src/bsdfs/CMakeFiles/roughdielectric.dir/build.make src/bsdfs/CMakeFiles/roughdielectric.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -2114,12 +2077,12 @@ clean: src/bsdfs/CMakeFiles/roughdielectric.dir/clean
 # Target rules for target src/bsdfs/CMakeFiles/roughdiffuse.dir
 
 # All Build rule for target.
+src/bsdfs/CMakeFiles/roughdiffuse.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 src/bsdfs/CMakeFiles/roughdiffuse.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 src/bsdfs/CMakeFiles/roughdiffuse.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
-src/bsdfs/CMakeFiles/roughdiffuse.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 	$(MAKE) -f src/bsdfs/CMakeFiles/roughdiffuse.dir/build.make src/bsdfs/CMakeFiles/roughdiffuse.dir/depend
 	$(MAKE) -f src/bsdfs/CMakeFiles/roughdiffuse.dir/build.make src/bsdfs/CMakeFiles/roughdiffuse.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  87
 	@echo "Built target roughdiffuse"
 .PHONY : src/bsdfs/CMakeFiles/roughdiffuse.dir/all
 
@@ -2129,7 +2092,7 @@ all: src/bsdfs/CMakeFiles/roughdiffuse.dir/all
 
 # Build rule for subdir invocation for target.
 src/bsdfs/CMakeFiles/roughdiffuse.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 28
 	$(MAKE) -f CMakeFiles/Makefile2 src/bsdfs/CMakeFiles/roughdiffuse.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/bsdfs/CMakeFiles/roughdiffuse.dir/rule
@@ -2151,12 +2114,12 @@ clean: src/bsdfs/CMakeFiles/roughdiffuse.dir/clean
 # Target rules for target src/bsdfs/CMakeFiles/roughplastic.dir
 
 # All Build rule for target.
+src/bsdfs/CMakeFiles/roughplastic.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 src/bsdfs/CMakeFiles/roughplastic.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 src/bsdfs/CMakeFiles/roughplastic.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
-src/bsdfs/CMakeFiles/roughplastic.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 	$(MAKE) -f src/bsdfs/CMakeFiles/roughplastic.dir/build.make src/bsdfs/CMakeFiles/roughplastic.dir/depend
 	$(MAKE) -f src/bsdfs/CMakeFiles/roughplastic.dir/build.make src/bsdfs/CMakeFiles/roughplastic.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  87
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
 	@echo "Built target roughplastic"
 .PHONY : src/bsdfs/CMakeFiles/roughplastic.dir/all
 
@@ -2166,7 +2129,7 @@ all: src/bsdfs/CMakeFiles/roughplastic.dir/all
 
 # Build rule for subdir invocation for target.
 src/bsdfs/CMakeFiles/roughplastic.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 28
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 27
 	$(MAKE) -f CMakeFiles/Makefile2 src/bsdfs/CMakeFiles/roughplastic.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/bsdfs/CMakeFiles/roughplastic.dir/rule
@@ -2188,9 +2151,9 @@ clean: src/bsdfs/CMakeFiles/roughplastic.dir/clean
 # Target rules for target src/bsdfs/CMakeFiles/thindielectric.dir
 
 # All Build rule for target.
+src/bsdfs/CMakeFiles/thindielectric.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 src/bsdfs/CMakeFiles/thindielectric.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 src/bsdfs/CMakeFiles/thindielectric.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
-src/bsdfs/CMakeFiles/thindielectric.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 	$(MAKE) -f src/bsdfs/CMakeFiles/thindielectric.dir/build.make src/bsdfs/CMakeFiles/thindielectric.dir/depend
 	$(MAKE) -f src/bsdfs/CMakeFiles/thindielectric.dir/build.make src/bsdfs/CMakeFiles/thindielectric.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  97
@@ -2225,9 +2188,9 @@ clean: src/bsdfs/CMakeFiles/thindielectric.dir/clean
 # Target rules for target src/bsdfs/CMakeFiles/twosided.dir
 
 # All Build rule for target.
+src/bsdfs/CMakeFiles/twosided.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 src/bsdfs/CMakeFiles/twosided.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 src/bsdfs/CMakeFiles/twosided.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
-src/bsdfs/CMakeFiles/twosided.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 	$(MAKE) -f src/bsdfs/CMakeFiles/twosided.dir/build.make src/bsdfs/CMakeFiles/twosided.dir/depend
 	$(MAKE) -f src/bsdfs/CMakeFiles/twosided.dir/build.make src/bsdfs/CMakeFiles/twosided.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  98
@@ -2262,9 +2225,9 @@ clean: src/bsdfs/CMakeFiles/twosided.dir/clean
 # Target rules for target src/bsdfs/CMakeFiles/ward.dir
 
 # All Build rule for target.
+src/bsdfs/CMakeFiles/ward.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 src/bsdfs/CMakeFiles/ward.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 src/bsdfs/CMakeFiles/ward.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
-src/bsdfs/CMakeFiles/ward.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 	$(MAKE) -f src/bsdfs/CMakeFiles/ward.dir/build.make src/bsdfs/CMakeFiles/ward.dir/depend
 	$(MAKE) -f src/bsdfs/CMakeFiles/ward.dir/build.make src/bsdfs/CMakeFiles/ward.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -2324,8 +2287,8 @@ src/phase/preinstall:
 # Target rules for target src/phase/CMakeFiles/hg.dir
 
 # All Build rule for target.
-src/phase/CMakeFiles/hg.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/phase/CMakeFiles/hg.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/phase/CMakeFiles/hg.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/phase/CMakeFiles/hg.dir/build.make src/phase/CMakeFiles/hg.dir/depend
 	$(MAKE) -f src/phase/CMakeFiles/hg.dir/build.make src/phase/CMakeFiles/hg.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -2360,8 +2323,8 @@ clean: src/phase/CMakeFiles/hg.dir/clean
 # Target rules for target src/phase/CMakeFiles/isotropic.dir
 
 # All Build rule for target.
-src/phase/CMakeFiles/isotropic.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/phase/CMakeFiles/isotropic.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/phase/CMakeFiles/isotropic.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/phase/CMakeFiles/isotropic.dir/build.make src/phase/CMakeFiles/isotropic.dir/depend
 	$(MAKE) -f src/phase/CMakeFiles/isotropic.dir/build.make src/phase/CMakeFiles/isotropic.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  19
@@ -2396,8 +2359,8 @@ clean: src/phase/CMakeFiles/isotropic.dir/clean
 # Target rules for target src/phase/CMakeFiles/kkay.dir
 
 # All Build rule for target.
-src/phase/CMakeFiles/kkay.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/phase/CMakeFiles/kkay.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/phase/CMakeFiles/kkay.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/phase/CMakeFiles/kkay.dir/build.make src/phase/CMakeFiles/kkay.dir/depend
 	$(MAKE) -f src/phase/CMakeFiles/kkay.dir/build.make src/phase/CMakeFiles/kkay.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -2432,8 +2395,8 @@ clean: src/phase/CMakeFiles/kkay.dir/clean
 # Target rules for target src/phase/CMakeFiles/microflake.dir
 
 # All Build rule for target.
-src/phase/CMakeFiles/microflake.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/phase/CMakeFiles/microflake.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/phase/CMakeFiles/microflake.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/phase/CMakeFiles/microflake.dir/build.make src/phase/CMakeFiles/microflake.dir/depend
 	$(MAKE) -f src/phase/CMakeFiles/microflake.dir/build.make src/phase/CMakeFiles/microflake.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -2468,8 +2431,8 @@ clean: src/phase/CMakeFiles/microflake.dir/clean
 # Target rules for target src/phase/CMakeFiles/mixturephase.dir
 
 # All Build rule for target.
-src/phase/CMakeFiles/mixturephase.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/phase/CMakeFiles/mixturephase.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/phase/CMakeFiles/mixturephase.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/phase/CMakeFiles/mixturephase.dir/build.make src/phase/CMakeFiles/mixturephase.dir/depend
 	$(MAKE) -f src/phase/CMakeFiles/mixturephase.dir/build.make src/phase/CMakeFiles/mixturephase.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  55
@@ -2504,8 +2467,8 @@ clean: src/phase/CMakeFiles/mixturephase.dir/clean
 # Target rules for target src/phase/CMakeFiles/rayleigh.dir
 
 # All Build rule for target.
-src/phase/CMakeFiles/rayleigh.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/phase/CMakeFiles/rayleigh.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/phase/CMakeFiles/rayleigh.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/phase/CMakeFiles/rayleigh.dir/build.make src/phase/CMakeFiles/rayleigh.dir/depend
 	$(MAKE) -f src/phase/CMakeFiles/rayleigh.dir/build.make src/phase/CMakeFiles/rayleigh.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -2578,8 +2541,8 @@ src/shapes/preinstall:
 # Target rules for target src/shapes/CMakeFiles/cube.dir
 
 # All Build rule for target.
-src/shapes/CMakeFiles/cube.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/shapes/CMakeFiles/cube.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/shapes/CMakeFiles/cube.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/shapes/CMakeFiles/cube.dir/build.make src/shapes/CMakeFiles/cube.dir/depend
 	$(MAKE) -f src/shapes/CMakeFiles/cube.dir/build.make src/shapes/CMakeFiles/cube.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  6
@@ -2614,8 +2577,8 @@ clean: src/shapes/CMakeFiles/cube.dir/clean
 # Target rules for target src/shapes/CMakeFiles/cylinder.dir
 
 # All Build rule for target.
-src/shapes/CMakeFiles/cylinder.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/shapes/CMakeFiles/cylinder.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/shapes/CMakeFiles/cylinder.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/shapes/CMakeFiles/cylinder.dir/build.make src/shapes/CMakeFiles/cylinder.dir/depend
 	$(MAKE) -f src/shapes/CMakeFiles/cylinder.dir/build.make src/shapes/CMakeFiles/cylinder.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -2650,8 +2613,8 @@ clean: src/shapes/CMakeFiles/cylinder.dir/clean
 # Target rules for target src/shapes/CMakeFiles/disk.dir
 
 # All Build rule for target.
-src/shapes/CMakeFiles/disk.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/shapes/CMakeFiles/disk.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/shapes/CMakeFiles/disk.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/shapes/CMakeFiles/disk.dir/build.make src/shapes/CMakeFiles/disk.dir/depend
 	$(MAKE) -f src/shapes/CMakeFiles/disk.dir/build.make src/shapes/CMakeFiles/disk.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -2686,8 +2649,8 @@ clean: src/shapes/CMakeFiles/disk.dir/clean
 # Target rules for target src/shapes/CMakeFiles/hair.dir
 
 # All Build rule for target.
-src/shapes/CMakeFiles/hair.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/shapes/CMakeFiles/hair.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/shapes/CMakeFiles/hair.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/shapes/CMakeFiles/hair.dir/build.make src/shapes/CMakeFiles/hair.dir/depend
 	$(MAKE) -f src/shapes/CMakeFiles/hair.dir/build.make src/shapes/CMakeFiles/hair.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -2722,8 +2685,8 @@ clean: src/shapes/CMakeFiles/hair.dir/clean
 # Target rules for target src/shapes/CMakeFiles/heightfield.dir
 
 # All Build rule for target.
-src/shapes/CMakeFiles/heightfield.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/shapes/CMakeFiles/heightfield.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/shapes/CMakeFiles/heightfield.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/shapes/CMakeFiles/heightfield.dir/build.make src/shapes/CMakeFiles/heightfield.dir/depend
 	$(MAKE) -f src/shapes/CMakeFiles/heightfield.dir/build.make src/shapes/CMakeFiles/heightfield.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -2758,8 +2721,8 @@ clean: src/shapes/CMakeFiles/heightfield.dir/clean
 # Target rules for target src/shapes/CMakeFiles/instance.dir
 
 # All Build rule for target.
-src/shapes/CMakeFiles/instance.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/shapes/CMakeFiles/instance.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/shapes/CMakeFiles/instance.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/shapes/CMakeFiles/instance.dir/build.make src/shapes/CMakeFiles/instance.dir/depend
 	$(MAKE) -f src/shapes/CMakeFiles/instance.dir/build.make src/shapes/CMakeFiles/instance.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  17
@@ -2794,12 +2757,12 @@ clean: src/shapes/CMakeFiles/instance.dir/clean
 # Target rules for target src/shapes/CMakeFiles/obj.dir
 
 # All Build rule for target.
+src/shapes/CMakeFiles/obj.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 src/shapes/CMakeFiles/obj.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 src/shapes/CMakeFiles/obj.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
-src/shapes/CMakeFiles/obj.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 	$(MAKE) -f src/shapes/CMakeFiles/obj.dir/build.make src/shapes/CMakeFiles/obj.dir/depend
 	$(MAKE) -f src/shapes/CMakeFiles/obj.dir/build.make src/shapes/CMakeFiles/obj.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  79
 	@echo "Built target obj"
 .PHONY : src/shapes/CMakeFiles/obj.dir/all
 
@@ -2809,7 +2772,7 @@ all: src/shapes/CMakeFiles/obj.dir/all
 
 # Build rule for subdir invocation for target.
 src/shapes/CMakeFiles/obj.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 28
 	$(MAKE) -f CMakeFiles/Makefile2 src/shapes/CMakeFiles/obj.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/shapes/CMakeFiles/obj.dir/rule
@@ -2831,8 +2794,8 @@ clean: src/shapes/CMakeFiles/obj.dir/clean
 # Target rules for target src/shapes/CMakeFiles/ply.dir
 
 # All Build rule for target.
-src/shapes/CMakeFiles/ply.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/shapes/CMakeFiles/ply.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/shapes/CMakeFiles/ply.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/shapes/CMakeFiles/ply.dir/all: src/shapes/CMakeFiles/ply_pch.dir/all
 	$(MAKE) -f src/shapes/CMakeFiles/ply.dir/build.make src/shapes/CMakeFiles/ply.dir/depend
 	$(MAKE) -f src/shapes/CMakeFiles/ply.dir/build.make src/shapes/CMakeFiles/ply.dir/build
@@ -2899,11 +2862,11 @@ clean: src/shapes/CMakeFiles/ply_pch.dir/clean
 # Target rules for target src/shapes/CMakeFiles/rectangle.dir
 
 # All Build rule for target.
-src/shapes/CMakeFiles/rectangle.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/shapes/CMakeFiles/rectangle.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/shapes/CMakeFiles/rectangle.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/shapes/CMakeFiles/rectangle.dir/build.make src/shapes/CMakeFiles/rectangle.dir/depend
 	$(MAKE) -f src/shapes/CMakeFiles/rectangle.dir/build.make src/shapes/CMakeFiles/rectangle.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  86
 	@echo "Built target rectangle"
 .PHONY : src/shapes/CMakeFiles/rectangle.dir/all
 
@@ -2913,7 +2876,7 @@ all: src/shapes/CMakeFiles/rectangle.dir/all
 
 # Build rule for subdir invocation for target.
 src/shapes/CMakeFiles/rectangle.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 src/shapes/CMakeFiles/rectangle.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/shapes/CMakeFiles/rectangle.dir/rule
@@ -2935,11 +2898,11 @@ clean: src/shapes/CMakeFiles/rectangle.dir/clean
 # Target rules for target src/shapes/CMakeFiles/serialized.dir
 
 # All Build rule for target.
-src/shapes/CMakeFiles/serialized.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/shapes/CMakeFiles/serialized.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/shapes/CMakeFiles/serialized.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/shapes/CMakeFiles/serialized.dir/build.make src/shapes/CMakeFiles/serialized.dir/depend
 	$(MAKE) -f src/shapes/CMakeFiles/serialized.dir/build.make src/shapes/CMakeFiles/serialized.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  88
 	@echo "Built target serialized"
 .PHONY : src/shapes/CMakeFiles/serialized.dir/all
 
@@ -2949,7 +2912,7 @@ all: src/shapes/CMakeFiles/serialized.dir/all
 
 # Build rule for subdir invocation for target.
 src/shapes/CMakeFiles/serialized.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 src/shapes/CMakeFiles/serialized.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/shapes/CMakeFiles/serialized.dir/rule
@@ -2971,8 +2934,8 @@ clean: src/shapes/CMakeFiles/serialized.dir/clean
 # Target rules for target src/shapes/CMakeFiles/shapegroup.dir
 
 # All Build rule for target.
-src/shapes/CMakeFiles/shapegroup.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/shapes/CMakeFiles/shapegroup.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/shapes/CMakeFiles/shapegroup.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/shapes/CMakeFiles/shapegroup.dir/build.make src/shapes/CMakeFiles/shapegroup.dir/depend
 	$(MAKE) -f src/shapes/CMakeFiles/shapegroup.dir/build.make src/shapes/CMakeFiles/shapegroup.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -3007,8 +2970,8 @@ clean: src/shapes/CMakeFiles/shapegroup.dir/clean
 # Target rules for target src/shapes/CMakeFiles/sphere.dir
 
 # All Build rule for target.
-src/shapes/CMakeFiles/sphere.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/shapes/CMakeFiles/sphere.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/shapes/CMakeFiles/sphere.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/shapes/CMakeFiles/sphere.dir/build.make src/shapes/CMakeFiles/sphere.dir/depend
 	$(MAKE) -f src/shapes/CMakeFiles/sphere.dir/build.make src/shapes/CMakeFiles/sphere.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  91
@@ -3071,8 +3034,8 @@ src/samplers/preinstall:
 # Target rules for target src/samplers/CMakeFiles/halton.dir
 
 # All Build rule for target.
-src/samplers/CMakeFiles/halton.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/samplers/CMakeFiles/halton.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/samplers/CMakeFiles/halton.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/samplers/CMakeFiles/halton.dir/all: src/samplers/CMakeFiles/halton_pch.dir/all
 	$(MAKE) -f src/samplers/CMakeFiles/halton.dir/build.make src/samplers/CMakeFiles/halton.dir/depend
 	$(MAKE) -f src/samplers/CMakeFiles/halton.dir/build.make src/samplers/CMakeFiles/halton.dir/build
@@ -3139,8 +3102,8 @@ clean: src/samplers/CMakeFiles/halton_pch.dir/clean
 # Target rules for target src/samplers/CMakeFiles/hammersley.dir
 
 # All Build rule for target.
-src/samplers/CMakeFiles/hammersley.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/samplers/CMakeFiles/hammersley.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/samplers/CMakeFiles/hammersley.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/samplers/CMakeFiles/hammersley.dir/all: src/samplers/CMakeFiles/hammersley_pch.dir/all
 	$(MAKE) -f src/samplers/CMakeFiles/hammersley.dir/build.make src/samplers/CMakeFiles/hammersley.dir/depend
 	$(MAKE) -f src/samplers/CMakeFiles/hammersley.dir/build.make src/samplers/CMakeFiles/hammersley.dir/build
@@ -3207,8 +3170,8 @@ clean: src/samplers/CMakeFiles/hammersley_pch.dir/clean
 # Target rules for target src/samplers/CMakeFiles/independent.dir
 
 # All Build rule for target.
-src/samplers/CMakeFiles/independent.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/samplers/CMakeFiles/independent.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/samplers/CMakeFiles/independent.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/samplers/CMakeFiles/independent.dir/build.make src/samplers/CMakeFiles/independent.dir/depend
 	$(MAKE) -f src/samplers/CMakeFiles/independent.dir/build.make src/samplers/CMakeFiles/independent.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -3243,8 +3206,8 @@ clean: src/samplers/CMakeFiles/independent.dir/clean
 # Target rules for target src/samplers/CMakeFiles/ldsampler.dir
 
 # All Build rule for target.
-src/samplers/CMakeFiles/ldsampler.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/samplers/CMakeFiles/ldsampler.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/samplers/CMakeFiles/ldsampler.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/samplers/CMakeFiles/ldsampler.dir/build.make src/samplers/CMakeFiles/ldsampler.dir/depend
 	$(MAKE) -f src/samplers/CMakeFiles/ldsampler.dir/build.make src/samplers/CMakeFiles/ldsampler.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -3279,8 +3242,8 @@ clean: src/samplers/CMakeFiles/ldsampler.dir/clean
 # Target rules for target src/samplers/CMakeFiles/sobol.dir
 
 # All Build rule for target.
-src/samplers/CMakeFiles/sobol.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/samplers/CMakeFiles/sobol.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/samplers/CMakeFiles/sobol.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/samplers/CMakeFiles/sobol.dir/all: src/samplers/CMakeFiles/sobol_pch.dir/all
 	$(MAKE) -f src/samplers/CMakeFiles/sobol.dir/build.make src/samplers/CMakeFiles/sobol.dir/depend
 	$(MAKE) -f src/samplers/CMakeFiles/sobol.dir/build.make src/samplers/CMakeFiles/sobol.dir/build
@@ -3347,8 +3310,8 @@ clean: src/samplers/CMakeFiles/sobol_pch.dir/clean
 # Target rules for target src/samplers/CMakeFiles/stratified.dir
 
 # All Build rule for target.
-src/samplers/CMakeFiles/stratified.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/samplers/CMakeFiles/stratified.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/samplers/CMakeFiles/stratified.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/samplers/CMakeFiles/stratified.dir/build.make src/samplers/CMakeFiles/stratified.dir/depend
 	$(MAKE) -f src/samplers/CMakeFiles/stratified.dir/build.make src/samplers/CMakeFiles/stratified.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  92
@@ -3408,8 +3371,8 @@ src/rfilters/preinstall:
 # Target rules for target src/rfilters/CMakeFiles/box.dir
 
 # All Build rule for target.
-src/rfilters/CMakeFiles/box.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/rfilters/CMakeFiles/box.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/rfilters/CMakeFiles/box.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/rfilters/CMakeFiles/box.dir/build.make src/rfilters/CMakeFiles/box.dir/depend
 	$(MAKE) -f src/rfilters/CMakeFiles/box.dir/build.make src/rfilters/CMakeFiles/box.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -3444,8 +3407,8 @@ clean: src/rfilters/CMakeFiles/box.dir/clean
 # Target rules for target src/rfilters/CMakeFiles/catmullrom.dir
 
 # All Build rule for target.
-src/rfilters/CMakeFiles/catmullrom.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/rfilters/CMakeFiles/catmullrom.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/rfilters/CMakeFiles/catmullrom.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/rfilters/CMakeFiles/catmullrom.dir/build.make src/rfilters/CMakeFiles/catmullrom.dir/depend
 	$(MAKE) -f src/rfilters/CMakeFiles/catmullrom.dir/build.make src/rfilters/CMakeFiles/catmullrom.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  4
@@ -3480,8 +3443,8 @@ clean: src/rfilters/CMakeFiles/catmullrom.dir/clean
 # Target rules for target src/rfilters/CMakeFiles/gaussian.dir
 
 # All Build rule for target.
-src/rfilters/CMakeFiles/gaussian.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/rfilters/CMakeFiles/gaussian.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/rfilters/CMakeFiles/gaussian.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/rfilters/CMakeFiles/gaussian.dir/build.make src/rfilters/CMakeFiles/gaussian.dir/depend
 	$(MAKE) -f src/rfilters/CMakeFiles/gaussian.dir/build.make src/rfilters/CMakeFiles/gaussian.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -3516,8 +3479,8 @@ clean: src/rfilters/CMakeFiles/gaussian.dir/clean
 # Target rules for target src/rfilters/CMakeFiles/lanczos.dir
 
 # All Build rule for target.
-src/rfilters/CMakeFiles/lanczos.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/rfilters/CMakeFiles/lanczos.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/rfilters/CMakeFiles/lanczos.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/rfilters/CMakeFiles/lanczos.dir/build.make src/rfilters/CMakeFiles/lanczos.dir/depend
 	$(MAKE) -f src/rfilters/CMakeFiles/lanczos.dir/build.make src/rfilters/CMakeFiles/lanczos.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  20
@@ -3552,8 +3515,8 @@ clean: src/rfilters/CMakeFiles/lanczos.dir/clean
 # Target rules for target src/rfilters/CMakeFiles/mitchell.dir
 
 # All Build rule for target.
-src/rfilters/CMakeFiles/mitchell.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/rfilters/CMakeFiles/mitchell.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/rfilters/CMakeFiles/mitchell.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/rfilters/CMakeFiles/mitchell.dir/build.make src/rfilters/CMakeFiles/mitchell.dir/depend
 	$(MAKE) -f src/rfilters/CMakeFiles/mitchell.dir/build.make src/rfilters/CMakeFiles/mitchell.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  23
@@ -3588,8 +3551,8 @@ clean: src/rfilters/CMakeFiles/mitchell.dir/clean
 # Target rules for target src/rfilters/CMakeFiles/tent.dir
 
 # All Build rule for target.
-src/rfilters/CMakeFiles/tent.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/rfilters/CMakeFiles/tent.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/rfilters/CMakeFiles/tent.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/rfilters/CMakeFiles/tent.dir/build.make src/rfilters/CMakeFiles/tent.dir/depend
 	$(MAKE) -f src/rfilters/CMakeFiles/tent.dir/build.make src/rfilters/CMakeFiles/tent.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  93
@@ -3646,9 +3609,9 @@ src/films/preinstall:
 # Target rules for target src/films/CMakeFiles/hdrfilm.dir
 
 # All Build rule for target.
+src/films/CMakeFiles/hdrfilm.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 src/films/CMakeFiles/hdrfilm.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 src/films/CMakeFiles/hdrfilm.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
-src/films/CMakeFiles/hdrfilm.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 	$(MAKE) -f src/films/CMakeFiles/hdrfilm.dir/build.make src/films/CMakeFiles/hdrfilm.dir/depend
 	$(MAKE) -f src/films/CMakeFiles/hdrfilm.dir/build.make src/films/CMakeFiles/hdrfilm.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  15
@@ -3683,9 +3646,9 @@ clean: src/films/CMakeFiles/hdrfilm.dir/clean
 # Target rules for target src/films/CMakeFiles/ldrfilm.dir
 
 # All Build rule for target.
+src/films/CMakeFiles/ldrfilm.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 src/films/CMakeFiles/ldrfilm.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 src/films/CMakeFiles/ldrfilm.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
-src/films/CMakeFiles/ldrfilm.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 	$(MAKE) -f src/films/CMakeFiles/ldrfilm.dir/build.make src/films/CMakeFiles/ldrfilm.dir/depend
 	$(MAKE) -f src/films/CMakeFiles/ldrfilm.dir/build.make src/films/CMakeFiles/ldrfilm.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -3720,8 +3683,8 @@ clean: src/films/CMakeFiles/ldrfilm.dir/clean
 # Target rules for target src/films/CMakeFiles/mfilm.dir
 
 # All Build rule for target.
-src/films/CMakeFiles/mfilm.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/films/CMakeFiles/mfilm.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/films/CMakeFiles/mfilm.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/films/CMakeFiles/mfilm.dir/all: src/films/CMakeFiles/mfilm_pch.dir/all
 	$(MAKE) -f src/films/CMakeFiles/mfilm.dir/build.make src/films/CMakeFiles/mfilm.dir/depend
 	$(MAKE) -f src/films/CMakeFiles/mfilm.dir/build.make src/films/CMakeFiles/mfilm.dir/build
@@ -3788,8 +3751,8 @@ clean: src/films/CMakeFiles/mfilm_pch.dir/clean
 # Target rules for target src/films/CMakeFiles/tiledhdrfilm.dir
 
 # All Build rule for target.
-src/films/CMakeFiles/tiledhdrfilm.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/films/CMakeFiles/tiledhdrfilm.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/films/CMakeFiles/tiledhdrfilm.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/films/CMakeFiles/tiledhdrfilm.dir/build.make src/films/CMakeFiles/tiledhdrfilm.dir/depend
 	$(MAKE) -f src/films/CMakeFiles/tiledhdrfilm.dir/build.make src/films/CMakeFiles/tiledhdrfilm.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -3855,8 +3818,8 @@ src/sensors/preinstall:
 # Target rules for target src/sensors/CMakeFiles/fluencemeter.dir
 
 # All Build rule for target.
-src/sensors/CMakeFiles/fluencemeter.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/sensors/CMakeFiles/fluencemeter.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/sensors/CMakeFiles/fluencemeter.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/sensors/CMakeFiles/fluencemeter.dir/build.make src/sensors/CMakeFiles/fluencemeter.dir/depend
 	$(MAKE) -f src/sensors/CMakeFiles/fluencemeter.dir/build.make src/sensors/CMakeFiles/fluencemeter.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -3891,8 +3854,8 @@ clean: src/sensors/CMakeFiles/fluencemeter.dir/clean
 # Target rules for target src/sensors/CMakeFiles/irradiancemeter.dir
 
 # All Build rule for target.
-src/sensors/CMakeFiles/irradiancemeter.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/sensors/CMakeFiles/irradiancemeter.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/sensors/CMakeFiles/irradiancemeter.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/sensors/CMakeFiles/irradiancemeter.dir/build.make src/sensors/CMakeFiles/irradiancemeter.dir/depend
 	$(MAKE) -f src/sensors/CMakeFiles/irradiancemeter.dir/build.make src/sensors/CMakeFiles/irradiancemeter.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -3927,11 +3890,11 @@ clean: src/sensors/CMakeFiles/irradiancemeter.dir/clean
 # Target rules for target src/sensors/CMakeFiles/orthographic.dir
 
 # All Build rule for target.
-src/sensors/CMakeFiles/orthographic.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/sensors/CMakeFiles/orthographic.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/sensors/CMakeFiles/orthographic.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/sensors/CMakeFiles/orthographic.dir/build.make src/sensors/CMakeFiles/orthographic.dir/depend
 	$(MAKE) -f src/sensors/CMakeFiles/orthographic.dir/build.make src/sensors/CMakeFiles/orthographic.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  79
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
 	@echo "Built target orthographic"
 .PHONY : src/sensors/CMakeFiles/orthographic.dir/all
 
@@ -3941,7 +3904,7 @@ all: src/sensors/CMakeFiles/orthographic.dir/all
 
 # Build rule for subdir invocation for target.
 src/sensors/CMakeFiles/orthographic.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 21
 	$(MAKE) -f CMakeFiles/Makefile2 src/sensors/CMakeFiles/orthographic.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/sensors/CMakeFiles/orthographic.dir/rule
@@ -3963,8 +3926,8 @@ clean: src/sensors/CMakeFiles/orthographic.dir/clean
 # Target rules for target src/sensors/CMakeFiles/perspective.dir
 
 # All Build rule for target.
-src/sensors/CMakeFiles/perspective.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/sensors/CMakeFiles/perspective.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/sensors/CMakeFiles/perspective.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/sensors/CMakeFiles/perspective.dir/build.make src/sensors/CMakeFiles/perspective.dir/depend
 	$(MAKE) -f src/sensors/CMakeFiles/perspective.dir/build.make src/sensors/CMakeFiles/perspective.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -3999,11 +3962,11 @@ clean: src/sensors/CMakeFiles/perspective.dir/clean
 # Target rules for target src/sensors/CMakeFiles/perspective_rdist.dir
 
 # All Build rule for target.
-src/sensors/CMakeFiles/perspective_rdist.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/sensors/CMakeFiles/perspective_rdist.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/sensors/CMakeFiles/perspective_rdist.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/sensors/CMakeFiles/perspective_rdist.dir/build.make src/sensors/CMakeFiles/perspective_rdist.dir/depend
 	$(MAKE) -f src/sensors/CMakeFiles/perspective_rdist.dir/build.make src/sensors/CMakeFiles/perspective_rdist.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  80
 	@echo "Built target perspective_rdist"
 .PHONY : src/sensors/CMakeFiles/perspective_rdist.dir/all
 
@@ -4013,7 +3976,7 @@ all: src/sensors/CMakeFiles/perspective_rdist.dir/all
 
 # Build rule for subdir invocation for target.
 src/sensors/CMakeFiles/perspective_rdist.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 src/sensors/CMakeFiles/perspective_rdist.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/sensors/CMakeFiles/perspective_rdist.dir/rule
@@ -4035,8 +3998,8 @@ clean: src/sensors/CMakeFiles/perspective_rdist.dir/clean
 # Target rules for target src/sensors/CMakeFiles/radiancemeter.dir
 
 # All Build rule for target.
-src/sensors/CMakeFiles/radiancemeter.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/sensors/CMakeFiles/radiancemeter.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/sensors/CMakeFiles/radiancemeter.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/sensors/CMakeFiles/radiancemeter.dir/build.make src/sensors/CMakeFiles/radiancemeter.dir/depend
 	$(MAKE) -f src/sensors/CMakeFiles/radiancemeter.dir/build.make src/sensors/CMakeFiles/radiancemeter.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -4071,8 +4034,8 @@ clean: src/sensors/CMakeFiles/radiancemeter.dir/clean
 # Target rules for target src/sensors/CMakeFiles/spherical.dir
 
 # All Build rule for target.
-src/sensors/CMakeFiles/spherical.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/sensors/CMakeFiles/spherical.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/sensors/CMakeFiles/spherical.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/sensors/CMakeFiles/spherical.dir/build.make src/sensors/CMakeFiles/spherical.dir/depend
 	$(MAKE) -f src/sensors/CMakeFiles/spherical.dir/build.make src/sensors/CMakeFiles/spherical.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -4107,8 +4070,8 @@ clean: src/sensors/CMakeFiles/spherical.dir/clean
 # Target rules for target src/sensors/CMakeFiles/telecentric.dir
 
 # All Build rule for target.
-src/sensors/CMakeFiles/telecentric.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/sensors/CMakeFiles/telecentric.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/sensors/CMakeFiles/telecentric.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/sensors/CMakeFiles/telecentric.dir/build.make src/sensors/CMakeFiles/telecentric.dir/depend
 	$(MAKE) -f src/sensors/CMakeFiles/telecentric.dir/build.make src/sensors/CMakeFiles/telecentric.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -4143,8 +4106,8 @@ clean: src/sensors/CMakeFiles/telecentric.dir/clean
 # Target rules for target src/sensors/CMakeFiles/thinlens.dir
 
 # All Build rule for target.
-src/sensors/CMakeFiles/thinlens.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/sensors/CMakeFiles/thinlens.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/sensors/CMakeFiles/thinlens.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/sensors/CMakeFiles/thinlens.dir/build.make src/sensors/CMakeFiles/thinlens.dir/depend
 	$(MAKE) -f src/sensors/CMakeFiles/thinlens.dir/build.make src/sensors/CMakeFiles/thinlens.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -4213,8 +4176,8 @@ src/emitters/preinstall:
 # Target rules for target src/emitters/CMakeFiles/area.dir
 
 # All Build rule for target.
-src/emitters/CMakeFiles/area.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/emitters/CMakeFiles/area.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/emitters/CMakeFiles/area.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/emitters/CMakeFiles/area.dir/build.make src/emitters/CMakeFiles/area.dir/depend
 	$(MAKE) -f src/emitters/CMakeFiles/area.dir/build.make src/emitters/CMakeFiles/area.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -4249,8 +4212,8 @@ clean: src/emitters/CMakeFiles/area.dir/clean
 # Target rules for target src/emitters/CMakeFiles/collimated.dir
 
 # All Build rule for target.
-src/emitters/CMakeFiles/collimated.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/emitters/CMakeFiles/collimated.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/emitters/CMakeFiles/collimated.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/emitters/CMakeFiles/collimated.dir/build.make src/emitters/CMakeFiles/collimated.dir/depend
 	$(MAKE) -f src/emitters/CMakeFiles/collimated.dir/build.make src/emitters/CMakeFiles/collimated.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -4285,8 +4248,8 @@ clean: src/emitters/CMakeFiles/collimated.dir/clean
 # Target rules for target src/emitters/CMakeFiles/constant.dir
 
 # All Build rule for target.
-src/emitters/CMakeFiles/constant.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/emitters/CMakeFiles/constant.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/emitters/CMakeFiles/constant.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/emitters/CMakeFiles/constant.dir/build.make src/emitters/CMakeFiles/constant.dir/depend
 	$(MAKE) -f src/emitters/CMakeFiles/constant.dir/build.make src/emitters/CMakeFiles/constant.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -4321,8 +4284,8 @@ clean: src/emitters/CMakeFiles/constant.dir/clean
 # Target rules for target src/emitters/CMakeFiles/directional.dir
 
 # All Build rule for target.
-src/emitters/CMakeFiles/directional.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/emitters/CMakeFiles/directional.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/emitters/CMakeFiles/directional.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/emitters/CMakeFiles/directional.dir/build.make src/emitters/CMakeFiles/directional.dir/depend
 	$(MAKE) -f src/emitters/CMakeFiles/directional.dir/build.make src/emitters/CMakeFiles/directional.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -4357,9 +4320,9 @@ clean: src/emitters/CMakeFiles/directional.dir/clean
 # Target rules for target src/emitters/CMakeFiles/envmap.dir
 
 # All Build rule for target.
+src/emitters/CMakeFiles/envmap.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 src/emitters/CMakeFiles/envmap.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 src/emitters/CMakeFiles/envmap.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
-src/emitters/CMakeFiles/envmap.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 	$(MAKE) -f src/emitters/CMakeFiles/envmap.dir/build.make src/emitters/CMakeFiles/envmap.dir/depend
 	$(MAKE) -f src/emitters/CMakeFiles/envmap.dir/build.make src/emitters/CMakeFiles/envmap.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  10
@@ -4394,8 +4357,8 @@ clean: src/emitters/CMakeFiles/envmap.dir/clean
 # Target rules for target src/emitters/CMakeFiles/point.dir
 
 # All Build rule for target.
-src/emitters/CMakeFiles/point.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/emitters/CMakeFiles/point.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/emitters/CMakeFiles/point.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/emitters/CMakeFiles/point.dir/build.make src/emitters/CMakeFiles/point.dir/depend
 	$(MAKE) -f src/emitters/CMakeFiles/point.dir/build.make src/emitters/CMakeFiles/point.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -4430,8 +4393,8 @@ clean: src/emitters/CMakeFiles/point.dir/clean
 # Target rules for target src/emitters/CMakeFiles/sky.dir
 
 # All Build rule for target.
-src/emitters/CMakeFiles/sky.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/emitters/CMakeFiles/sky.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/emitters/CMakeFiles/sky.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/emitters/CMakeFiles/sky.dir/all: src/emitters/CMakeFiles/sky_pch.dir/all
 	$(MAKE) -f src/emitters/CMakeFiles/sky.dir/build.make src/emitters/CMakeFiles/sky.dir/depend
 	$(MAKE) -f src/emitters/CMakeFiles/sky.dir/build.make src/emitters/CMakeFiles/sky.dir/build
@@ -4498,9 +4461,9 @@ clean: src/emitters/CMakeFiles/sky_pch.dir/clean
 # Target rules for target src/emitters/CMakeFiles/spot.dir
 
 # All Build rule for target.
+src/emitters/CMakeFiles/spot.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 src/emitters/CMakeFiles/spot.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 src/emitters/CMakeFiles/spot.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
-src/emitters/CMakeFiles/spot.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 	$(MAKE) -f src/emitters/CMakeFiles/spot.dir/build.make src/emitters/CMakeFiles/spot.dir/depend
 	$(MAKE) -f src/emitters/CMakeFiles/spot.dir/build.make src/emitters/CMakeFiles/spot.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -4535,8 +4498,8 @@ clean: src/emitters/CMakeFiles/spot.dir/clean
 # Target rules for target src/emitters/CMakeFiles/sun.dir
 
 # All Build rule for target.
-src/emitters/CMakeFiles/sun.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/emitters/CMakeFiles/sun.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/emitters/CMakeFiles/sun.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/emitters/CMakeFiles/sun.dir/build.make src/emitters/CMakeFiles/sun.dir/depend
 	$(MAKE) -f src/emitters/CMakeFiles/sun.dir/build.make src/emitters/CMakeFiles/sun.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -4571,8 +4534,8 @@ clean: src/emitters/CMakeFiles/sun.dir/clean
 # Target rules for target src/emitters/CMakeFiles/sunsky.dir
 
 # All Build rule for target.
-src/emitters/CMakeFiles/sunsky.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/emitters/CMakeFiles/sunsky.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/emitters/CMakeFiles/sunsky.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/emitters/CMakeFiles/sunsky.dir/build.make src/emitters/CMakeFiles/sunsky.dir/depend
 	$(MAKE) -f src/emitters/CMakeFiles/sunsky.dir/build.make src/emitters/CMakeFiles/sunsky.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -4624,8 +4587,8 @@ src/medium/preinstall:
 # Target rules for target src/medium/CMakeFiles/heterogeneous.dir
 
 # All Build rule for target.
-src/medium/CMakeFiles/heterogeneous.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/medium/CMakeFiles/heterogeneous.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/medium/CMakeFiles/heterogeneous.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/medium/CMakeFiles/heterogeneous.dir/build.make src/medium/CMakeFiles/heterogeneous.dir/depend
 	$(MAKE) -f src/medium/CMakeFiles/heterogeneous.dir/build.make src/medium/CMakeFiles/heterogeneous.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -4660,8 +4623,8 @@ clean: src/medium/CMakeFiles/heterogeneous.dir/clean
 # Target rules for target src/medium/CMakeFiles/homogeneous.dir
 
 # All Build rule for target.
-src/medium/CMakeFiles/homogeneous.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/medium/CMakeFiles/homogeneous.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/medium/CMakeFiles/homogeneous.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/medium/CMakeFiles/homogeneous.dir/build.make src/medium/CMakeFiles/homogeneous.dir/depend
 	$(MAKE) -f src/medium/CMakeFiles/homogeneous.dir/build.make src/medium/CMakeFiles/homogeneous.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -4717,8 +4680,8 @@ src/volume/preinstall:
 # Target rules for target src/volume/CMakeFiles/constvolume.dir
 
 # All Build rule for target.
-src/volume/CMakeFiles/constvolume.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/volume/CMakeFiles/constvolume.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/volume/CMakeFiles/constvolume.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/volume/CMakeFiles/constvolume.dir/build.make src/volume/CMakeFiles/constvolume.dir/depend
 	$(MAKE) -f src/volume/CMakeFiles/constvolume.dir/build.make src/volume/CMakeFiles/constvolume.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -4753,8 +4716,8 @@ clean: src/volume/CMakeFiles/constvolume.dir/clean
 # Target rules for target src/volume/CMakeFiles/gridvolume.dir
 
 # All Build rule for target.
-src/volume/CMakeFiles/gridvolume.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/volume/CMakeFiles/gridvolume.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/volume/CMakeFiles/gridvolume.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/volume/CMakeFiles/gridvolume.dir/build.make src/volume/CMakeFiles/gridvolume.dir/depend
 	$(MAKE) -f src/volume/CMakeFiles/gridvolume.dir/build.make src/volume/CMakeFiles/gridvolume.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -4789,8 +4752,8 @@ clean: src/volume/CMakeFiles/gridvolume.dir/clean
 # Target rules for target src/volume/CMakeFiles/hgridvolume.dir
 
 # All Build rule for target.
-src/volume/CMakeFiles/hgridvolume.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/volume/CMakeFiles/hgridvolume.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/volume/CMakeFiles/hgridvolume.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/volume/CMakeFiles/hgridvolume.dir/build.make src/volume/CMakeFiles/hgridvolume.dir/depend
 	$(MAKE) -f src/volume/CMakeFiles/hgridvolume.dir/build.make src/volume/CMakeFiles/hgridvolume.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  16
@@ -4825,8 +4788,8 @@ clean: src/volume/CMakeFiles/hgridvolume.dir/clean
 # Target rules for target src/volume/CMakeFiles/volcache.dir
 
 # All Build rule for target.
-src/volume/CMakeFiles/volcache.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/volume/CMakeFiles/volcache.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/volume/CMakeFiles/volcache.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/volume/CMakeFiles/volcache.dir/build.make src/volume/CMakeFiles/volcache.dir/depend
 	$(MAKE) -f src/volume/CMakeFiles/volcache.dir/build.make src/volume/CMakeFiles/volcache.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -4877,8 +4840,8 @@ src/subsurface/preinstall:
 # Target rules for target src/subsurface/CMakeFiles/dipole.dir
 
 # All Build rule for target.
-src/subsurface/CMakeFiles/dipole.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/subsurface/CMakeFiles/dipole.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/subsurface/CMakeFiles/dipole.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/subsurface/CMakeFiles/dipole.dir/all: src/subsurface/CMakeFiles/dipole_pch.dir/all
 	$(MAKE) -f src/subsurface/CMakeFiles/dipole.dir/build.make src/subsurface/CMakeFiles/dipole.dir/depend
 	$(MAKE) -f src/subsurface/CMakeFiles/dipole.dir/build.make src/subsurface/CMakeFiles/dipole.dir/build
@@ -4972,9 +4935,9 @@ src/textures/preinstall:
 # Target rules for target src/textures/CMakeFiles/bitmap.dir
 
 # All Build rule for target.
+src/textures/CMakeFiles/bitmap.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 src/textures/CMakeFiles/bitmap.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 src/textures/CMakeFiles/bitmap.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
-src/textures/CMakeFiles/bitmap.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 	$(MAKE) -f src/textures/CMakeFiles/bitmap.dir/build.make src/textures/CMakeFiles/bitmap.dir/depend
 	$(MAKE) -f src/textures/CMakeFiles/bitmap.dir/build.make src/textures/CMakeFiles/bitmap.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  3
@@ -5009,8 +4972,8 @@ clean: src/textures/CMakeFiles/bitmap.dir/clean
 # Target rules for target src/textures/CMakeFiles/checkerboard.dir
 
 # All Build rule for target.
-src/textures/CMakeFiles/checkerboard.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/textures/CMakeFiles/checkerboard.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/textures/CMakeFiles/checkerboard.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/textures/CMakeFiles/checkerboard.dir/build.make src/textures/CMakeFiles/checkerboard.dir/depend
 	$(MAKE) -f src/textures/CMakeFiles/checkerboard.dir/build.make src/textures/CMakeFiles/checkerboard.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -5045,8 +5008,8 @@ clean: src/textures/CMakeFiles/checkerboard.dir/clean
 # Target rules for target src/textures/CMakeFiles/curvature.dir
 
 # All Build rule for target.
-src/textures/CMakeFiles/curvature.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/textures/CMakeFiles/curvature.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/textures/CMakeFiles/curvature.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/textures/CMakeFiles/curvature.dir/build.make src/textures/CMakeFiles/curvature.dir/depend
 	$(MAKE) -f src/textures/CMakeFiles/curvature.dir/build.make src/textures/CMakeFiles/curvature.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -5081,8 +5044,8 @@ clean: src/textures/CMakeFiles/curvature.dir/clean
 # Target rules for target src/textures/CMakeFiles/gridtexture.dir
 
 # All Build rule for target.
-src/textures/CMakeFiles/gridtexture.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/textures/CMakeFiles/gridtexture.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/textures/CMakeFiles/gridtexture.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/textures/CMakeFiles/gridtexture.dir/build.make src/textures/CMakeFiles/gridtexture.dir/depend
 	$(MAKE) -f src/textures/CMakeFiles/gridtexture.dir/build.make src/textures/CMakeFiles/gridtexture.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  12
@@ -5117,9 +5080,9 @@ clean: src/textures/CMakeFiles/gridtexture.dir/clean
 # Target rules for target src/textures/CMakeFiles/scale.dir
 
 # All Build rule for target.
+src/textures/CMakeFiles/scale.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 src/textures/CMakeFiles/scale.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 src/textures/CMakeFiles/scale.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
-src/textures/CMakeFiles/scale.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 	$(MAKE) -f src/textures/CMakeFiles/scale.dir/build.make src/textures/CMakeFiles/scale.dir/depend
 	$(MAKE) -f src/textures/CMakeFiles/scale.dir/build.make src/textures/CMakeFiles/scale.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -5154,8 +5117,8 @@ clean: src/textures/CMakeFiles/scale.dir/clean
 # Target rules for target src/textures/CMakeFiles/vertexcolors.dir
 
 # All Build rule for target.
-src/textures/CMakeFiles/vertexcolors.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/textures/CMakeFiles/vertexcolors.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/textures/CMakeFiles/vertexcolors.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/textures/CMakeFiles/vertexcolors.dir/build.make src/textures/CMakeFiles/vertexcolors.dir/depend
 	$(MAKE) -f src/textures/CMakeFiles/vertexcolors.dir/build.make src/textures/CMakeFiles/vertexcolors.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -5190,8 +5153,8 @@ clean: src/textures/CMakeFiles/vertexcolors.dir/clean
 # Target rules for target src/textures/CMakeFiles/wireframe.dir
 
 # All Build rule for target.
-src/textures/CMakeFiles/wireframe.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/textures/CMakeFiles/wireframe.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/textures/CMakeFiles/wireframe.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/textures/CMakeFiles/wireframe.dir/build.make src/textures/CMakeFiles/wireframe.dir/depend
 	$(MAKE) -f src/textures/CMakeFiles/wireframe.dir/build.make src/textures/CMakeFiles/wireframe.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  100
@@ -5282,8 +5245,8 @@ src/integrators/preinstall:
 # Target rules for target src/integrators/CMakeFiles/adaptive.dir
 
 # All Build rule for target.
-src/integrators/CMakeFiles/adaptive.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/integrators/CMakeFiles/adaptive.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/integrators/CMakeFiles/adaptive.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/integrators/CMakeFiles/adaptive.dir/build.make src/integrators/CMakeFiles/adaptive.dir/depend
 	$(MAKE) -f src/integrators/CMakeFiles/adaptive.dir/build.make src/integrators/CMakeFiles/adaptive.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -5318,8 +5281,8 @@ clean: src/integrators/CMakeFiles/adaptive.dir/clean
 # Target rules for target src/integrators/CMakeFiles/ao.dir
 
 # All Build rule for target.
-src/integrators/CMakeFiles/ao.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/integrators/CMakeFiles/ao.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/integrators/CMakeFiles/ao.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/integrators/CMakeFiles/ao.dir/build.make src/integrators/CMakeFiles/ao.dir/depend
 	$(MAKE) -f src/integrators/CMakeFiles/ao.dir/build.make src/integrators/CMakeFiles/ao.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -5354,8 +5317,8 @@ clean: src/integrators/CMakeFiles/ao.dir/clean
 # Target rules for target src/integrators/CMakeFiles/bdpt.dir
 
 # All Build rule for target.
-src/integrators/CMakeFiles/bdpt.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/integrators/CMakeFiles/bdpt.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/integrators/CMakeFiles/bdpt.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/integrators/CMakeFiles/bdpt.dir/all: src/libbidir/CMakeFiles/mitsuba-bidir.dir/all
 src/integrators/CMakeFiles/bdpt.dir/all: src/integrators/CMakeFiles/bdpt_pch.dir/all
 	$(MAKE) -f src/integrators/CMakeFiles/bdpt.dir/build.make src/integrators/CMakeFiles/bdpt.dir/depend
@@ -5423,8 +5386,8 @@ clean: src/integrators/CMakeFiles/bdpt_pch.dir/clean
 # Target rules for target src/integrators/CMakeFiles/direct.dir
 
 # All Build rule for target.
-src/integrators/CMakeFiles/direct.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/integrators/CMakeFiles/direct.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/integrators/CMakeFiles/direct.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/integrators/CMakeFiles/direct.dir/build.make src/integrators/CMakeFiles/direct.dir/depend
 	$(MAKE) -f src/integrators/CMakeFiles/direct.dir/build.make src/integrators/CMakeFiles/direct.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -5459,8 +5422,8 @@ clean: src/integrators/CMakeFiles/direct.dir/clean
 # Target rules for target src/integrators/CMakeFiles/erpt.dir
 
 # All Build rule for target.
-src/integrators/CMakeFiles/erpt.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/integrators/CMakeFiles/erpt.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/integrators/CMakeFiles/erpt.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/integrators/CMakeFiles/erpt.dir/all: src/libbidir/CMakeFiles/mitsuba-bidir.dir/all
 src/integrators/CMakeFiles/erpt.dir/all: src/integrators/CMakeFiles/erpt_pch.dir/all
 	$(MAKE) -f src/integrators/CMakeFiles/erpt.dir/build.make src/integrators/CMakeFiles/erpt.dir/depend
@@ -5528,8 +5491,8 @@ clean: src/integrators/CMakeFiles/erpt_pch.dir/clean
 # Target rules for target src/integrators/CMakeFiles/field.dir
 
 # All Build rule for target.
-src/integrators/CMakeFiles/field.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/integrators/CMakeFiles/field.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/integrators/CMakeFiles/field.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/integrators/CMakeFiles/field.dir/build.make src/integrators/CMakeFiles/field.dir/depend
 	$(MAKE) -f src/integrators/CMakeFiles/field.dir/build.make src/integrators/CMakeFiles/field.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -5564,8 +5527,8 @@ clean: src/integrators/CMakeFiles/field.dir/clean
 # Target rules for target src/integrators/CMakeFiles/irrcache.dir
 
 # All Build rule for target.
-src/integrators/CMakeFiles/irrcache.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/integrators/CMakeFiles/irrcache.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/integrators/CMakeFiles/irrcache.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/integrators/CMakeFiles/irrcache.dir/all: src/integrators/CMakeFiles/irrcache_pch.dir/all
 	$(MAKE) -f src/integrators/CMakeFiles/irrcache.dir/build.make src/integrators/CMakeFiles/irrcache.dir/depend
 	$(MAKE) -f src/integrators/CMakeFiles/irrcache.dir/build.make src/integrators/CMakeFiles/irrcache.dir/build
@@ -5632,8 +5595,8 @@ clean: src/integrators/CMakeFiles/irrcache_pch.dir/clean
 # Target rules for target src/integrators/CMakeFiles/mlt.dir
 
 # All Build rule for target.
-src/integrators/CMakeFiles/mlt.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/integrators/CMakeFiles/mlt.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/integrators/CMakeFiles/mlt.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/integrators/CMakeFiles/mlt.dir/all: src/libbidir/CMakeFiles/mitsuba-bidir.dir/all
 src/integrators/CMakeFiles/mlt.dir/all: src/integrators/CMakeFiles/mlt_pch.dir/all
 	$(MAKE) -f src/integrators/CMakeFiles/mlt.dir/build.make src/integrators/CMakeFiles/mlt.dir/depend
@@ -5701,11 +5664,11 @@ clean: src/integrators/CMakeFiles/mlt_pch.dir/clean
 # Target rules for target src/integrators/CMakeFiles/multichannel.dir
 
 # All Build rule for target.
-src/integrators/CMakeFiles/multichannel.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/integrators/CMakeFiles/multichannel.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/integrators/CMakeFiles/multichannel.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/integrators/CMakeFiles/multichannel.dir/build.make src/integrators/CMakeFiles/multichannel.dir/depend
 	$(MAKE) -f src/integrators/CMakeFiles/multichannel.dir/build.make src/integrators/CMakeFiles/multichannel.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  78
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
 	@echo "Built target multichannel"
 .PHONY : src/integrators/CMakeFiles/multichannel.dir/all
 
@@ -5715,7 +5678,7 @@ all: src/integrators/CMakeFiles/multichannel.dir/all
 
 # Build rule for subdir invocation for target.
 src/integrators/CMakeFiles/multichannel.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 21
 	$(MAKE) -f CMakeFiles/Makefile2 src/integrators/CMakeFiles/multichannel.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/integrators/CMakeFiles/multichannel.dir/rule
@@ -5737,8 +5700,8 @@ clean: src/integrators/CMakeFiles/multichannel.dir/clean
 # Target rules for target src/integrators/CMakeFiles/path.dir
 
 # All Build rule for target.
-src/integrators/CMakeFiles/path.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/integrators/CMakeFiles/path.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/integrators/CMakeFiles/path.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/integrators/CMakeFiles/path.dir/build.make src/integrators/CMakeFiles/path.dir/depend
 	$(MAKE) -f src/integrators/CMakeFiles/path.dir/build.make src/integrators/CMakeFiles/path.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -5773,12 +5736,12 @@ clean: src/integrators/CMakeFiles/path.dir/clean
 # Target rules for target src/integrators/CMakeFiles/photonmapper.dir
 
 # All Build rule for target.
-src/integrators/CMakeFiles/photonmapper.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/integrators/CMakeFiles/photonmapper.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/integrators/CMakeFiles/photonmapper.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/integrators/CMakeFiles/photonmapper.dir/all: src/integrators/CMakeFiles/photonmapper_pch.dir/all
 	$(MAKE) -f src/integrators/CMakeFiles/photonmapper.dir/build.make src/integrators/CMakeFiles/photonmapper.dir/depend
 	$(MAKE) -f src/integrators/CMakeFiles/photonmapper.dir/build.make src/integrators/CMakeFiles/photonmapper.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  81
 	@echo "Built target photonmapper"
 .PHONY : src/integrators/CMakeFiles/photonmapper.dir/all
 
@@ -5813,13 +5776,13 @@ clean: src/integrators/CMakeFiles/photonmapper.dir/clean
 src/integrators/CMakeFiles/photonmapper_pch.dir/all:
 	$(MAKE) -f src/integrators/CMakeFiles/photonmapper_pch.dir/build.make src/integrators/CMakeFiles/photonmapper_pch.dir/depend
 	$(MAKE) -f src/integrators/CMakeFiles/photonmapper_pch.dir/build.make src/integrators/CMakeFiles/photonmapper_pch.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  81
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
 	@echo "Built target photonmapper_pch"
 .PHONY : src/integrators/CMakeFiles/photonmapper_pch.dir/all
 
 # Build rule for subdir invocation for target.
 src/integrators/CMakeFiles/photonmapper_pch.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 src/integrators/CMakeFiles/photonmapper_pch.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/integrators/CMakeFiles/photonmapper_pch.dir/rule
@@ -5841,11 +5804,11 @@ clean: src/integrators/CMakeFiles/photonmapper_pch.dir/clean
 # Target rules for target src/integrators/CMakeFiles/ppm.dir
 
 # All Build rule for target.
-src/integrators/CMakeFiles/ppm.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/integrators/CMakeFiles/ppm.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/integrators/CMakeFiles/ppm.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/integrators/CMakeFiles/ppm.dir/build.make src/integrators/CMakeFiles/ppm.dir/depend
 	$(MAKE) -f src/integrators/CMakeFiles/ppm.dir/build.make src/integrators/CMakeFiles/ppm.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  83
 	@echo "Built target ppm"
 .PHONY : src/integrators/CMakeFiles/ppm.dir/all
 
@@ -5855,7 +5818,7 @@ all: src/integrators/CMakeFiles/ppm.dir/all
 
 # Build rule for subdir invocation for target.
 src/integrators/CMakeFiles/ppm.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 src/integrators/CMakeFiles/ppm.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/integrators/CMakeFiles/ppm.dir/rule
@@ -5877,13 +5840,13 @@ clean: src/integrators/CMakeFiles/ppm.dir/clean
 # Target rules for target src/integrators/CMakeFiles/pssmlt.dir
 
 # All Build rule for target.
-src/integrators/CMakeFiles/pssmlt.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/integrators/CMakeFiles/pssmlt.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/integrators/CMakeFiles/pssmlt.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/integrators/CMakeFiles/pssmlt.dir/all: src/libbidir/CMakeFiles/mitsuba-bidir.dir/all
 src/integrators/CMakeFiles/pssmlt.dir/all: src/integrators/CMakeFiles/pssmlt_pch.dir/all
 	$(MAKE) -f src/integrators/CMakeFiles/pssmlt.dir/build.make src/integrators/CMakeFiles/pssmlt.dir/depend
 	$(MAKE) -f src/integrators/CMakeFiles/pssmlt.dir/build.make src/integrators/CMakeFiles/pssmlt.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  83
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  84
 	@echo "Built target pssmlt"
 .PHONY : src/integrators/CMakeFiles/pssmlt.dir/all
 
@@ -5893,7 +5856,7 @@ all: src/integrators/CMakeFiles/pssmlt.dir/all
 
 # Build rule for subdir invocation for target.
 src/integrators/CMakeFiles/pssmlt.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 26
 	$(MAKE) -f CMakeFiles/Makefile2 src/integrators/CMakeFiles/pssmlt.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/integrators/CMakeFiles/pssmlt.dir/rule
@@ -5918,13 +5881,13 @@ clean: src/integrators/CMakeFiles/pssmlt.dir/clean
 src/integrators/CMakeFiles/pssmlt_pch.dir/all:
 	$(MAKE) -f src/integrators/CMakeFiles/pssmlt_pch.dir/build.make src/integrators/CMakeFiles/pssmlt_pch.dir/depend
 	$(MAKE) -f src/integrators/CMakeFiles/pssmlt_pch.dir/build.make src/integrators/CMakeFiles/pssmlt_pch.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  84
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
 	@echo "Built target pssmlt_pch"
 .PHONY : src/integrators/CMakeFiles/pssmlt_pch.dir/all
 
 # Build rule for subdir invocation for target.
 src/integrators/CMakeFiles/pssmlt_pch.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 src/integrators/CMakeFiles/pssmlt_pch.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/integrators/CMakeFiles/pssmlt_pch.dir/rule
@@ -5946,12 +5909,12 @@ clean: src/integrators/CMakeFiles/pssmlt_pch.dir/clean
 # Target rules for target src/integrators/CMakeFiles/ptracer.dir
 
 # All Build rule for target.
-src/integrators/CMakeFiles/ptracer.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/integrators/CMakeFiles/ptracer.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/integrators/CMakeFiles/ptracer.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/integrators/CMakeFiles/ptracer.dir/all: src/integrators/CMakeFiles/ptracer_pch.dir/all
 	$(MAKE) -f src/integrators/CMakeFiles/ptracer.dir/build.make src/integrators/CMakeFiles/ptracer.dir/depend
 	$(MAKE) -f src/integrators/CMakeFiles/ptracer.dir/build.make src/integrators/CMakeFiles/ptracer.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  85
 	@echo "Built target ptracer"
 .PHONY : src/integrators/CMakeFiles/ptracer.dir/all
 
@@ -5986,13 +5949,13 @@ clean: src/integrators/CMakeFiles/ptracer.dir/clean
 src/integrators/CMakeFiles/ptracer_pch.dir/all:
 	$(MAKE) -f src/integrators/CMakeFiles/ptracer_pch.dir/build.make src/integrators/CMakeFiles/ptracer_pch.dir/depend
 	$(MAKE) -f src/integrators/CMakeFiles/ptracer_pch.dir/build.make src/integrators/CMakeFiles/ptracer_pch.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  85
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
 	@echo "Built target ptracer_pch"
 .PHONY : src/integrators/CMakeFiles/ptracer_pch.dir/all
 
 # Build rule for subdir invocation for target.
 src/integrators/CMakeFiles/ptracer_pch.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 src/integrators/CMakeFiles/ptracer_pch.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/integrators/CMakeFiles/ptracer_pch.dir/rule
@@ -6014,8 +5977,8 @@ clean: src/integrators/CMakeFiles/ptracer_pch.dir/clean
 # Target rules for target src/integrators/CMakeFiles/sppm.dir
 
 # All Build rule for target.
-src/integrators/CMakeFiles/sppm.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/integrators/CMakeFiles/sppm.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/integrators/CMakeFiles/sppm.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/integrators/CMakeFiles/sppm.dir/build.make src/integrators/CMakeFiles/sppm.dir/depend
 	$(MAKE) -f src/integrators/CMakeFiles/sppm.dir/build.make src/integrators/CMakeFiles/sppm.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -6050,8 +6013,8 @@ clean: src/integrators/CMakeFiles/sppm.dir/clean
 # Target rules for target src/integrators/CMakeFiles/volpath.dir
 
 # All Build rule for target.
-src/integrators/CMakeFiles/volpath.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/integrators/CMakeFiles/volpath.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/integrators/CMakeFiles/volpath.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/integrators/CMakeFiles/volpath.dir/build.make src/integrators/CMakeFiles/volpath.dir/depend
 	$(MAKE) -f src/integrators/CMakeFiles/volpath.dir/build.make src/integrators/CMakeFiles/volpath.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -6086,8 +6049,8 @@ clean: src/integrators/CMakeFiles/volpath.dir/clean
 # Target rules for target src/integrators/CMakeFiles/volpath_simple.dir
 
 # All Build rule for target.
-src/integrators/CMakeFiles/volpath_simple.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/integrators/CMakeFiles/volpath_simple.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/integrators/CMakeFiles/volpath_simple.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/integrators/CMakeFiles/volpath_simple.dir/build.make src/integrators/CMakeFiles/volpath_simple.dir/depend
 	$(MAKE) -f src/integrators/CMakeFiles/volpath_simple.dir/build.make src/integrators/CMakeFiles/volpath_simple.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  99
@@ -6122,9 +6085,9 @@ clean: src/integrators/CMakeFiles/volpath_simple.dir/clean
 # Target rules for target src/integrators/CMakeFiles/vpl.dir
 
 # All Build rule for target.
+src/integrators/CMakeFiles/vpl.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 src/integrators/CMakeFiles/vpl.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 src/integrators/CMakeFiles/vpl.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
-src/integrators/CMakeFiles/vpl.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
 	$(MAKE) -f src/integrators/CMakeFiles/vpl.dir/build.make src/integrators/CMakeFiles/vpl.dir/depend
 	$(MAKE) -f src/integrators/CMakeFiles/vpl.dir/build.make src/integrators/CMakeFiles/vpl.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -6192,8 +6155,8 @@ src/tests/preinstall:
 # Target rules for target src/tests/CMakeFiles/test_chisquare.dir
 
 # All Build rule for target.
-src/tests/CMakeFiles/test_chisquare.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/tests/CMakeFiles/test_chisquare.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/tests/CMakeFiles/test_chisquare.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/tests/CMakeFiles/test_chisquare.dir/build.make src/tests/CMakeFiles/test_chisquare.dir/depend
 	$(MAKE) -f src/tests/CMakeFiles/test_chisquare.dir/build.make src/tests/CMakeFiles/test_chisquare.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -6228,8 +6191,8 @@ clean: src/tests/CMakeFiles/test_chisquare.dir/clean
 # Target rules for target src/tests/CMakeFiles/test_dgeom.dir
 
 # All Build rule for target.
-src/tests/CMakeFiles/test_dgeom.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/tests/CMakeFiles/test_dgeom.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/tests/CMakeFiles/test_dgeom.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/tests/CMakeFiles/test_dgeom.dir/build.make src/tests/CMakeFiles/test_dgeom.dir/depend
 	$(MAKE) -f src/tests/CMakeFiles/test_dgeom.dir/build.make src/tests/CMakeFiles/test_dgeom.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -6264,8 +6227,8 @@ clean: src/tests/CMakeFiles/test_dgeom.dir/clean
 # Target rules for target src/tests/CMakeFiles/test_kd.dir
 
 # All Build rule for target.
-src/tests/CMakeFiles/test_kd.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/tests/CMakeFiles/test_kd.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/tests/CMakeFiles/test_kd.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/tests/CMakeFiles/test_kd.dir/build.make src/tests/CMakeFiles/test_kd.dir/depend
 	$(MAKE) -f src/tests/CMakeFiles/test_kd.dir/build.make src/tests/CMakeFiles/test_kd.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -6300,8 +6263,8 @@ clean: src/tests/CMakeFiles/test_kd.dir/clean
 # Target rules for target src/tests/CMakeFiles/test_la.dir
 
 # All Build rule for target.
-src/tests/CMakeFiles/test_la.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/tests/CMakeFiles/test_la.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/tests/CMakeFiles/test_la.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/tests/CMakeFiles/test_la.dir/build.make src/tests/CMakeFiles/test_la.dir/depend
 	$(MAKE) -f src/tests/CMakeFiles/test_la.dir/build.make src/tests/CMakeFiles/test_la.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  94
@@ -6336,8 +6299,8 @@ clean: src/tests/CMakeFiles/test_la.dir/clean
 # Target rules for target src/tests/CMakeFiles/test_quad.dir
 
 # All Build rule for target.
-src/tests/CMakeFiles/test_quad.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/tests/CMakeFiles/test_quad.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/tests/CMakeFiles/test_quad.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/tests/CMakeFiles/test_quad.dir/build.make src/tests/CMakeFiles/test_quad.dir/depend
 	$(MAKE) -f src/tests/CMakeFiles/test_quad.dir/build.make src/tests/CMakeFiles/test_quad.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -6372,8 +6335,8 @@ clean: src/tests/CMakeFiles/test_quad.dir/clean
 # Target rules for target src/tests/CMakeFiles/test_random.dir
 
 # All Build rule for target.
-src/tests/CMakeFiles/test_random.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/tests/CMakeFiles/test_random.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/tests/CMakeFiles/test_random.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/tests/CMakeFiles/test_random.dir/build.make src/tests/CMakeFiles/test_random.dir/depend
 	$(MAKE) -f src/tests/CMakeFiles/test_random.dir/build.make src/tests/CMakeFiles/test_random.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -6408,8 +6371,8 @@ clean: src/tests/CMakeFiles/test_random.dir/clean
 # Target rules for target src/tests/CMakeFiles/test_rtrans.dir
 
 # All Build rule for target.
-src/tests/CMakeFiles/test_rtrans.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/tests/CMakeFiles/test_rtrans.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/tests/CMakeFiles/test_rtrans.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/tests/CMakeFiles/test_rtrans.dir/build.make src/tests/CMakeFiles/test_rtrans.dir/depend
 	$(MAKE) -f src/tests/CMakeFiles/test_rtrans.dir/build.make src/tests/CMakeFiles/test_rtrans.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -6444,8 +6407,8 @@ clean: src/tests/CMakeFiles/test_rtrans.dir/clean
 # Target rules for target src/tests/CMakeFiles/test_samplers.dir
 
 # All Build rule for target.
-src/tests/CMakeFiles/test_samplers.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/tests/CMakeFiles/test_samplers.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/tests/CMakeFiles/test_samplers.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/tests/CMakeFiles/test_samplers.dir/build.make src/tests/CMakeFiles/test_samplers.dir/depend
 	$(MAKE) -f src/tests/CMakeFiles/test_samplers.dir/build.make src/tests/CMakeFiles/test_samplers.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  95
@@ -6480,8 +6443,8 @@ clean: src/tests/CMakeFiles/test_samplers.dir/clean
 # Target rules for target src/tests/CMakeFiles/test_sh.dir
 
 # All Build rule for target.
-src/tests/CMakeFiles/test_sh.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/tests/CMakeFiles/test_sh.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/tests/CMakeFiles/test_sh.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/tests/CMakeFiles/test_sh.dir/build.make src/tests/CMakeFiles/test_sh.dir/depend
 	$(MAKE) -f src/tests/CMakeFiles/test_sh.dir/build.make src/tests/CMakeFiles/test_sh.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -6516,8 +6479,8 @@ clean: src/tests/CMakeFiles/test_sh.dir/clean
 # Target rules for target src/tests/CMakeFiles/test_spectrum.dir
 
 # All Build rule for target.
-src/tests/CMakeFiles/test_spectrum.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 src/tests/CMakeFiles/test_spectrum.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
+src/tests/CMakeFiles/test_spectrum.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/tests/CMakeFiles/test_spectrum.dir/build.make src/tests/CMakeFiles/test_spectrum.dir/depend
 	$(MAKE) -f src/tests/CMakeFiles/test_spectrum.dir/build.make src/tests/CMakeFiles/test_spectrum.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
