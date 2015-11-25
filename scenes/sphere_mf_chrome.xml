@@ -4,7 +4,6 @@
 
         <bsdf type="microfacet" id="chrome-micro-facet">
                 <rgb name="diffuseReflectance" value="0.0027, 0.0025, 0.0031"/>
-                <rgb name="specularReflectance" value="0.0428, 0.0298, 0.0143"/>
                 <rgb name="A" value="986.846723, 771.035507, 696.134589"/>
                 <float name="B" value="64661.258846"/>
 				<float name="C" value="1.905420"/>

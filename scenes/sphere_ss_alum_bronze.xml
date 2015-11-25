@@ -7,7 +7,6 @@
                 <rgb name="A" value="164.167455, 120.726144, 86.665430"/>
                 <float name="B" value="16711.814477"/>
 				<float name="C" value="0.663506"/>
-				<float name="roughness" value="0.0367"/>
                 <float name="F0" value="1.560827"/>
         </bsdf>
 

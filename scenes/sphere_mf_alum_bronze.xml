@@ -4,7 +4,6 @@
 
         <bsdf type="microfacet" id="alum-bronze-micro-facet">
                 <rgb name="diffuseReflectance" value="0.0245, 0.0223, 0.0162"/>
-                <rgb name="specularReflectance" value="51.714552, 37.932695, 27.373094"/>
                 <rgb name="A" value="51.714552, 37.932695, 27.373094"/>
                 <float name="B" value="10482.133785"/>
 				<float name="C" value="0.816737"/>
