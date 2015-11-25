@@ -56,7 +56,7 @@ public:
 		{
 		  // compute the S(f) function
 		  const Float f2 = 1.0f-cosThetaH;
-		  const Spectrum S = m_A/std::pow(1.0f+m_B*f2, m_C);
+		  const Spectrum S = m_A/pow(1.0f+m_B*f2, m_C);
 
 		  // compute shadowing and masking
 		  const Float Hwi = dot(bRec.wi, H);
@@ -66,7 +66,7 @@ public:
 					   2.0f * cosThetaH * Frame::cosTheta(bRec.wo) / Hwo));
 
 		  // compute Fresnel
-		  const Float F = fresnel(m_F0, Hwi);
+		  const Float F = fresnel(m_F0, cosThetaH);
 
 		  // evaluate the MicroFacet model
 		  result += INV_PI * S * G * F / (Frame::cosTheta(bRec.wi));
@@ -99,11 +99,11 @@ public:
 		  if (m_C == 1.0f)
 			MhA = m_B/(2.0f*M_PI*log10(1.0f+m_B));
 		  else
-			MhA = m_B*(m_C-1.0f)/(2.0f*M_PI*(1.0f-std::pow(1.0f+m_B, 1.0f-m_C)));
+			MhA = m_B*(m_C-1.0f)/(2.0f*M_PI*(1.0f-pow(1.0f+m_B, 1.0f-m_C)));
 
 		  /* proposal densify function of the incident direction*/
 		  const Float f2 = 1.0f-Frame::cosTheta(H);
-		  specProb = (MhA / std::pow(1.0f+m_B*f2, m_C)) / (4.0f * absDot(bRec.wo, H));
+		  specProb = (MhA / pow(1.0f+m_B*f2, m_C)) / (4.0f * absDot(bRec.wo, H));
 		}
 		return specProb;
 	}
@@ -115,7 +115,7 @@ public:
 		if (m_C == 1.0f)
 			cosThetaM = (1.0f + m_B - math::fastexp(sample.x*log10(1.0f+m_B)))/m_B;
 		else
-			cosThetaM = (1.0f + m_B - std::pow(1.0f+sample.x*(std::pow(1.0f+m_B, 1.0f-m_C) - 1.0f), -1.0f/(m_C-1.0f)))/m_B;
+			cosThetaM = (1.0f + m_B - pow(1.0f+sample.x*(std::pow(1.0f+m_B, 1.0f-m_C) - 1.0f), -1.0f/(m_C-1.0f)))/m_B;
 		const Float sinThetaM = std::sqrt(std::max((Float) 0.0f, 1.0f - cosThetaM*cosThetaM));
 
 		Float phiM = (2.0f * M_PI) * sample.y;

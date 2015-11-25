@@ -57,8 +57,8 @@ CMAKE_BINARY_DIR = /home/pony/mitsuba
 
 # All Build rule for target.
 CMakeFiles/cooktorrance.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
-CMakeFiles/cooktorrance.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 CMakeFiles/cooktorrance.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
+CMakeFiles/cooktorrance.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 	$(MAKE) -f CMakeFiles/cooktorrance.dir/build.make CMakeFiles/cooktorrance.dir/depend
 	$(MAKE) -f CMakeFiles/cooktorrance.dir/build.make CMakeFiles/cooktorrance.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -71,7 +71,7 @@ all: CMakeFiles/cooktorrance.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/cooktorrance.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 28
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/cooktorrance.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : CMakeFiles/cooktorrance.dir/rule
@@ -94,8 +94,8 @@ clean: CMakeFiles/cooktorrance.dir/clean
 
 # All Build rule for target.
 CMakeFiles/merl.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
-CMakeFiles/merl.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 CMakeFiles/merl.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
+CMakeFiles/merl.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 	$(MAKE) -f CMakeFiles/merl.dir/build.make CMakeFiles/merl.dir/depend
 	$(MAKE) -f CMakeFiles/merl.dir/build.make CMakeFiles/merl.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  21
@@ -108,7 +108,7 @@ all: CMakeFiles/merl.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/merl.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 28
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 29
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/merl.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : CMakeFiles/merl.dir/rule
@@ -131,8 +131,8 @@ clean: CMakeFiles/merl.dir/clean
 
 # All Build rule for target.
 CMakeFiles/microfacet.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
-CMakeFiles/microfacet.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 CMakeFiles/microfacet.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
+CMakeFiles/microfacet.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 	$(MAKE) -f CMakeFiles/microfacet.dir/build.make CMakeFiles/microfacet.dir/depend
 	$(MAKE) -f CMakeFiles/microfacet.dir/build.make CMakeFiles/microfacet.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -145,7 +145,7 @@ all: CMakeFiles/microfacet.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/microfacet.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 28
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/microfacet.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : CMakeFiles/microfacet.dir/rule
@@ -164,49 +164,12 @@ clean: CMakeFiles/microfacet.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/sgd.dir
-
-# All Build rule for target.
-CMakeFiles/sgd.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
-CMakeFiles/sgd.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
-CMakeFiles/sgd.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
-	$(MAKE) -f CMakeFiles/sgd.dir/build.make CMakeFiles/sgd.dir/depend
-	$(MAKE) -f CMakeFiles/sgd.dir/build.make CMakeFiles/sgd.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
-	@echo "Built target sgd"
-.PHONY : CMakeFiles/sgd.dir/all
-
-# Include target in all.
-all: CMakeFiles/sgd.dir/all
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/sgd.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 27
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/sgd.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
-.PHONY : CMakeFiles/sgd.dir/rule
-
-# Convenience name for target.
-sgd: CMakeFiles/sgd.dir/rule
-.PHONY : sgd
-
-# clean rule for target.
-CMakeFiles/sgd.dir/clean:
-	$(MAKE) -f CMakeFiles/sgd.dir/build.make CMakeFiles/sgd.dir/clean
-.PHONY : CMakeFiles/sgd.dir/clean
-
-# clean rule for target.
-clean: CMakeFiles/sgd.dir/clean
-.PHONY : clean
-
-#=============================================================================
 # Target rules for target CMakeFiles/smoothsurface.dir
 
 # All Build rule for target.
 CMakeFiles/smoothsurface.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
-CMakeFiles/smoothsurface.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 CMakeFiles/smoothsurface.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
+CMakeFiles/smoothsurface.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 	$(MAKE) -f CMakeFiles/smoothsurface.dir/build.make CMakeFiles/smoothsurface.dir/depend
 	$(MAKE) -f CMakeFiles/smoothsurface.dir/build.make CMakeFiles/smoothsurface.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -219,7 +182,7 @@ all: CMakeFiles/smoothsurface.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/smoothsurface.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 28
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/smoothsurface.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : CMakeFiles/smoothsurface.dir/rule
@@ -259,13 +222,13 @@ data/schema/preinstall:
 data/schema/CMakeFiles/scene_schema.dir/all:
 	$(MAKE) -f data/schema/CMakeFiles/scene_schema.dir/build.make data/schema/CMakeFiles/scene_schema.dir/depend
 	$(MAKE) -f data/schema/CMakeFiles/scene_schema.dir/build.make data/schema/CMakeFiles/scene_schema.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  88
 	@echo "Built target scene_schema"
 .PHONY : data/schema/CMakeFiles/scene_schema.dir/all
 
 # Build rule for subdir invocation for target.
 data/schema/CMakeFiles/scene_schema.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 data/schema/CMakeFiles/scene_schema.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : data/schema/CMakeFiles/scene_schema.dir/rule
@@ -480,8 +443,8 @@ src/librender/preinstall:
 
 # All Build rule for target.
 src/librender/CMakeFiles/mitsuba-render.dir/all: data/schema/CMakeFiles/scene_schema.dir/all
-src/librender/CMakeFiles/mitsuba-render.dir/all: src/librender/CMakeFiles/mitsuba-render_pch.dir/all
 src/librender/CMakeFiles/mitsuba-render.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
+src/librender/CMakeFiles/mitsuba-render.dir/all: src/librender/CMakeFiles/mitsuba-render_pch.dir/all
 	$(MAKE) -f src/librender/CMakeFiles/mitsuba-render.dir/build.make src/librender/CMakeFiles/mitsuba-render.dir/depend
 	$(MAKE) -f src/librender/CMakeFiles/mitsuba-render.dir/build.make src/librender/CMakeFiles/mitsuba-render.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  46 47 48 49 50 51 52 53 54
@@ -494,7 +457,7 @@ all: src/librender/CMakeFiles/mitsuba-render.dir/all
 
 # Build rule for subdir invocation for target.
 src/librender/CMakeFiles/mitsuba-render.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 src/librender/CMakeFiles/mitsuba-render.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/librender/CMakeFiles/mitsuba-render.dir/rule
@@ -578,7 +541,7 @@ all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 
 # Build rule for subdir invocation for target.
 src/libhw/CMakeFiles/mitsuba-hw.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 28
 	$(MAKE) -f CMakeFiles/Makefile2 src/libhw/CMakeFiles/mitsuba-hw.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/libhw/CMakeFiles/mitsuba-hw.dir/rule
@@ -662,7 +625,7 @@ all: src/libbidir/CMakeFiles/mitsuba-bidir.dir/all
 
 # Build rule for subdir invocation for target.
 src/libbidir/CMakeFiles/mitsuba-bidir.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 25
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 26
 	$(MAKE) -f CMakeFiles/Makefile2 src/libbidir/CMakeFiles/mitsuba-bidir.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/libbidir/CMakeFiles/mitsuba-bidir.dir/rule
@@ -744,7 +707,7 @@ all: src/libpython/CMakeFiles/PyMitsuba.dir/all
 
 # Build rule for subdir invocation for target.
 src/libpython/CMakeFiles/PyMitsuba.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 src/libpython/CMakeFiles/PyMitsuba.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/libpython/CMakeFiles/PyMitsuba.dir/rule
@@ -803,7 +766,7 @@ all: src/mitsuba/CMakeFiles/mitsuba.dir/all
 
 # Build rule for subdir invocation for target.
 src/mitsuba/CMakeFiles/mitsuba.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 src/mitsuba/CMakeFiles/mitsuba.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/mitsuba/CMakeFiles/mitsuba.dir/rule
@@ -871,7 +834,7 @@ all: src/mitsuba/CMakeFiles/mtssrv.dir/all
 
 # Build rule for subdir invocation for target.
 src/mitsuba/CMakeFiles/mtssrv.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 23
 	$(MAKE) -f CMakeFiles/Makefile2 src/mitsuba/CMakeFiles/mtssrv.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/mitsuba/CMakeFiles/mtssrv.dir/rule
@@ -929,7 +892,7 @@ src/mitsuba/CMakeFiles/mtsutil.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/
 src/mitsuba/CMakeFiles/mtsutil.dir/all: src/mitsuba/CMakeFiles/mtsutil_pch.dir/all
 	$(MAKE) -f src/mitsuba/CMakeFiles/mtsutil.dir/build.make src/mitsuba/CMakeFiles/mtsutil.dir/depend
 	$(MAKE) -f src/mitsuba/CMakeFiles/mtsutil.dir/build.make src/mitsuba/CMakeFiles/mtsutil.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  78
 	@echo "Built target mtsutil"
 .PHONY : src/mitsuba/CMakeFiles/mtsutil.dir/all
 
@@ -939,7 +902,7 @@ all: src/mitsuba/CMakeFiles/mtsutil.dir/all
 
 # Build rule for subdir invocation for target.
 src/mitsuba/CMakeFiles/mtsutil.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 23
 	$(MAKE) -f CMakeFiles/Makefile2 src/mitsuba/CMakeFiles/mtsutil.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/mitsuba/CMakeFiles/mtsutil.dir/rule
@@ -964,13 +927,13 @@ clean: src/mitsuba/CMakeFiles/mtsutil.dir/clean
 src/mitsuba/CMakeFiles/mtsutil_pch.dir/all:
 	$(MAKE) -f src/mitsuba/CMakeFiles/mtsutil_pch.dir/build.make src/mitsuba/CMakeFiles/mtsutil_pch.dir/depend
 	$(MAKE) -f src/mitsuba/CMakeFiles/mtsutil_pch.dir/build.make src/mitsuba/CMakeFiles/mtsutil_pch.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  78
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
 	@echo "Built target mtsutil_pch"
 .PHONY : src/mitsuba/CMakeFiles/mtsutil_pch.dir/all
 
 # Build rule for subdir invocation for target.
 src/mitsuba/CMakeFiles/mtsutil_pch.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 src/mitsuba/CMakeFiles/mtsutil_pch.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/mitsuba/CMakeFiles/mtsutil_pch.dir/rule
@@ -1012,8 +975,8 @@ src/mtsgui/preinstall:
 
 # All Build rule for target.
 src/mtsgui/CMakeFiles/mtsgui.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
-src/mtsgui/CMakeFiles/mtsgui.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 src/mtsgui/CMakeFiles/mtsgui.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
+src/mtsgui/CMakeFiles/mtsgui.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 src/mtsgui/CMakeFiles/mtsgui.dir/all: src/mtsgui/CMakeFiles/mtsgui_pch.dir/all
 	$(MAKE) -f src/mtsgui/CMakeFiles/mtsgui.dir/build.make src/mtsgui/CMakeFiles/mtsgui.dir/depend
 	$(MAKE) -f src/mtsgui/CMakeFiles/mtsgui.dir/build.make src/mtsgui/CMakeFiles/mtsgui.dir/build
@@ -1027,7 +990,7 @@ all: src/mtsgui/CMakeFiles/mtsgui.dir/all
 
 # Build rule for subdir invocation for target.
 src/mtsgui/CMakeFiles/mtsgui.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 47
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 48
 	$(MAKE) -f CMakeFiles/Makefile2 src/mtsgui/CMakeFiles/mtsgui.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/mtsgui/CMakeFiles/mtsgui.dir/rule
@@ -1095,7 +1058,7 @@ all: src/mtsgui/CMakeFiles/test_simdtonemap.dir/all
 
 # Build rule for subdir invocation for target.
 src/mtsgui/CMakeFiles/test_simdtonemap.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 23
 	$(MAKE) -f CMakeFiles/Makefile2 src/mtsgui/CMakeFiles/test_simdtonemap.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/mtsgui/CMakeFiles/test_simdtonemap.dir/rule
@@ -1185,7 +1148,7 @@ all: src/utils/CMakeFiles/addimages.dir/all
 
 # Build rule for subdir invocation for target.
 src/utils/CMakeFiles/addimages.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 23
 	$(MAKE) -f CMakeFiles/Makefile2 src/utils/CMakeFiles/addimages.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/utils/CMakeFiles/addimages.dir/rule
@@ -1208,8 +1171,8 @@ clean: src/utils/CMakeFiles/addimages.dir/clean
 
 # All Build rule for target.
 src/utils/CMakeFiles/cylclip.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
-src/utils/CMakeFiles/cylclip.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 src/utils/CMakeFiles/cylclip.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
+src/utils/CMakeFiles/cylclip.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 	$(MAKE) -f src/utils/CMakeFiles/cylclip.dir/build.make src/utils/CMakeFiles/cylclip.dir/depend
 	$(MAKE) -f src/utils/CMakeFiles/cylclip.dir/build.make src/utils/CMakeFiles/cylclip.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -1222,7 +1185,7 @@ all: src/utils/CMakeFiles/cylclip.dir/all
 
 # Build rule for subdir invocation for target.
 src/utils/CMakeFiles/cylclip.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 28
 	$(MAKE) -f CMakeFiles/Makefile2 src/utils/CMakeFiles/cylclip.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/utils/CMakeFiles/cylclip.dir/rule
@@ -1258,7 +1221,7 @@ all: src/utils/CMakeFiles/joinrgb.dir/all
 
 # Build rule for subdir invocation for target.
 src/utils/CMakeFiles/joinrgb.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 src/utils/CMakeFiles/joinrgb.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/utils/CMakeFiles/joinrgb.dir/rule
@@ -1294,7 +1257,7 @@ all: src/utils/CMakeFiles/kdbench.dir/all
 
 # Build rule for subdir invocation for target.
 src/utils/CMakeFiles/kdbench.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 src/utils/CMakeFiles/kdbench.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/utils/CMakeFiles/kdbench.dir/rule
@@ -1330,7 +1293,7 @@ all: src/utils/CMakeFiles/tonemap.dir/all
 
 # Build rule for subdir invocation for target.
 src/utils/CMakeFiles/tonemap.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 src/utils/CMakeFiles/tonemap.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/utils/CMakeFiles/tonemap.dir/rule
@@ -1412,8 +1375,8 @@ src/bsdfs/preinstall:
 
 # All Build rule for target.
 src/bsdfs/CMakeFiles/blendbsdf.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
-src/bsdfs/CMakeFiles/blendbsdf.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 src/bsdfs/CMakeFiles/blendbsdf.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
+src/bsdfs/CMakeFiles/blendbsdf.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 	$(MAKE) -f src/bsdfs/CMakeFiles/blendbsdf.dir/build.make src/bsdfs/CMakeFiles/blendbsdf.dir/depend
 	$(MAKE) -f src/bsdfs/CMakeFiles/blendbsdf.dir/build.make src/bsdfs/CMakeFiles/blendbsdf.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -1426,7 +1389,7 @@ all: src/bsdfs/CMakeFiles/blendbsdf.dir/all
 
 # Build rule for subdir invocation for target.
 src/bsdfs/CMakeFiles/blendbsdf.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 28
 	$(MAKE) -f CMakeFiles/Makefile2 src/bsdfs/CMakeFiles/blendbsdf.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/bsdfs/CMakeFiles/blendbsdf.dir/rule
@@ -1449,8 +1412,8 @@ clean: src/bsdfs/CMakeFiles/blendbsdf.dir/clean
 
 # All Build rule for target.
 src/bsdfs/CMakeFiles/bumpmap.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
-src/bsdfs/CMakeFiles/bumpmap.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 src/bsdfs/CMakeFiles/bumpmap.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
+src/bsdfs/CMakeFiles/bumpmap.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 	$(MAKE) -f src/bsdfs/CMakeFiles/bumpmap.dir/build.make src/bsdfs/CMakeFiles/bumpmap.dir/depend
 	$(MAKE) -f src/bsdfs/CMakeFiles/bumpmap.dir/build.make src/bsdfs/CMakeFiles/bumpmap.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -1463,7 +1426,7 @@ all: src/bsdfs/CMakeFiles/bumpmap.dir/all
 
 # Build rule for subdir invocation for target.
 src/bsdfs/CMakeFiles/bumpmap.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 28
 	$(MAKE) -f CMakeFiles/Makefile2 src/bsdfs/CMakeFiles/bumpmap.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/bsdfs/CMakeFiles/bumpmap.dir/rule
@@ -1486,8 +1449,8 @@ clean: src/bsdfs/CMakeFiles/bumpmap.dir/clean
 
 # All Build rule for target.
 src/bsdfs/CMakeFiles/coating.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
-src/bsdfs/CMakeFiles/coating.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 src/bsdfs/CMakeFiles/coating.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
+src/bsdfs/CMakeFiles/coating.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 	$(MAKE) -f src/bsdfs/CMakeFiles/coating.dir/build.make src/bsdfs/CMakeFiles/coating.dir/depend
 	$(MAKE) -f src/bsdfs/CMakeFiles/coating.dir/build.make src/bsdfs/CMakeFiles/coating.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -1500,7 +1463,7 @@ all: src/bsdfs/CMakeFiles/coating.dir/all
 
 # Build rule for subdir invocation for target.
 src/bsdfs/CMakeFiles/coating.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 28
 	$(MAKE) -f CMakeFiles/Makefile2 src/bsdfs/CMakeFiles/coating.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/bsdfs/CMakeFiles/coating.dir/rule
@@ -1523,8 +1486,8 @@ clean: src/bsdfs/CMakeFiles/coating.dir/clean
 
 # All Build rule for target.
 src/bsdfs/CMakeFiles/conductor.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
-src/bsdfs/CMakeFiles/conductor.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 src/bsdfs/CMakeFiles/conductor.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
+src/bsdfs/CMakeFiles/conductor.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 	$(MAKE) -f src/bsdfs/CMakeFiles/conductor.dir/build.make src/bsdfs/CMakeFiles/conductor.dir/depend
 	$(MAKE) -f src/bsdfs/CMakeFiles/conductor.dir/build.make src/bsdfs/CMakeFiles/conductor.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  5
@@ -1537,7 +1500,7 @@ all: src/bsdfs/CMakeFiles/conductor.dir/all
 
 # Build rule for subdir invocation for target.
 src/bsdfs/CMakeFiles/conductor.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 28
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 29
 	$(MAKE) -f CMakeFiles/Makefile2 src/bsdfs/CMakeFiles/conductor.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/bsdfs/CMakeFiles/conductor.dir/rule
@@ -1560,8 +1523,8 @@ clean: src/bsdfs/CMakeFiles/conductor.dir/clean
 
 # All Build rule for target.
 src/bsdfs/CMakeFiles/dielectric.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
-src/bsdfs/CMakeFiles/dielectric.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 src/bsdfs/CMakeFiles/dielectric.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
+src/bsdfs/CMakeFiles/dielectric.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 	$(MAKE) -f src/bsdfs/CMakeFiles/dielectric.dir/build.make src/bsdfs/CMakeFiles/dielectric.dir/depend
 	$(MAKE) -f src/bsdfs/CMakeFiles/dielectric.dir/build.make src/bsdfs/CMakeFiles/dielectric.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  7
@@ -1574,7 +1537,7 @@ all: src/bsdfs/CMakeFiles/dielectric.dir/all
 
 # Build rule for subdir invocation for target.
 src/bsdfs/CMakeFiles/dielectric.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 28
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 29
 	$(MAKE) -f CMakeFiles/Makefile2 src/bsdfs/CMakeFiles/dielectric.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/bsdfs/CMakeFiles/dielectric.dir/rule
@@ -1597,8 +1560,8 @@ clean: src/bsdfs/CMakeFiles/dielectric.dir/clean
 
 # All Build rule for target.
 src/bsdfs/CMakeFiles/difftrans.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
-src/bsdfs/CMakeFiles/difftrans.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 src/bsdfs/CMakeFiles/difftrans.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
+src/bsdfs/CMakeFiles/difftrans.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 	$(MAKE) -f src/bsdfs/CMakeFiles/difftrans.dir/build.make src/bsdfs/CMakeFiles/difftrans.dir/depend
 	$(MAKE) -f src/bsdfs/CMakeFiles/difftrans.dir/build.make src/bsdfs/CMakeFiles/difftrans.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -1611,7 +1574,7 @@ all: src/bsdfs/CMakeFiles/difftrans.dir/all
 
 # Build rule for subdir invocation for target.
 src/bsdfs/CMakeFiles/difftrans.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 28
 	$(MAKE) -f CMakeFiles/Makefile2 src/bsdfs/CMakeFiles/difftrans.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/bsdfs/CMakeFiles/difftrans.dir/rule
@@ -1634,8 +1597,8 @@ clean: src/bsdfs/CMakeFiles/difftrans.dir/clean
 
 # All Build rule for target.
 src/bsdfs/CMakeFiles/diffuse.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
-src/bsdfs/CMakeFiles/diffuse.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 src/bsdfs/CMakeFiles/diffuse.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
+src/bsdfs/CMakeFiles/diffuse.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 	$(MAKE) -f src/bsdfs/CMakeFiles/diffuse.dir/build.make src/bsdfs/CMakeFiles/diffuse.dir/depend
 	$(MAKE) -f src/bsdfs/CMakeFiles/diffuse.dir/build.make src/bsdfs/CMakeFiles/diffuse.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -1648,7 +1611,7 @@ all: src/bsdfs/CMakeFiles/diffuse.dir/all
 
 # Build rule for subdir invocation for target.
 src/bsdfs/CMakeFiles/diffuse.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 28
 	$(MAKE) -f CMakeFiles/Makefile2 src/bsdfs/CMakeFiles/diffuse.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/bsdfs/CMakeFiles/diffuse.dir/rule
@@ -1671,8 +1634,8 @@ clean: src/bsdfs/CMakeFiles/diffuse.dir/clean
 
 # All Build rule for target.
 src/bsdfs/CMakeFiles/hk.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
-src/bsdfs/CMakeFiles/hk.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 src/bsdfs/CMakeFiles/hk.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
+src/bsdfs/CMakeFiles/hk.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 	$(MAKE) -f src/bsdfs/CMakeFiles/hk.dir/build.make src/bsdfs/CMakeFiles/hk.dir/depend
 	$(MAKE) -f src/bsdfs/CMakeFiles/hk.dir/build.make src/bsdfs/CMakeFiles/hk.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -1685,7 +1648,7 @@ all: src/bsdfs/CMakeFiles/hk.dir/all
 
 # Build rule for subdir invocation for target.
 src/bsdfs/CMakeFiles/hk.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 28
 	$(MAKE) -f CMakeFiles/Makefile2 src/bsdfs/CMakeFiles/hk.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/bsdfs/CMakeFiles/hk.dir/rule
@@ -1708,8 +1671,8 @@ clean: src/bsdfs/CMakeFiles/hk.dir/clean
 
 # All Build rule for target.
 src/bsdfs/CMakeFiles/irawan.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
-src/bsdfs/CMakeFiles/irawan.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 src/bsdfs/CMakeFiles/irawan.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
+src/bsdfs/CMakeFiles/irawan.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 	$(MAKE) -f src/bsdfs/CMakeFiles/irawan.dir/build.make src/bsdfs/CMakeFiles/irawan.dir/depend
 	$(MAKE) -f src/bsdfs/CMakeFiles/irawan.dir/build.make src/bsdfs/CMakeFiles/irawan.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -1722,7 +1685,7 @@ all: src/bsdfs/CMakeFiles/irawan.dir/all
 
 # Build rule for subdir invocation for target.
 src/bsdfs/CMakeFiles/irawan.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 28
 	$(MAKE) -f CMakeFiles/Makefile2 src/bsdfs/CMakeFiles/irawan.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/bsdfs/CMakeFiles/irawan.dir/rule
@@ -1745,8 +1708,8 @@ clean: src/bsdfs/CMakeFiles/irawan.dir/clean
 
 # All Build rule for target.
 src/bsdfs/CMakeFiles/mask.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
-src/bsdfs/CMakeFiles/mask.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 src/bsdfs/CMakeFiles/mask.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
+src/bsdfs/CMakeFiles/mask.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 	$(MAKE) -f src/bsdfs/CMakeFiles/mask.dir/build.make src/bsdfs/CMakeFiles/mask.dir/depend
 	$(MAKE) -f src/bsdfs/CMakeFiles/mask.dir/build.make src/bsdfs/CMakeFiles/mask.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -1759,7 +1722,7 @@ all: src/bsdfs/CMakeFiles/mask.dir/all
 
 # Build rule for subdir invocation for target.
 src/bsdfs/CMakeFiles/mask.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 28
 	$(MAKE) -f CMakeFiles/Makefile2 src/bsdfs/CMakeFiles/mask.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/bsdfs/CMakeFiles/mask.dir/rule
@@ -1782,11 +1745,11 @@ clean: src/bsdfs/CMakeFiles/mask.dir/clean
 
 # All Build rule for target.
 src/bsdfs/CMakeFiles/mixturebsdf.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
-src/bsdfs/CMakeFiles/mixturebsdf.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 src/bsdfs/CMakeFiles/mixturebsdf.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
+src/bsdfs/CMakeFiles/mixturebsdf.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 	$(MAKE) -f src/bsdfs/CMakeFiles/mixturebsdf.dir/build.make src/bsdfs/CMakeFiles/mixturebsdf.dir/depend
 	$(MAKE) -f src/bsdfs/CMakeFiles/mixturebsdf.dir/build.make src/bsdfs/CMakeFiles/mixturebsdf.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  55
 	@echo "Built target mixturebsdf"
 .PHONY : src/bsdfs/CMakeFiles/mixturebsdf.dir/all
 
@@ -1796,7 +1759,7 @@ all: src/bsdfs/CMakeFiles/mixturebsdf.dir/all
 
 # Build rule for subdir invocation for target.
 src/bsdfs/CMakeFiles/mixturebsdf.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 29
 	$(MAKE) -f CMakeFiles/Makefile2 src/bsdfs/CMakeFiles/mixturebsdf.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/bsdfs/CMakeFiles/mixturebsdf.dir/rule
@@ -1819,8 +1782,8 @@ clean: src/bsdfs/CMakeFiles/mixturebsdf.dir/clean
 
 # All Build rule for target.
 src/bsdfs/CMakeFiles/normalmap.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
-src/bsdfs/CMakeFiles/normalmap.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 src/bsdfs/CMakeFiles/normalmap.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
+src/bsdfs/CMakeFiles/normalmap.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 	$(MAKE) -f src/bsdfs/CMakeFiles/normalmap.dir/build.make src/bsdfs/CMakeFiles/normalmap.dir/depend
 	$(MAKE) -f src/bsdfs/CMakeFiles/normalmap.dir/build.make src/bsdfs/CMakeFiles/normalmap.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -1833,7 +1796,7 @@ all: src/bsdfs/CMakeFiles/normalmap.dir/all
 
 # Build rule for subdir invocation for target.
 src/bsdfs/CMakeFiles/normalmap.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 28
 	$(MAKE) -f CMakeFiles/Makefile2 src/bsdfs/CMakeFiles/normalmap.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/bsdfs/CMakeFiles/normalmap.dir/rule
@@ -1856,11 +1819,11 @@ clean: src/bsdfs/CMakeFiles/normalmap.dir/clean
 
 # All Build rule for target.
 src/bsdfs/CMakeFiles/null.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
-src/bsdfs/CMakeFiles/null.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 src/bsdfs/CMakeFiles/null.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
+src/bsdfs/CMakeFiles/null.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 	$(MAKE) -f src/bsdfs/CMakeFiles/null.dir/build.make src/bsdfs/CMakeFiles/null.dir/depend
 	$(MAKE) -f src/bsdfs/CMakeFiles/null.dir/build.make src/bsdfs/CMakeFiles/null.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  79
 	@echo "Built target null"
 .PHONY : src/bsdfs/CMakeFiles/null.dir/all
 
@@ -1870,7 +1833,7 @@ all: src/bsdfs/CMakeFiles/null.dir/all
 
 # Build rule for subdir invocation for target.
 src/bsdfs/CMakeFiles/null.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 29
 	$(MAKE) -f CMakeFiles/Makefile2 src/bsdfs/CMakeFiles/null.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/bsdfs/CMakeFiles/null.dir/rule
@@ -1893,8 +1856,8 @@ clean: src/bsdfs/CMakeFiles/null.dir/clean
 
 # All Build rule for target.
 src/bsdfs/CMakeFiles/phong.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
-src/bsdfs/CMakeFiles/phong.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 src/bsdfs/CMakeFiles/phong.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
+src/bsdfs/CMakeFiles/phong.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 	$(MAKE) -f src/bsdfs/CMakeFiles/phong.dir/build.make src/bsdfs/CMakeFiles/phong.dir/depend
 	$(MAKE) -f src/bsdfs/CMakeFiles/phong.dir/build.make src/bsdfs/CMakeFiles/phong.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -1907,7 +1870,7 @@ all: src/bsdfs/CMakeFiles/phong.dir/all
 
 # Build rule for subdir invocation for target.
 src/bsdfs/CMakeFiles/phong.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 28
 	$(MAKE) -f CMakeFiles/Makefile2 src/bsdfs/CMakeFiles/phong.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/bsdfs/CMakeFiles/phong.dir/rule
@@ -1930,8 +1893,8 @@ clean: src/bsdfs/CMakeFiles/phong.dir/clean
 
 # All Build rule for target.
 src/bsdfs/CMakeFiles/plastic.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
-src/bsdfs/CMakeFiles/plastic.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 src/bsdfs/CMakeFiles/plastic.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
+src/bsdfs/CMakeFiles/plastic.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 	$(MAKE) -f src/bsdfs/CMakeFiles/plastic.dir/build.make src/bsdfs/CMakeFiles/plastic.dir/depend
 	$(MAKE) -f src/bsdfs/CMakeFiles/plastic.dir/build.make src/bsdfs/CMakeFiles/plastic.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -1944,7 +1907,7 @@ all: src/bsdfs/CMakeFiles/plastic.dir/all
 
 # Build rule for subdir invocation for target.
 src/bsdfs/CMakeFiles/plastic.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 28
 	$(MAKE) -f CMakeFiles/Makefile2 src/bsdfs/CMakeFiles/plastic.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/bsdfs/CMakeFiles/plastic.dir/rule
@@ -1967,8 +1930,8 @@ clean: src/bsdfs/CMakeFiles/plastic.dir/clean
 
 # All Build rule for target.
 src/bsdfs/CMakeFiles/roughcoating.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
-src/bsdfs/CMakeFiles/roughcoating.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 src/bsdfs/CMakeFiles/roughcoating.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
+src/bsdfs/CMakeFiles/roughcoating.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 	$(MAKE) -f src/bsdfs/CMakeFiles/roughcoating.dir/build.make src/bsdfs/CMakeFiles/roughcoating.dir/depend
 	$(MAKE) -f src/bsdfs/CMakeFiles/roughcoating.dir/build.make src/bsdfs/CMakeFiles/roughcoating.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -1981,7 +1944,7 @@ all: src/bsdfs/CMakeFiles/roughcoating.dir/all
 
 # Build rule for subdir invocation for target.
 src/bsdfs/CMakeFiles/roughcoating.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 28
 	$(MAKE) -f CMakeFiles/Makefile2 src/bsdfs/CMakeFiles/roughcoating.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/bsdfs/CMakeFiles/roughcoating.dir/rule
@@ -2004,8 +1967,8 @@ clean: src/bsdfs/CMakeFiles/roughcoating.dir/clean
 
 # All Build rule for target.
 src/bsdfs/CMakeFiles/roughconductor.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
-src/bsdfs/CMakeFiles/roughconductor.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 src/bsdfs/CMakeFiles/roughconductor.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
+src/bsdfs/CMakeFiles/roughconductor.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 	$(MAKE) -f src/bsdfs/CMakeFiles/roughconductor.dir/build.make src/bsdfs/CMakeFiles/roughconductor.dir/depend
 	$(MAKE) -f src/bsdfs/CMakeFiles/roughconductor.dir/build.make src/bsdfs/CMakeFiles/roughconductor.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -2018,7 +1981,7 @@ all: src/bsdfs/CMakeFiles/roughconductor.dir/all
 
 # Build rule for subdir invocation for target.
 src/bsdfs/CMakeFiles/roughconductor.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 28
 	$(MAKE) -f CMakeFiles/Makefile2 src/bsdfs/CMakeFiles/roughconductor.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/bsdfs/CMakeFiles/roughconductor.dir/rule
@@ -2041,11 +2004,11 @@ clean: src/bsdfs/CMakeFiles/roughconductor.dir/clean
 
 # All Build rule for target.
 src/bsdfs/CMakeFiles/roughdielectric.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
-src/bsdfs/CMakeFiles/roughdielectric.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 src/bsdfs/CMakeFiles/roughdielectric.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
+src/bsdfs/CMakeFiles/roughdielectric.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 	$(MAKE) -f src/bsdfs/CMakeFiles/roughdielectric.dir/build.make src/bsdfs/CMakeFiles/roughdielectric.dir/depend
 	$(MAKE) -f src/bsdfs/CMakeFiles/roughdielectric.dir/build.make src/bsdfs/CMakeFiles/roughdielectric.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  87
 	@echo "Built target roughdielectric"
 .PHONY : src/bsdfs/CMakeFiles/roughdielectric.dir/all
 
@@ -2055,7 +2018,7 @@ all: src/bsdfs/CMakeFiles/roughdielectric.dir/all
 
 # Build rule for subdir invocation for target.
 src/bsdfs/CMakeFiles/roughdielectric.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 29
 	$(MAKE) -f CMakeFiles/Makefile2 src/bsdfs/CMakeFiles/roughdielectric.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/bsdfs/CMakeFiles/roughdielectric.dir/rule
@@ -2078,11 +2041,11 @@ clean: src/bsdfs/CMakeFiles/roughdielectric.dir/clean
 
 # All Build rule for target.
 src/bsdfs/CMakeFiles/roughdiffuse.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
-src/bsdfs/CMakeFiles/roughdiffuse.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 src/bsdfs/CMakeFiles/roughdiffuse.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
+src/bsdfs/CMakeFiles/roughdiffuse.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 	$(MAKE) -f src/bsdfs/CMakeFiles/roughdiffuse.dir/build.make src/bsdfs/CMakeFiles/roughdiffuse.dir/depend
 	$(MAKE) -f src/bsdfs/CMakeFiles/roughdiffuse.dir/build.make src/bsdfs/CMakeFiles/roughdiffuse.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  87
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
 	@echo "Built target roughdiffuse"
 .PHONY : src/bsdfs/CMakeFiles/roughdiffuse.dir/all
 
@@ -2115,8 +2078,8 @@ clean: src/bsdfs/CMakeFiles/roughdiffuse.dir/clean
 
 # All Build rule for target.
 src/bsdfs/CMakeFiles/roughplastic.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
-src/bsdfs/CMakeFiles/roughplastic.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 src/bsdfs/CMakeFiles/roughplastic.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
+src/bsdfs/CMakeFiles/roughplastic.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 	$(MAKE) -f src/bsdfs/CMakeFiles/roughplastic.dir/build.make src/bsdfs/CMakeFiles/roughplastic.dir/depend
 	$(MAKE) -f src/bsdfs/CMakeFiles/roughplastic.dir/build.make src/bsdfs/CMakeFiles/roughplastic.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -2129,7 +2092,7 @@ all: src/bsdfs/CMakeFiles/roughplastic.dir/all
 
 # Build rule for subdir invocation for target.
 src/bsdfs/CMakeFiles/roughplastic.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 28
 	$(MAKE) -f CMakeFiles/Makefile2 src/bsdfs/CMakeFiles/roughplastic.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/bsdfs/CMakeFiles/roughplastic.dir/rule
@@ -2152,8 +2115,8 @@ clean: src/bsdfs/CMakeFiles/roughplastic.dir/clean
 
 # All Build rule for target.
 src/bsdfs/CMakeFiles/thindielectric.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
-src/bsdfs/CMakeFiles/thindielectric.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 src/bsdfs/CMakeFiles/thindielectric.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
+src/bsdfs/CMakeFiles/thindielectric.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 	$(MAKE) -f src/bsdfs/CMakeFiles/thindielectric.dir/build.make src/bsdfs/CMakeFiles/thindielectric.dir/depend
 	$(MAKE) -f src/bsdfs/CMakeFiles/thindielectric.dir/build.make src/bsdfs/CMakeFiles/thindielectric.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  97
@@ -2166,7 +2129,7 @@ all: src/bsdfs/CMakeFiles/thindielectric.dir/all
 
 # Build rule for subdir invocation for target.
 src/bsdfs/CMakeFiles/thindielectric.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 28
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 29
 	$(MAKE) -f CMakeFiles/Makefile2 src/bsdfs/CMakeFiles/thindielectric.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/bsdfs/CMakeFiles/thindielectric.dir/rule
@@ -2189,8 +2152,8 @@ clean: src/bsdfs/CMakeFiles/thindielectric.dir/clean
 
 # All Build rule for target.
 src/bsdfs/CMakeFiles/twosided.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
-src/bsdfs/CMakeFiles/twosided.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 src/bsdfs/CMakeFiles/twosided.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
+src/bsdfs/CMakeFiles/twosided.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 	$(MAKE) -f src/bsdfs/CMakeFiles/twosided.dir/build.make src/bsdfs/CMakeFiles/twosided.dir/depend
 	$(MAKE) -f src/bsdfs/CMakeFiles/twosided.dir/build.make src/bsdfs/CMakeFiles/twosided.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  98
@@ -2203,7 +2166,7 @@ all: src/bsdfs/CMakeFiles/twosided.dir/all
 
 # Build rule for subdir invocation for target.
 src/bsdfs/CMakeFiles/twosided.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 28
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 29
 	$(MAKE) -f CMakeFiles/Makefile2 src/bsdfs/CMakeFiles/twosided.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/bsdfs/CMakeFiles/twosided.dir/rule
@@ -2226,8 +2189,8 @@ clean: src/bsdfs/CMakeFiles/twosided.dir/clean
 
 # All Build rule for target.
 src/bsdfs/CMakeFiles/ward.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
-src/bsdfs/CMakeFiles/ward.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 src/bsdfs/CMakeFiles/ward.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
+src/bsdfs/CMakeFiles/ward.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 	$(MAKE) -f src/bsdfs/CMakeFiles/ward.dir/build.make src/bsdfs/CMakeFiles/ward.dir/depend
 	$(MAKE) -f src/bsdfs/CMakeFiles/ward.dir/build.make src/bsdfs/CMakeFiles/ward.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -2240,7 +2203,7 @@ all: src/bsdfs/CMakeFiles/ward.dir/all
 
 # Build rule for subdir invocation for target.
 src/bsdfs/CMakeFiles/ward.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 28
 	$(MAKE) -f CMakeFiles/Makefile2 src/bsdfs/CMakeFiles/ward.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/bsdfs/CMakeFiles/ward.dir/rule
@@ -2301,7 +2264,7 @@ all: src/phase/CMakeFiles/hg.dir/all
 
 # Build rule for subdir invocation for target.
 src/phase/CMakeFiles/hg.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 src/phase/CMakeFiles/hg.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/phase/CMakeFiles/hg.dir/rule
@@ -2337,7 +2300,7 @@ all: src/phase/CMakeFiles/isotropic.dir/all
 
 # Build rule for subdir invocation for target.
 src/phase/CMakeFiles/isotropic.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 23
 	$(MAKE) -f CMakeFiles/Makefile2 src/phase/CMakeFiles/isotropic.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/phase/CMakeFiles/isotropic.dir/rule
@@ -2373,7 +2336,7 @@ all: src/phase/CMakeFiles/kkay.dir/all
 
 # Build rule for subdir invocation for target.
 src/phase/CMakeFiles/kkay.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 src/phase/CMakeFiles/kkay.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/phase/CMakeFiles/kkay.dir/rule
@@ -2409,7 +2372,7 @@ all: src/phase/CMakeFiles/microflake.dir/all
 
 # Build rule for subdir invocation for target.
 src/phase/CMakeFiles/microflake.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 src/phase/CMakeFiles/microflake.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/phase/CMakeFiles/microflake.dir/rule
@@ -2435,7 +2398,7 @@ src/phase/CMakeFiles/mixturephase.dir/all: src/librender/CMakeFiles/mitsuba-rend
 src/phase/CMakeFiles/mixturephase.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/phase/CMakeFiles/mixturephase.dir/build.make src/phase/CMakeFiles/mixturephase.dir/depend
 	$(MAKE) -f src/phase/CMakeFiles/mixturephase.dir/build.make src/phase/CMakeFiles/mixturephase.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  55
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
 	@echo "Built target mixturephase"
 .PHONY : src/phase/CMakeFiles/mixturephase.dir/all
 
@@ -2471,7 +2434,7 @@ src/phase/CMakeFiles/rayleigh.dir/all: src/librender/CMakeFiles/mitsuba-render.d
 src/phase/CMakeFiles/rayleigh.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/phase/CMakeFiles/rayleigh.dir/build.make src/phase/CMakeFiles/rayleigh.dir/depend
 	$(MAKE) -f src/phase/CMakeFiles/rayleigh.dir/build.make src/phase/CMakeFiles/rayleigh.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  86
 	@echo "Built target rayleigh"
 .PHONY : src/phase/CMakeFiles/rayleigh.dir/all
 
@@ -2481,7 +2444,7 @@ all: src/phase/CMakeFiles/rayleigh.dir/all
 
 # Build rule for subdir invocation for target.
 src/phase/CMakeFiles/rayleigh.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 23
 	$(MAKE) -f CMakeFiles/Makefile2 src/phase/CMakeFiles/rayleigh.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/phase/CMakeFiles/rayleigh.dir/rule
@@ -2555,7 +2518,7 @@ all: src/shapes/CMakeFiles/cube.dir/all
 
 # Build rule for subdir invocation for target.
 src/shapes/CMakeFiles/cube.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 23
 	$(MAKE) -f CMakeFiles/Makefile2 src/shapes/CMakeFiles/cube.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/shapes/CMakeFiles/cube.dir/rule
@@ -2591,7 +2554,7 @@ all: src/shapes/CMakeFiles/cylinder.dir/all
 
 # Build rule for subdir invocation for target.
 src/shapes/CMakeFiles/cylinder.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 src/shapes/CMakeFiles/cylinder.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/shapes/CMakeFiles/cylinder.dir/rule
@@ -2627,7 +2590,7 @@ all: src/shapes/CMakeFiles/disk.dir/all
 
 # Build rule for subdir invocation for target.
 src/shapes/CMakeFiles/disk.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 src/shapes/CMakeFiles/disk.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/shapes/CMakeFiles/disk.dir/rule
@@ -2663,7 +2626,7 @@ all: src/shapes/CMakeFiles/hair.dir/all
 
 # Build rule for subdir invocation for target.
 src/shapes/CMakeFiles/hair.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 src/shapes/CMakeFiles/hair.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/shapes/CMakeFiles/hair.dir/rule
@@ -2699,7 +2662,7 @@ all: src/shapes/CMakeFiles/heightfield.dir/all
 
 # Build rule for subdir invocation for target.
 src/shapes/CMakeFiles/heightfield.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 src/shapes/CMakeFiles/heightfield.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/shapes/CMakeFiles/heightfield.dir/rule
@@ -2735,7 +2698,7 @@ all: src/shapes/CMakeFiles/instance.dir/all
 
 # Build rule for subdir invocation for target.
 src/shapes/CMakeFiles/instance.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 23
 	$(MAKE) -f CMakeFiles/Makefile2 src/shapes/CMakeFiles/instance.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/shapes/CMakeFiles/instance.dir/rule
@@ -2758,11 +2721,11 @@ clean: src/shapes/CMakeFiles/instance.dir/clean
 
 # All Build rule for target.
 src/shapes/CMakeFiles/obj.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
-src/shapes/CMakeFiles/obj.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 src/shapes/CMakeFiles/obj.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
+src/shapes/CMakeFiles/obj.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 	$(MAKE) -f src/shapes/CMakeFiles/obj.dir/build.make src/shapes/CMakeFiles/obj.dir/depend
 	$(MAKE) -f src/shapes/CMakeFiles/obj.dir/build.make src/shapes/CMakeFiles/obj.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  79
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
 	@echo "Built target obj"
 .PHONY : src/shapes/CMakeFiles/obj.dir/all
 
@@ -2809,7 +2772,7 @@ all: src/shapes/CMakeFiles/ply.dir/all
 
 # Build rule for subdir invocation for target.
 src/shapes/CMakeFiles/ply.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 23
 	$(MAKE) -f CMakeFiles/Makefile2 src/shapes/CMakeFiles/ply.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/shapes/CMakeFiles/ply.dir/rule
@@ -2866,7 +2829,7 @@ src/shapes/CMakeFiles/rectangle.dir/all: src/librender/CMakeFiles/mitsuba-render
 src/shapes/CMakeFiles/rectangle.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/shapes/CMakeFiles/rectangle.dir/build.make src/shapes/CMakeFiles/rectangle.dir/depend
 	$(MAKE) -f src/shapes/CMakeFiles/rectangle.dir/build.make src/shapes/CMakeFiles/rectangle.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  86
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
 	@echo "Built target rectangle"
 .PHONY : src/shapes/CMakeFiles/rectangle.dir/all
 
@@ -2902,7 +2865,7 @@ src/shapes/CMakeFiles/serialized.dir/all: src/librender/CMakeFiles/mitsuba-rende
 src/shapes/CMakeFiles/serialized.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/shapes/CMakeFiles/serialized.dir/build.make src/shapes/CMakeFiles/serialized.dir/depend
 	$(MAKE) -f src/shapes/CMakeFiles/serialized.dir/build.make src/shapes/CMakeFiles/serialized.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  88
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
 	@echo "Built target serialized"
 .PHONY : src/shapes/CMakeFiles/serialized.dir/all
 
@@ -2948,7 +2911,7 @@ all: src/shapes/CMakeFiles/shapegroup.dir/all
 
 # Build rule for subdir invocation for target.
 src/shapes/CMakeFiles/shapegroup.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 src/shapes/CMakeFiles/shapegroup.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/shapes/CMakeFiles/shapegroup.dir/rule
@@ -2984,7 +2947,7 @@ all: src/shapes/CMakeFiles/sphere.dir/all
 
 # Build rule for subdir invocation for target.
 src/shapes/CMakeFiles/sphere.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 23
 	$(MAKE) -f CMakeFiles/Makefile2 src/shapes/CMakeFiles/sphere.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/shapes/CMakeFiles/sphere.dir/rule
@@ -3049,7 +3012,7 @@ all: src/samplers/CMakeFiles/halton.dir/all
 
 # Build rule for subdir invocation for target.
 src/samplers/CMakeFiles/halton.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 23
 	$(MAKE) -f CMakeFiles/Makefile2 src/samplers/CMakeFiles/halton.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/samplers/CMakeFiles/halton.dir/rule
@@ -3117,7 +3080,7 @@ all: src/samplers/CMakeFiles/hammersley.dir/all
 
 # Build rule for subdir invocation for target.
 src/samplers/CMakeFiles/hammersley.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 23
 	$(MAKE) -f CMakeFiles/Makefile2 src/samplers/CMakeFiles/hammersley.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/samplers/CMakeFiles/hammersley.dir/rule
@@ -3184,7 +3147,7 @@ all: src/samplers/CMakeFiles/independent.dir/all
 
 # Build rule for subdir invocation for target.
 src/samplers/CMakeFiles/independent.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 src/samplers/CMakeFiles/independent.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/samplers/CMakeFiles/independent.dir/rule
@@ -3220,7 +3183,7 @@ all: src/samplers/CMakeFiles/ldsampler.dir/all
 
 # Build rule for subdir invocation for target.
 src/samplers/CMakeFiles/ldsampler.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 src/samplers/CMakeFiles/ldsampler.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/samplers/CMakeFiles/ldsampler.dir/rule
@@ -3257,7 +3220,7 @@ all: src/samplers/CMakeFiles/sobol.dir/all
 
 # Build rule for subdir invocation for target.
 src/samplers/CMakeFiles/sobol.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 23
 	$(MAKE) -f CMakeFiles/Makefile2 src/samplers/CMakeFiles/sobol.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/samplers/CMakeFiles/sobol.dir/rule
@@ -3324,7 +3287,7 @@ all: src/samplers/CMakeFiles/stratified.dir/all
 
 # Build rule for subdir invocation for target.
 src/samplers/CMakeFiles/stratified.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 23
 	$(MAKE) -f CMakeFiles/Makefile2 src/samplers/CMakeFiles/stratified.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/samplers/CMakeFiles/stratified.dir/rule
@@ -3385,7 +3348,7 @@ all: src/rfilters/CMakeFiles/box.dir/all
 
 # Build rule for subdir invocation for target.
 src/rfilters/CMakeFiles/box.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 src/rfilters/CMakeFiles/box.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/rfilters/CMakeFiles/box.dir/rule
@@ -3421,7 +3384,7 @@ all: src/rfilters/CMakeFiles/catmullrom.dir/all
 
 # Build rule for subdir invocation for target.
 src/rfilters/CMakeFiles/catmullrom.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 23
 	$(MAKE) -f CMakeFiles/Makefile2 src/rfilters/CMakeFiles/catmullrom.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/rfilters/CMakeFiles/catmullrom.dir/rule
@@ -3457,7 +3420,7 @@ all: src/rfilters/CMakeFiles/gaussian.dir/all
 
 # Build rule for subdir invocation for target.
 src/rfilters/CMakeFiles/gaussian.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 src/rfilters/CMakeFiles/gaussian.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/rfilters/CMakeFiles/gaussian.dir/rule
@@ -3493,7 +3456,7 @@ all: src/rfilters/CMakeFiles/lanczos.dir/all
 
 # Build rule for subdir invocation for target.
 src/rfilters/CMakeFiles/lanczos.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 23
 	$(MAKE) -f CMakeFiles/Makefile2 src/rfilters/CMakeFiles/lanczos.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/rfilters/CMakeFiles/lanczos.dir/rule
@@ -3529,7 +3492,7 @@ all: src/rfilters/CMakeFiles/mitchell.dir/all
 
 # Build rule for subdir invocation for target.
 src/rfilters/CMakeFiles/mitchell.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 23
 	$(MAKE) -f CMakeFiles/Makefile2 src/rfilters/CMakeFiles/mitchell.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/rfilters/CMakeFiles/mitchell.dir/rule
@@ -3565,7 +3528,7 @@ all: src/rfilters/CMakeFiles/tent.dir/all
 
 # Build rule for subdir invocation for target.
 src/rfilters/CMakeFiles/tent.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 23
 	$(MAKE) -f CMakeFiles/Makefile2 src/rfilters/CMakeFiles/tent.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/rfilters/CMakeFiles/tent.dir/rule
@@ -3610,8 +3573,8 @@ src/films/preinstall:
 
 # All Build rule for target.
 src/films/CMakeFiles/hdrfilm.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
-src/films/CMakeFiles/hdrfilm.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 src/films/CMakeFiles/hdrfilm.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
+src/films/CMakeFiles/hdrfilm.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 	$(MAKE) -f src/films/CMakeFiles/hdrfilm.dir/build.make src/films/CMakeFiles/hdrfilm.dir/depend
 	$(MAKE) -f src/films/CMakeFiles/hdrfilm.dir/build.make src/films/CMakeFiles/hdrfilm.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  15
@@ -3624,7 +3587,7 @@ all: src/films/CMakeFiles/hdrfilm.dir/all
 
 # Build rule for subdir invocation for target.
 src/films/CMakeFiles/hdrfilm.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 28
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 29
 	$(MAKE) -f CMakeFiles/Makefile2 src/films/CMakeFiles/hdrfilm.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/films/CMakeFiles/hdrfilm.dir/rule
@@ -3647,8 +3610,8 @@ clean: src/films/CMakeFiles/hdrfilm.dir/clean
 
 # All Build rule for target.
 src/films/CMakeFiles/ldrfilm.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
-src/films/CMakeFiles/ldrfilm.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 src/films/CMakeFiles/ldrfilm.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
+src/films/CMakeFiles/ldrfilm.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 	$(MAKE) -f src/films/CMakeFiles/ldrfilm.dir/build.make src/films/CMakeFiles/ldrfilm.dir/depend
 	$(MAKE) -f src/films/CMakeFiles/ldrfilm.dir/build.make src/films/CMakeFiles/ldrfilm.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -3661,7 +3624,7 @@ all: src/films/CMakeFiles/ldrfilm.dir/all
 
 # Build rule for subdir invocation for target.
 src/films/CMakeFiles/ldrfilm.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 28
 	$(MAKE) -f CMakeFiles/Makefile2 src/films/CMakeFiles/ldrfilm.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/films/CMakeFiles/ldrfilm.dir/rule
@@ -3698,7 +3661,7 @@ all: src/films/CMakeFiles/mfilm.dir/all
 
 # Build rule for subdir invocation for target.
 src/films/CMakeFiles/mfilm.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 23
 	$(MAKE) -f CMakeFiles/Makefile2 src/films/CMakeFiles/mfilm.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/films/CMakeFiles/mfilm.dir/rule
@@ -3765,7 +3728,7 @@ all: src/films/CMakeFiles/tiledhdrfilm.dir/all
 
 # Build rule for subdir invocation for target.
 src/films/CMakeFiles/tiledhdrfilm.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 src/films/CMakeFiles/tiledhdrfilm.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/films/CMakeFiles/tiledhdrfilm.dir/rule
@@ -3832,7 +3795,7 @@ all: src/sensors/CMakeFiles/fluencemeter.dir/all
 
 # Build rule for subdir invocation for target.
 src/sensors/CMakeFiles/fluencemeter.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 src/sensors/CMakeFiles/fluencemeter.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/sensors/CMakeFiles/fluencemeter.dir/rule
@@ -3868,7 +3831,7 @@ all: src/sensors/CMakeFiles/irradiancemeter.dir/all
 
 # Build rule for subdir invocation for target.
 src/sensors/CMakeFiles/irradiancemeter.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 src/sensors/CMakeFiles/irradiancemeter.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/sensors/CMakeFiles/irradiancemeter.dir/rule
@@ -3904,7 +3867,7 @@ all: src/sensors/CMakeFiles/orthographic.dir/all
 
 # Build rule for subdir invocation for target.
 src/sensors/CMakeFiles/orthographic.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 src/sensors/CMakeFiles/orthographic.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/sensors/CMakeFiles/orthographic.dir/rule
@@ -3930,7 +3893,7 @@ src/sensors/CMakeFiles/perspective.dir/all: src/librender/CMakeFiles/mitsuba-ren
 src/sensors/CMakeFiles/perspective.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/sensors/CMakeFiles/perspective.dir/build.make src/sensors/CMakeFiles/perspective.dir/depend
 	$(MAKE) -f src/sensors/CMakeFiles/perspective.dir/build.make src/sensors/CMakeFiles/perspective.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  80
 	@echo "Built target perspective"
 .PHONY : src/sensors/CMakeFiles/perspective.dir/all
 
@@ -3940,7 +3903,7 @@ all: src/sensors/CMakeFiles/perspective.dir/all
 
 # Build rule for subdir invocation for target.
 src/sensors/CMakeFiles/perspective.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 23
 	$(MAKE) -f CMakeFiles/Makefile2 src/sensors/CMakeFiles/perspective.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/sensors/CMakeFiles/perspective.dir/rule
@@ -3966,7 +3929,7 @@ src/sensors/CMakeFiles/perspective_rdist.dir/all: src/librender/CMakeFiles/mitsu
 src/sensors/CMakeFiles/perspective_rdist.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/sensors/CMakeFiles/perspective_rdist.dir/build.make src/sensors/CMakeFiles/perspective_rdist.dir/depend
 	$(MAKE) -f src/sensors/CMakeFiles/perspective_rdist.dir/build.make src/sensors/CMakeFiles/perspective_rdist.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  80
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
 	@echo "Built target perspective_rdist"
 .PHONY : src/sensors/CMakeFiles/perspective_rdist.dir/all
 
@@ -4012,7 +3975,7 @@ all: src/sensors/CMakeFiles/radiancemeter.dir/all
 
 # Build rule for subdir invocation for target.
 src/sensors/CMakeFiles/radiancemeter.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 src/sensors/CMakeFiles/radiancemeter.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/sensors/CMakeFiles/radiancemeter.dir/rule
@@ -4048,7 +4011,7 @@ all: src/sensors/CMakeFiles/spherical.dir/all
 
 # Build rule for subdir invocation for target.
 src/sensors/CMakeFiles/spherical.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 src/sensors/CMakeFiles/spherical.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/sensors/CMakeFiles/spherical.dir/rule
@@ -4084,7 +4047,7 @@ all: src/sensors/CMakeFiles/telecentric.dir/all
 
 # Build rule for subdir invocation for target.
 src/sensors/CMakeFiles/telecentric.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 src/sensors/CMakeFiles/telecentric.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/sensors/CMakeFiles/telecentric.dir/rule
@@ -4120,7 +4083,7 @@ all: src/sensors/CMakeFiles/thinlens.dir/all
 
 # Build rule for subdir invocation for target.
 src/sensors/CMakeFiles/thinlens.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 src/sensors/CMakeFiles/thinlens.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/sensors/CMakeFiles/thinlens.dir/rule
@@ -4190,7 +4153,7 @@ all: src/emitters/CMakeFiles/area.dir/all
 
 # Build rule for subdir invocation for target.
 src/emitters/CMakeFiles/area.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 src/emitters/CMakeFiles/area.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/emitters/CMakeFiles/area.dir/rule
@@ -4226,7 +4189,7 @@ all: src/emitters/CMakeFiles/collimated.dir/all
 
 # Build rule for subdir invocation for target.
 src/emitters/CMakeFiles/collimated.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 src/emitters/CMakeFiles/collimated.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/emitters/CMakeFiles/collimated.dir/rule
@@ -4262,7 +4225,7 @@ all: src/emitters/CMakeFiles/constant.dir/all
 
 # Build rule for subdir invocation for target.
 src/emitters/CMakeFiles/constant.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 src/emitters/CMakeFiles/constant.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/emitters/CMakeFiles/constant.dir/rule
@@ -4298,7 +4261,7 @@ all: src/emitters/CMakeFiles/directional.dir/all
 
 # Build rule for subdir invocation for target.
 src/emitters/CMakeFiles/directional.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 src/emitters/CMakeFiles/directional.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/emitters/CMakeFiles/directional.dir/rule
@@ -4321,8 +4284,8 @@ clean: src/emitters/CMakeFiles/directional.dir/clean
 
 # All Build rule for target.
 src/emitters/CMakeFiles/envmap.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
-src/emitters/CMakeFiles/envmap.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 src/emitters/CMakeFiles/envmap.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
+src/emitters/CMakeFiles/envmap.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 	$(MAKE) -f src/emitters/CMakeFiles/envmap.dir/build.make src/emitters/CMakeFiles/envmap.dir/depend
 	$(MAKE) -f src/emitters/CMakeFiles/envmap.dir/build.make src/emitters/CMakeFiles/envmap.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  10
@@ -4335,7 +4298,7 @@ all: src/emitters/CMakeFiles/envmap.dir/all
 
 # Build rule for subdir invocation for target.
 src/emitters/CMakeFiles/envmap.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 28
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 29
 	$(MAKE) -f CMakeFiles/Makefile2 src/emitters/CMakeFiles/envmap.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/emitters/CMakeFiles/envmap.dir/rule
@@ -4361,7 +4324,7 @@ src/emitters/CMakeFiles/point.dir/all: src/librender/CMakeFiles/mitsuba-render.d
 src/emitters/CMakeFiles/point.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/emitters/CMakeFiles/point.dir/build.make src/emitters/CMakeFiles/point.dir/depend
 	$(MAKE) -f src/emitters/CMakeFiles/point.dir/build.make src/emitters/CMakeFiles/point.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  83
 	@echo "Built target point"
 .PHONY : src/emitters/CMakeFiles/point.dir/all
 
@@ -4371,7 +4334,7 @@ all: src/emitters/CMakeFiles/point.dir/all
 
 # Build rule for subdir invocation for target.
 src/emitters/CMakeFiles/point.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 23
 	$(MAKE) -f CMakeFiles/Makefile2 src/emitters/CMakeFiles/point.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/emitters/CMakeFiles/point.dir/rule
@@ -4408,7 +4371,7 @@ all: src/emitters/CMakeFiles/sky.dir/all
 
 # Build rule for subdir invocation for target.
 src/emitters/CMakeFiles/sky.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 23
 	$(MAKE) -f CMakeFiles/Makefile2 src/emitters/CMakeFiles/sky.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/emitters/CMakeFiles/sky.dir/rule
@@ -4462,8 +4425,8 @@ clean: src/emitters/CMakeFiles/sky_pch.dir/clean
 
 # All Build rule for target.
 src/emitters/CMakeFiles/spot.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
-src/emitters/CMakeFiles/spot.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 src/emitters/CMakeFiles/spot.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
+src/emitters/CMakeFiles/spot.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 	$(MAKE) -f src/emitters/CMakeFiles/spot.dir/build.make src/emitters/CMakeFiles/spot.dir/depend
 	$(MAKE) -f src/emitters/CMakeFiles/spot.dir/build.make src/emitters/CMakeFiles/spot.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -4476,7 +4439,7 @@ all: src/emitters/CMakeFiles/spot.dir/all
 
 # Build rule for subdir invocation for target.
 src/emitters/CMakeFiles/spot.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 28
 	$(MAKE) -f CMakeFiles/Makefile2 src/emitters/CMakeFiles/spot.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/emitters/CMakeFiles/spot.dir/rule
@@ -4512,7 +4475,7 @@ all: src/emitters/CMakeFiles/sun.dir/all
 
 # Build rule for subdir invocation for target.
 src/emitters/CMakeFiles/sun.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 src/emitters/CMakeFiles/sun.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/emitters/CMakeFiles/sun.dir/rule
@@ -4548,7 +4511,7 @@ all: src/emitters/CMakeFiles/sunsky.dir/all
 
 # Build rule for subdir invocation for target.
 src/emitters/CMakeFiles/sunsky.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 src/emitters/CMakeFiles/sunsky.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/emitters/CMakeFiles/sunsky.dir/rule
@@ -4601,7 +4564,7 @@ all: src/medium/CMakeFiles/heterogeneous.dir/all
 
 # Build rule for subdir invocation for target.
 src/medium/CMakeFiles/heterogeneous.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 src/medium/CMakeFiles/heterogeneous.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/medium/CMakeFiles/heterogeneous.dir/rule
@@ -4637,7 +4600,7 @@ all: src/medium/CMakeFiles/homogeneous.dir/all
 
 # Build rule for subdir invocation for target.
 src/medium/CMakeFiles/homogeneous.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 src/medium/CMakeFiles/homogeneous.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/medium/CMakeFiles/homogeneous.dir/rule
@@ -4694,7 +4657,7 @@ all: src/volume/CMakeFiles/constvolume.dir/all
 
 # Build rule for subdir invocation for target.
 src/volume/CMakeFiles/constvolume.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 src/volume/CMakeFiles/constvolume.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/volume/CMakeFiles/constvolume.dir/rule
@@ -4730,7 +4693,7 @@ all: src/volume/CMakeFiles/gridvolume.dir/all
 
 # Build rule for subdir invocation for target.
 src/volume/CMakeFiles/gridvolume.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 src/volume/CMakeFiles/gridvolume.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/volume/CMakeFiles/gridvolume.dir/rule
@@ -4766,7 +4729,7 @@ all: src/volume/CMakeFiles/hgridvolume.dir/all
 
 # Build rule for subdir invocation for target.
 src/volume/CMakeFiles/hgridvolume.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 23
 	$(MAKE) -f CMakeFiles/Makefile2 src/volume/CMakeFiles/hgridvolume.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/volume/CMakeFiles/hgridvolume.dir/rule
@@ -4802,7 +4765,7 @@ all: src/volume/CMakeFiles/volcache.dir/all
 
 # Build rule for subdir invocation for target.
 src/volume/CMakeFiles/volcache.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 src/volume/CMakeFiles/volcache.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/volume/CMakeFiles/volcache.dir/rule
@@ -4855,7 +4818,7 @@ all: src/subsurface/CMakeFiles/dipole.dir/all
 
 # Build rule for subdir invocation for target.
 src/subsurface/CMakeFiles/dipole.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 23
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 24
 	$(MAKE) -f CMakeFiles/Makefile2 src/subsurface/CMakeFiles/dipole.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/subsurface/CMakeFiles/dipole.dir/rule
@@ -4936,8 +4899,8 @@ src/textures/preinstall:
 
 # All Build rule for target.
 src/textures/CMakeFiles/bitmap.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
-src/textures/CMakeFiles/bitmap.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 src/textures/CMakeFiles/bitmap.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
+src/textures/CMakeFiles/bitmap.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 	$(MAKE) -f src/textures/CMakeFiles/bitmap.dir/build.make src/textures/CMakeFiles/bitmap.dir/depend
 	$(MAKE) -f src/textures/CMakeFiles/bitmap.dir/build.make src/textures/CMakeFiles/bitmap.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  3
@@ -4950,7 +4913,7 @@ all: src/textures/CMakeFiles/bitmap.dir/all
 
 # Build rule for subdir invocation for target.
 src/textures/CMakeFiles/bitmap.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 28
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 29
 	$(MAKE) -f CMakeFiles/Makefile2 src/textures/CMakeFiles/bitmap.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/textures/CMakeFiles/bitmap.dir/rule
@@ -4986,7 +4949,7 @@ all: src/textures/CMakeFiles/checkerboard.dir/all
 
 # Build rule for subdir invocation for target.
 src/textures/CMakeFiles/checkerboard.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 src/textures/CMakeFiles/checkerboard.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/textures/CMakeFiles/checkerboard.dir/rule
@@ -5022,7 +4985,7 @@ all: src/textures/CMakeFiles/curvature.dir/all
 
 # Build rule for subdir invocation for target.
 src/textures/CMakeFiles/curvature.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 src/textures/CMakeFiles/curvature.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/textures/CMakeFiles/curvature.dir/rule
@@ -5058,7 +5021,7 @@ all: src/textures/CMakeFiles/gridtexture.dir/all
 
 # Build rule for subdir invocation for target.
 src/textures/CMakeFiles/gridtexture.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 23
 	$(MAKE) -f CMakeFiles/Makefile2 src/textures/CMakeFiles/gridtexture.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/textures/CMakeFiles/gridtexture.dir/rule
@@ -5081,8 +5044,8 @@ clean: src/textures/CMakeFiles/gridtexture.dir/clean
 
 # All Build rule for target.
 src/textures/CMakeFiles/scale.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
-src/textures/CMakeFiles/scale.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 src/textures/CMakeFiles/scale.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
+src/textures/CMakeFiles/scale.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 	$(MAKE) -f src/textures/CMakeFiles/scale.dir/build.make src/textures/CMakeFiles/scale.dir/depend
 	$(MAKE) -f src/textures/CMakeFiles/scale.dir/build.make src/textures/CMakeFiles/scale.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -5095,7 +5058,7 @@ all: src/textures/CMakeFiles/scale.dir/all
 
 # Build rule for subdir invocation for target.
 src/textures/CMakeFiles/scale.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 28
 	$(MAKE) -f CMakeFiles/Makefile2 src/textures/CMakeFiles/scale.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/textures/CMakeFiles/scale.dir/rule
@@ -5131,7 +5094,7 @@ all: src/textures/CMakeFiles/vertexcolors.dir/all
 
 # Build rule for subdir invocation for target.
 src/textures/CMakeFiles/vertexcolors.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 src/textures/CMakeFiles/vertexcolors.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/textures/CMakeFiles/vertexcolors.dir/rule
@@ -5167,7 +5130,7 @@ all: src/textures/CMakeFiles/wireframe.dir/all
 
 # Build rule for subdir invocation for target.
 src/textures/CMakeFiles/wireframe.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 23
 	$(MAKE) -f CMakeFiles/Makefile2 src/textures/CMakeFiles/wireframe.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/textures/CMakeFiles/wireframe.dir/rule
@@ -5259,7 +5222,7 @@ all: src/integrators/CMakeFiles/adaptive.dir/all
 
 # Build rule for subdir invocation for target.
 src/integrators/CMakeFiles/adaptive.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 src/integrators/CMakeFiles/adaptive.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/integrators/CMakeFiles/adaptive.dir/rule
@@ -5295,7 +5258,7 @@ all: src/integrators/CMakeFiles/ao.dir/all
 
 # Build rule for subdir invocation for target.
 src/integrators/CMakeFiles/ao.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 src/integrators/CMakeFiles/ao.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/integrators/CMakeFiles/ao.dir/rule
@@ -5333,7 +5296,7 @@ all: src/integrators/CMakeFiles/bdpt.dir/all
 
 # Build rule for subdir invocation for target.
 src/integrators/CMakeFiles/bdpt.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 26
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 27
 	$(MAKE) -f CMakeFiles/Makefile2 src/integrators/CMakeFiles/bdpt.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/integrators/CMakeFiles/bdpt.dir/rule
@@ -5400,7 +5363,7 @@ all: src/integrators/CMakeFiles/direct.dir/all
 
 # Build rule for subdir invocation for target.
 src/integrators/CMakeFiles/direct.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 src/integrators/CMakeFiles/direct.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/integrators/CMakeFiles/direct.dir/rule
@@ -5438,7 +5401,7 @@ all: src/integrators/CMakeFiles/erpt.dir/all
 
 # Build rule for subdir invocation for target.
 src/integrators/CMakeFiles/erpt.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 26
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 27
 	$(MAKE) -f CMakeFiles/Makefile2 src/integrators/CMakeFiles/erpt.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/integrators/CMakeFiles/erpt.dir/rule
@@ -5505,7 +5468,7 @@ all: src/integrators/CMakeFiles/field.dir/all
 
 # Build rule for subdir invocation for target.
 src/integrators/CMakeFiles/field.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 src/integrators/CMakeFiles/field.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/integrators/CMakeFiles/field.dir/rule
@@ -5542,7 +5505,7 @@ all: src/integrators/CMakeFiles/irrcache.dir/all
 
 # Build rule for subdir invocation for target.
 src/integrators/CMakeFiles/irrcache.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 23
 	$(MAKE) -f CMakeFiles/Makefile2 src/integrators/CMakeFiles/irrcache.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/integrators/CMakeFiles/irrcache.dir/rule
@@ -5601,7 +5564,7 @@ src/integrators/CMakeFiles/mlt.dir/all: src/libbidir/CMakeFiles/mitsuba-bidir.di
 src/integrators/CMakeFiles/mlt.dir/all: src/integrators/CMakeFiles/mlt_pch.dir/all
 	$(MAKE) -f src/integrators/CMakeFiles/mlt.dir/build.make src/integrators/CMakeFiles/mlt.dir/depend
 	$(MAKE) -f src/integrators/CMakeFiles/mlt.dir/build.make src/integrators/CMakeFiles/mlt.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  56
 	@echo "Built target mlt"
 .PHONY : src/integrators/CMakeFiles/mlt.dir/all
 
@@ -5611,7 +5574,7 @@ all: src/integrators/CMakeFiles/mlt.dir/all
 
 # Build rule for subdir invocation for target.
 src/integrators/CMakeFiles/mlt.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 26
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 27
 	$(MAKE) -f CMakeFiles/Makefile2 src/integrators/CMakeFiles/mlt.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/integrators/CMakeFiles/mlt.dir/rule
@@ -5636,13 +5599,13 @@ clean: src/integrators/CMakeFiles/mlt.dir/clean
 src/integrators/CMakeFiles/mlt_pch.dir/all:
 	$(MAKE) -f src/integrators/CMakeFiles/mlt_pch.dir/build.make src/integrators/CMakeFiles/mlt_pch.dir/depend
 	$(MAKE) -f src/integrators/CMakeFiles/mlt_pch.dir/build.make src/integrators/CMakeFiles/mlt_pch.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  56
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
 	@echo "Built target mlt_pch"
 .PHONY : src/integrators/CMakeFiles/mlt_pch.dir/all
 
 # Build rule for subdir invocation for target.
 src/integrators/CMakeFiles/mlt_pch.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 src/integrators/CMakeFiles/mlt_pch.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/integrators/CMakeFiles/mlt_pch.dir/rule
@@ -5678,7 +5641,7 @@ all: src/integrators/CMakeFiles/multichannel.dir/all
 
 # Build rule for subdir invocation for target.
 src/integrators/CMakeFiles/multichannel.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 src/integrators/CMakeFiles/multichannel.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/integrators/CMakeFiles/multichannel.dir/rule
@@ -5714,7 +5677,7 @@ all: src/integrators/CMakeFiles/path.dir/all
 
 # Build rule for subdir invocation for target.
 src/integrators/CMakeFiles/path.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 src/integrators/CMakeFiles/path.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/integrators/CMakeFiles/path.dir/rule
@@ -5751,7 +5714,7 @@ all: src/integrators/CMakeFiles/photonmapper.dir/all
 
 # Build rule for subdir invocation for target.
 src/integrators/CMakeFiles/photonmapper.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 23
 	$(MAKE) -f CMakeFiles/Makefile2 src/integrators/CMakeFiles/photonmapper.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/integrators/CMakeFiles/photonmapper.dir/rule
@@ -5808,7 +5771,7 @@ src/integrators/CMakeFiles/ppm.dir/all: src/librender/CMakeFiles/mitsuba-render.
 src/integrators/CMakeFiles/ppm.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
 	$(MAKE) -f src/integrators/CMakeFiles/ppm.dir/build.make src/integrators/CMakeFiles/ppm.dir/depend
 	$(MAKE) -f src/integrators/CMakeFiles/ppm.dir/build.make src/integrators/CMakeFiles/ppm.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles  83
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
 	@echo "Built target ppm"
 .PHONY : src/integrators/CMakeFiles/ppm.dir/all
 
@@ -5856,7 +5819,7 @@ all: src/integrators/CMakeFiles/pssmlt.dir/all
 
 # Build rule for subdir invocation for target.
 src/integrators/CMakeFiles/pssmlt.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 26
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 27
 	$(MAKE) -f CMakeFiles/Makefile2 src/integrators/CMakeFiles/pssmlt.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/integrators/CMakeFiles/pssmlt.dir/rule
@@ -5924,7 +5887,7 @@ all: src/integrators/CMakeFiles/ptracer.dir/all
 
 # Build rule for subdir invocation for target.
 src/integrators/CMakeFiles/ptracer.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 23
 	$(MAKE) -f CMakeFiles/Makefile2 src/integrators/CMakeFiles/ptracer.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/integrators/CMakeFiles/ptracer.dir/rule
@@ -5991,7 +5954,7 @@ all: src/integrators/CMakeFiles/sppm.dir/all
 
 # Build rule for subdir invocation for target.
 src/integrators/CMakeFiles/sppm.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 src/integrators/CMakeFiles/sppm.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/integrators/CMakeFiles/sppm.dir/rule
@@ -6027,7 +5990,7 @@ all: src/integrators/CMakeFiles/volpath.dir/all
 
 # Build rule for subdir invocation for target.
 src/integrators/CMakeFiles/volpath.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 src/integrators/CMakeFiles/volpath.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/integrators/CMakeFiles/volpath.dir/rule
@@ -6063,7 +6026,7 @@ all: src/integrators/CMakeFiles/volpath_simple.dir/all
 
 # Build rule for subdir invocation for target.
 src/integrators/CMakeFiles/volpath_simple.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 23
 	$(MAKE) -f CMakeFiles/Makefile2 src/integrators/CMakeFiles/volpath_simple.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/integrators/CMakeFiles/volpath_simple.dir/rule
@@ -6086,8 +6049,8 @@ clean: src/integrators/CMakeFiles/volpath_simple.dir/clean
 
 # All Build rule for target.
 src/integrators/CMakeFiles/vpl.dir/all: src/librender/CMakeFiles/mitsuba-render.dir/all
-src/integrators/CMakeFiles/vpl.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 src/integrators/CMakeFiles/vpl.dir/all: src/libcore/CMakeFiles/mitsuba-core.dir/all
+src/integrators/CMakeFiles/vpl.dir/all: src/libhw/CMakeFiles/mitsuba-hw.dir/all
 	$(MAKE) -f src/integrators/CMakeFiles/vpl.dir/build.make src/integrators/CMakeFiles/vpl.dir/depend
 	$(MAKE) -f src/integrators/CMakeFiles/vpl.dir/build.make src/integrators/CMakeFiles/vpl.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pony/mitsuba/CMakeFiles 
@@ -6100,7 +6063,7 @@ all: src/integrators/CMakeFiles/vpl.dir/all
 
 # Build rule for subdir invocation for target.
 src/integrators/CMakeFiles/vpl.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 28
 	$(MAKE) -f CMakeFiles/Makefile2 src/integrators/CMakeFiles/vpl.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/integrators/CMakeFiles/vpl.dir/rule
@@ -6169,7 +6132,7 @@ all: src/tests/CMakeFiles/test_chisquare.dir/all
 
 # Build rule for subdir invocation for target.
 src/tests/CMakeFiles/test_chisquare.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 src/tests/CMakeFiles/test_chisquare.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/tests/CMakeFiles/test_chisquare.dir/rule
@@ -6205,7 +6168,7 @@ all: src/tests/CMakeFiles/test_dgeom.dir/all
 
 # Build rule for subdir invocation for target.
 src/tests/CMakeFiles/test_dgeom.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 src/tests/CMakeFiles/test_dgeom.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/tests/CMakeFiles/test_dgeom.dir/rule
@@ -6241,7 +6204,7 @@ all: src/tests/CMakeFiles/test_kd.dir/all
 
 # Build rule for subdir invocation for target.
 src/tests/CMakeFiles/test_kd.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 src/tests/CMakeFiles/test_kd.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/tests/CMakeFiles/test_kd.dir/rule
@@ -6277,7 +6240,7 @@ all: src/tests/CMakeFiles/test_la.dir/all
 
 # Build rule for subdir invocation for target.
 src/tests/CMakeFiles/test_la.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 23
 	$(MAKE) -f CMakeFiles/Makefile2 src/tests/CMakeFiles/test_la.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/tests/CMakeFiles/test_la.dir/rule
@@ -6313,7 +6276,7 @@ all: src/tests/CMakeFiles/test_quad.dir/all
 
 # Build rule for subdir invocation for target.
 src/tests/CMakeFiles/test_quad.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 src/tests/CMakeFiles/test_quad.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/tests/CMakeFiles/test_quad.dir/rule
@@ -6349,7 +6312,7 @@ all: src/tests/CMakeFiles/test_random.dir/all
 
 # Build rule for subdir invocation for target.
 src/tests/CMakeFiles/test_random.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 src/tests/CMakeFiles/test_random.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/tests/CMakeFiles/test_random.dir/rule
@@ -6385,7 +6348,7 @@ all: src/tests/CMakeFiles/test_rtrans.dir/all
 
 # Build rule for subdir invocation for target.
 src/tests/CMakeFiles/test_rtrans.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 src/tests/CMakeFiles/test_rtrans.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/tests/CMakeFiles/test_rtrans.dir/rule
@@ -6421,7 +6384,7 @@ all: src/tests/CMakeFiles/test_samplers.dir/all
 
 # Build rule for subdir invocation for target.
 src/tests/CMakeFiles/test_samplers.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 23
 	$(MAKE) -f CMakeFiles/Makefile2 src/tests/CMakeFiles/test_samplers.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/tests/CMakeFiles/test_samplers.dir/rule
@@ -6457,7 +6420,7 @@ all: src/tests/CMakeFiles/test_sh.dir/all
 
 # Build rule for subdir invocation for target.
 src/tests/CMakeFiles/test_sh.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 src/tests/CMakeFiles/test_sh.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/tests/CMakeFiles/test_sh.dir/rule
@@ -6493,7 +6456,7 @@ all: src/tests/CMakeFiles/test_spectrum.dir/all
 
 # Build rule for subdir invocation for target.
 src/tests/CMakeFiles/test_spectrum.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 src/tests/CMakeFiles/test_spectrum.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pony/mitsuba/CMakeFiles 0
 .PHONY : src/tests/CMakeFiles/test_spectrum.dir/rule

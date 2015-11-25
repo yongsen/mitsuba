@@ -84,7 +84,7 @@ public:
 			  Float P22thetaM[3];
 			  for (int idx=0; idx <3; ++idx)
 			  {
-			  	P22thetaM[idx] = m_Kap[idx] * (math::fastexp(-(m_alpha[idx]+tanTheta2/m_alpha[idx]))) / (pow(m_alpha[idx]+tanTheta2/m_alpha[idx], m_p[idx]));
+			  	P22thetaM[idx] = m_Kap[idx] * (math::fastexp(-(m_alpha[idx]+tanTheta2/m_alpha[idx]))) / (std::pow(m_alpha[idx]+tanTheta2/m_alpha[idx], m_p[idx]));
 			  }
 
 			  const Spectrum P22 = Spectrum(P22thetaM);
@@ -99,6 +99,7 @@ public:
 			  // compute shadowing and masking
 			  const Float cosThetai = Frame::cosTheta(bRec.wo);
 			  const Float cosThetao = Frame::cosTheta(bRec.wi);
+			  // compute G(i,o) = G1(i)*G1(o)
 			  Float Gio[3];
 			  for (int idx=0; idx<3; ++idx)
 			  {
@@ -127,106 +128,41 @@ public:
 		return result;
 	}
 
-	Float pdf(const BSDFSamplingRecord &bRec, EMeasure measure) const {
-	        if (measure != ESolidAngle ||
-			Frame::cosTheta(bRec.wi) <= 0 ||
-			Frame::cosTheta(bRec.wo) <= 0 ||
-			((bRec.component != -1 && bRec.component != 0) ||
-			!(bRec.typeMask & EGlossyReflection)))
-			return 0.0f;
-
-		bool hasSpecular = (bRec.typeMask & EGlossyReflection)
-				&& (bRec.component == -1 || bRec.component == 0);
-		bool hasDiffuse  = (bRec.typeMask & EDiffuseReflection)
-				&& (bRec.component == -1 || bRec.component == 1);
-
-		Float diffuseProb = 0.0f, specProb = 0.0f;
-
-		//* diffuse pdf */
-		if (hasDiffuse)
-			diffuseProb = warp::squareToCosineHemispherePdf(bRec.wo);
-
-		/* specular pdf */
-		if (hasSpecular) {
-			Vector H = bRec.wo+bRec.wi;   Float Hlen = H.length();
-			if(Hlen == 0.0f) specProb = 0.0f;
-			else
-			{
-			  H /= Hlen;
-			  const Float roughness2 = m_roughness*m_roughness;
-			  const Float cosTheta2 = Frame::cosTheta2(H);
-			  specProb = INV_PI * Frame::cosTheta(H) * math::fastexp(-Frame::tanTheta2(H)/roughness2) / (roughness2 * cosTheta2*cosTheta2) / (4.0f * absDot(bRec.wo, H));
-			}
-		}
-
-		if (hasDiffuse && hasSpecular)
-			return m_specularSamplingWeight * specProb + (1.0f-m_specularSamplingWeight) * diffuseProb;
-		else if (hasDiffuse)
-			return diffuseProb;
-		else if (hasSpecular)
-			return specProb;
-		else
-			return 0.0f;
-	}
-
 	Spectrum sample(BSDFSamplingRecord &bRec, Float &pdf, const Point2 &_sample) const {
 	        Point2 sample(_sample);
 
-
-		bool hasSpecular = (bRec.typeMask & EGlossyReflection)
-				&& (bRec.component == -1 || bRec.component == 0);
-		bool hasDiffuse  = (bRec.typeMask & EDiffuseReflection)
-				&& (bRec.component == -1 || bRec.component == 1);
-
-
-		if (!hasSpecular && !hasDiffuse)
-			return Spectrum(0.0f);
-
-
-		// determine which component to sample
-		bool choseSpecular = hasSpecular;
-		if (hasDiffuse && hasSpecular) {
-			if (sample.x <= m_specularSamplingWeight) {
-				sample.x /= m_specularSamplingWeight;
-			} else {
-				sample.x = (sample.x - m_specularSamplingWeight)
-					/ (1.0f-m_specularSamplingWeight);
-				choseSpecular = false;
-			}
-		}
-
+        Spectrum specProb = m_specularReflectance/(m_diffuseReflectance+m_specularReflectance);
+        Spectrum diffProb = Spectrum(1.0f) - specProb;
 
 		/* sample specular */
-		if (choseSpecular) {
-			Float cosThetaM = 0.0f, phiM = (2.0f * M_PI) * sample.y;
-			Float tanThetaMSqr = -m_roughness*m_roughness * math::fastlog(1.0f - sample.x);
-			cosThetaM = 1.0f / std::sqrt(1.0f + tanThetaMSqr);
-			const Float sinThetaM = std::sqrt(std::max((Float) 0.0f, 1.0f - cosThetaM*cosThetaM));
-			Float sinPhiM, cosPhiM;
-			math::sincos(phiM, &sinPhiM, &cosPhiM);
-
-			const Normal m = Vector(sinThetaM * cosPhiM,sinThetaM * sinPhiM,cosThetaM);
-
-			// Perfect specular reflection based on the microsurface normal
-			bRec.wo = 2.0f * dot(bRec.wi, m) * Vector(m) - bRec.wi;
-			bRec.sampledComponent = 0;
-			bRec.sampledType = EGlossyReflection;
-
-	        /* sample diffuse */
-		} else {
-	   	        bRec.wo = warp::squareToCosineHemisphere(sample);
-			bRec.sampledComponent = 1;
-			bRec.sampledType = EDiffuseReflection;
+		Float tanThetaM, sinThetaM[3], cosThetaM[3];
+		for (int idx=0; idx<3; ++idx)
+		{
+			tanThetaM = m_alpha[idx] * std::sqrt(sample.x) / std::sqrt(1.0f-sample.x);
+			cosThetaM[idx] =  1.0f / std::sqrt(1.0f + tanThetaM*tanThetaM);
+			sinThetaM[idx] = std::sqrt(std::max((Float) 0.0f, 1.0f - cosThetaM[idx]*cosThetaM[idx]));
 		}
-		bRec.eta = 1.0f;
 
-		pdf = SGD::pdf(bRec, ESolidAngle);
+		Float phiM = (2.0f * M_PI) * sample.y;
+		Float sinPhiM, cosPhiM;
+		math::sincos(phiM, &sinPhiM, &cosPhiM);
+
+		const Normal m = Vector(sinThetaM * cosPhiM,sinThetaM * sinPhiM,cosThetaM);
+
+		// Perfect specular reflection based on the microsurface normal
+		bRec.wo = 2.0f * dot(bRec.wi, m) * Vector(m) - bRec.wi;
+		bRec.sampledComponent = 0;
+		bRec.sampledType = EGlossyReflection;
+
+        /* sample diffuse */
+
+		bRec.eta = 1.0f;
 
 		/* unoptimized evaluation, explicit division of evaluation / pdf. */
 		if (pdf == 0 || Frame::cosTheta(bRec.wo) <= 0)
 			return Spectrum(0.0f);
 		else
-			return eval(bRec, ESolidAngle) / pdf;
+			return eval(bRec, ESolidAngle) * 4.0f / specProb * pow(cosThetaM, 3) (m_alpha*m_alpha+tanThetaM*tanThetaM)/m_alpha;
 	}
 
 	Spectrum sample(BSDFSamplingRecord &bRec, const Point2 &sample) const {
@@ -283,27 +219,26 @@ private:
     	Float c = m_c[idx];
     	Float k = m_k[idx];
     	if (theta > theta0)
-    		return 1.0f + lambda*(1.0f-math::fastexp(c*pow(theta-theta0, k)));
+    		return 1.0f + lambda*(1.0f-math::fastexp(c*std::pow(theta-theta0, k)));
     	else
     		return 1.0f;
 	}
 
-
 	// attribtues
-        Spectrum m_F0;
-        Spectrum m_F1;
-        Spectrum m_alpha;
-        Spectrum m_p;
-        Spectrum m_Kap;
-        Spectrum m_lambda;
-        Spectrum m_c;
-        Spectrum m_k;
-        Spectrum m_theta0;
-        Float m_roughness;
-        Spectrum m_diffuseReflectance;
-        Spectrum m_specularReflectance;
+    Spectrum m_F0;
+    Spectrum m_F1;
+    Spectrum m_alpha;
+    Spectrum m_p;
+    Spectrum m_Kap;
+    Spectrum m_lambda;
+    Spectrum m_c;
+    Spectrum m_k;
+    Spectrum m_theta0;
+    Float m_roughness;
+    Spectrum m_diffuseReflectance;
+    Spectrum m_specularReflectance;
 
-        Float m_specularSamplingWeight;
+    Float m_specularSamplingWeight;
 };
 
 // ================ Hardware shader implementation ================
