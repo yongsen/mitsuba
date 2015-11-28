@@ -180,11 +180,11 @@ private:
 	}
 
 	// attribtues
-    	Float m_F0;
-    	Float m_C;
-    	Float m_B;
-    	Spectrum m_A;
-    	Spectrum m_diffuseReflectance;
+    Float m_F0;
+    Float m_C;
+    Float m_B;
+    Spectrum m_A;
+    Spectrum m_diffuseReflectance;
 };
 
 // ================ Hardware shader implementation ================

@@ -6,7 +6,7 @@
                 <rgb name="diffuseReflectance" value="0.0096, 0.0113, 0.0085"/>
                 <rgb name="A" value="164.167455, 120.726144, 86.665430"/>
                 <float name="B" value="16711.814477"/>
-				<float name="C" value="0.663506"/>
+		<float name="C" value="0.663506"/>
                 <float name="F0" value="1.560827"/>
         </bsdf>
 
@@ -40,7 +40,7 @@
 	<emitter type="envmap" id="Area_002-light">
 		<string name="filename" value="grace.exr"/>
 		<transform name="toWorld">
-                        <rotate y="1" angle="-180"/>
+                        <rotate y="1" angle="-225"/>
                 </transform>
 
 	</emitter>

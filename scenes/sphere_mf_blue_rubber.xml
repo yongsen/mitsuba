@@ -6,7 +6,7 @@
                 <rgb name="diffuseReflectance" value="0.0354, 0.0741, 0.1546"/>
                 <rgb name="A" value="1.295714, 1.279542, 1.248921"/>
                 <float name="B" value="37.265716"/>
-				<float name="C" value="1.565906"/>
+		<float name="C" value="1.565906"/>
                 <float name="F0" value="1.448611"/>
         </bsdf>
 

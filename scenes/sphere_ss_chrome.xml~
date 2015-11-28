@@ -2,17 +2,17 @@
 
 <scene version="0.5.0">
 
-        <bsdf type="smoothsurface" id="gold-metallic-paint2-smooth-surface">
-                <rgb name="diffuseReflectance" value="0.0000, 0.0000, 0.0000"/>
-                <rgb name="A" value="494.740747, 428.738092, 353.280662"/>
-                <float name="B" value="933657.850195"/>
-		<float name="C" value="0.577413"/>
-                <float name="F0" value="2.376167"/>
+        <bsdf type="smoothsurface" id="chrome-smooth-surface">
+                <rgb name="diffuseReflectance" value="0.0036, 0.0033, 0.0038"/>
+                <rgb name="A" value="901.243371, 704.419890, 639.134589"/>
+                <float name="B" value="14859.786129"/>
+				<float name="C" value="1.927413"/>
+                <float name="F0" value="9.054819"/>
         </bsdf>
 
 	<shape type="sphere">
 		<float name="radius" value="1"/>
-                <ref id="gold-metallic-paint2-smooth-surface"/>
+                <ref id="chrome-smooth-surface"/>
 	</shape>
 
 	<sensor type="perspective" id="Camera-camera">
