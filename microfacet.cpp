@@ -175,16 +175,16 @@ public:
 private:
 	// helper method
 	inline Float fresnel(const Float& F0, const Float& c) const
-        {
+    {
 	  return F0 + (1.0f - F0)*pow(1.0-c, 5.0f);
 	}
 
 	// attribtues
-    	Float m_F0;
-    	Float m_C;
-    	Float m_B;
-    	Spectrum m_A;
-    	Spectrum m_diffuseReflectance;
+    Float m_F0;
+    Float m_C;
+    Float m_B;
+    Spectrum m_A;
+    Spectrum m_diffuseReflectance;
 };
 
 // ================ Hardware shader implementation ================

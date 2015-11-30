@@ -32,14 +32,14 @@ public:
 		m_components.push_back(EDiffuseReflection | EFrontSide );
 		m_usesRayDifferentials = false;
 
-                // approximation of specular reflectance
+        // approximation of specular reflectance
 		m_specularReflectance = Spectrum(1.0f) - m_diffuseReflectance;
 
 		Float dAvg = m_diffuseReflectance.getLuminance(),
 		      sAvg = m_specularReflectance.getLuminance();
 		m_specularSamplingWeight = sAvg / (dAvg + sAvg);
 
-                m_F0 /= 2.0f;
+        // m_F0 /= 2.0f;
 
 		BSDF::configure();
 
@@ -56,7 +56,7 @@ public:
   	    /* which components to eval */
 	    bool hasDiffuse  = (bRec.typeMask & EDiffuseReflection)
 				&& (bRec.component == -1 || bRec.component == 1);
-            bool hasSpecular = (bRec.typeMask & EGlossyReflection)
+        bool hasSpecular = (bRec.typeMask & EGlossyReflection)
 				&& (bRec.component == -1 || bRec.component == 0);
 
 		/* eval spec */
@@ -188,7 +188,7 @@ public:
 			bRec.sampledComponent = 0;
 			bRec.sampledType = EGlossyReflection;
 
-	        /* sample diffuse */
+	    /* sample diffuse */
 		} else {
 	   	    bRec.wo = warp::squareToCosineHemisphere(sample);
 		    bRec.sampledComponent = 1;
