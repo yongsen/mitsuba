@@ -18,6 +18,8 @@ Some folders and files are not listed.
 mitsuba
 |	README.md
 |	CMakeList.txt
+|	smoothsurface.cpp
+|	microfacet.cpp
 |	...
 |---scenes
 	|	grace.exr
