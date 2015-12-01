@@ -49,9 +49,9 @@ public:
 	Spectrum eval(const BSDFSamplingRecord &bRec, EMeasure measure) const {
 	    /* sanity check */
 	    if(measure != ESolidAngle || 
-		   Frame::cosTheta(bRec.wi) <= 0 ||
+	       Frame::cosTheta(bRec.wi) <= 0 ||
 	       Frame::cosTheta(bRec.wo) <= 0)
-		    return Spectrum(0.0f);
+	      return Spectrum(0.0f);
 
   	    /* which components to eval */
 	    bool hasDiffuse  = (bRec.typeMask & EDiffuseReflection)
