@@ -52,13 +52,13 @@ public:
 
 		/* eval spec */
 		Spectrum result(0.0f);
-	        Vector H = normalize(bRec.wo+bRec.wi);
-	        const Float cosThetaH = Frame::cosTheta(H);
+	    Vector H = normalize(bRec.wo+bRec.wi);
+	    const Float cosThetaH = Frame::cosTheta(H);
 		if(cosThetaH > 0.0f)
 		{
 		  // compute the S(f) function
 		  const Float f2 = 1.0f-cosThetaH;
-		  const Spectrum S = m_A/pow(1.0f+m_B*f2, m_C);
+		  const Spectrum S = sFunc(f2);
 
 		  // compute shadowing and masking
 		  const Float Hwi = dot(bRec.wi, H);
@@ -71,7 +71,7 @@ public:
 		  const Float F = fresnel(m_F0, cosThetaH);
 
 		  // evaluate the MicroFacet model
-		  result += INV_PI * S * G * F / (Frame::cosTheta(bRec.wi));
+		  result += S * G * F / (Frame::cosTheta(bRec.wi));
 		}
 
 		/* eval diffuse */
@@ -113,6 +113,7 @@ public:
 	Spectrum sample(BSDFSamplingRecord &bRec, Float &pdf, const Point2 &_sample) const {
 	        Point2 sample(_sample);
 		/* sample specular */
+	    // compute theta
 		Float cosThetaM = 0.0f;
 		if (m_C == 1.0f)
 		  cosThetaM = (1.0f + m_B - math::fastexp(sample.x*log10(1.0f+m_B)))/m_B;
@@ -120,6 +121,7 @@ public:
 		  cosThetaM = (1.0f + m_B - pow(1.0f+sample.x*(std::pow(1.0f+m_B, 1.0f-m_C) - 1.0f), -1.0f/(m_C-1.0f)))/m_B;
 		const Float sinThetaM = std::sqrt(std::max((Float) 0.0f, 1.0f - cosThetaM*cosThetaM));
 
+		// compute phi
 		Float phiM = (2.0f * M_PI) * sample.y;
 		Float sinPhiM, cosPhiM;
 		math::sincos(phiM, &sinPhiM, &cosPhiM);
@@ -130,6 +132,7 @@ public:
 		bRec.wo = 2.0f * dot(bRec.wi, m) * Vector(m) - bRec.wi;
 		bRec.sampledComponent = 0;
 		bRec.sampledType = EGlossyReflection;
+
 		bRec.eta = 1.0f;
 
 		pdf = MicroFacet::pdf(bRec, ESolidAngle);
@@ -177,6 +180,11 @@ private:
 	inline Float fresnel(const Float& F0, const Float& c) const
     {
 	  return F0 + (1.0f - F0)*pow(1.0-c, 5.0f);
+	}
+
+	inline Spectrum sFunc(const Float& fSquare) const
+	{
+		return  m_A/(pow(1.0f+m_B*fSquare, m_C));
 	}
 
 	// attribtues

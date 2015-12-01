@@ -32,14 +32,14 @@ public:
 		m_components.push_back(EDiffuseReflection | EFrontSide );
 		m_usesRayDifferentials = false;
 
-        // approximation of specular reflectance
+                // approximation of specular reflectance
 		m_specularReflectance = Spectrum(1.0f) - m_diffuseReflectance;
 
 		Float dAvg = m_diffuseReflectance.getLuminance(),
 		      sAvg = m_specularReflectance.getLuminance();
 		m_specularSamplingWeight = sAvg / (dAvg + sAvg);
 
-        // m_F0 /= 2.0f;
+                m_F0 *= 2.0f;
 
 		BSDF::configure();
 
@@ -56,7 +56,7 @@ public:
   	    /* which components to eval */
 	    bool hasDiffuse  = (bRec.typeMask & EDiffuseReflection)
 				&& (bRec.component == -1 || bRec.component == 1);
-        bool hasSpecular = (bRec.typeMask & EGlossyReflection)
+            bool hasSpecular = (bRec.typeMask & EGlossyReflection)
 				&& (bRec.component == -1 || bRec.component == 0);
 
 		/* eval spec */
@@ -66,12 +66,14 @@ public:
 		    Float cosThetaH = Frame::cosTheta(H);
 			if(cosThetaH > 0.0f)
 			{
-			  // evaluate NDF
+			  // compute the S function
+			  // compute the square of the length of Dp
 			  const Float ri = Frame::sinTheta(bRec.wo);
 			  const Float ro = Frame::sinTheta(bRec.wi);
 			  const Float cosPhiD = Frame::cosPhi(bRec.wi)*Frame::cosPhi(bRec.wo) + Frame::sinPhi(bRec.wi)*Frame::sinPhi(bRec.wo);
 			  const Float dP2 = ri*ri + 2.0f*ri*ro*cosPhiD + ro*ro;
-			  const Spectrum S = m_A/(pow(1.0f+m_B*dP2, m_C));
+
+			  const Spectrum S = sFunc(dP2);
 
 			  // compute shadowing and masking
 			  const Float G = 1.0f;
@@ -119,12 +121,18 @@ public:
 			else
 			{
 		  	  H /= Hlen;
+
+		  	  // compute the square of the length of Dp
 			  const Float ri = Frame::sinTheta(bRec.wo);
 			  const Float ro = Frame::sinTheta(bRec.wi);
 			  const Float cosPhiD = Frame::cosPhi(bRec.wi)*Frame::cosPhi(bRec.wo) + Frame::sinPhi(bRec.wi)*Frame::sinPhi(bRec.wo);
 			  const Float dP2 = ri*ri + 2.0f*ri*ro*cosPhiD + ro*ro;
+
+			  // compute Md*A
 			  const Float MdTail = std::sqrt(1.0f + 2.0f*m_B*(1.0f+ro*ro) + m_B*m_B*(1.0f-ro*ro)*(1.0f-ro*ro));
 			  const Float MdA = m_B * INV_PI / (-log10(2.0f) + log10(1.0f+m_B-m_B*ro*ro+MdTail));
+
+			  // compute pdf
 			  specProb = Frame::cosTheta(bRec.wo) * MdA / (1.0f + m_B*dP2);
 			}
 		}
@@ -166,29 +174,23 @@ public:
 
 		/* sample specular */
 		if (choseSpecular) {
-			const Float ri = Frame::sinTheta(bRec.wo);
-			const Float ro = Frame::sinTheta(bRec.wi);
-			const Float MdTail = std::sqrt(1.0f + 2.0f * m_B *(1.0f+ro*ro) + m_B*m_B*(1.0f-ro*ro)*(1.0f-ro*ro));
-			const Float MdA = m_B * INV_PI / (-log10(2.0f) + log10(1.0f+m_B-m_B*ro*ro+MdTail));
-			const Float E = math::fastexp(sample.x*m_B*INV_PI/MdA + log10(2.0f));
-			const Float sinThetaM = std::sqrt(std::max((Float) 0.0f, (E-2.0f)*(E+2.0f*m_B*ro*ro)/(2.0f*E*m_B)));
+			// compute theta based on sample x and bRec
+			const Float sinThetaM = sampleToSinTheta(bRec, sample.x);
 			const Float cosThetaM = std::sqrt(std::max((Float) 0.0f, 1.0f - sinThetaM*sinThetaM));
 
-			const Float tanPhiT = std::tan(sample.y*M_PI)*std::sqrt((1.0f+m_B*(ri+ro)*(ri+ro))/(1.0f+m_B*(ri-ro)*(ri-ro)));
-			const Float tan2PhiT = 2.0f*tanPhiT/(1.0f-tanPhiT*tanPhiT);
-			const Float tanPhiO = Frame::sinPhi(bRec.wi)/Frame::cosPhi(bRec.wi);
-			const Float tanPhiM = (tan2PhiT+tanPhiO)/(1.0f-tan2PhiT*tanPhiO);
-			const Float cosPhiM = 1.0f / std::sqrt(1.0f + tanPhiM*tanPhiM);
+			// compute phi based on sample y and bRec
+			const Float cosPhiM = sampleToCosPhi(bRec, sample.y);
 			const Float sinPhiM = std::sqrt(std::max((Float) 0.0f, 1.0f - cosPhiM*cosPhiM));
 			
-			const Normal m = Vector(sinThetaM * cosPhiM,sinThetaM * sinPhiM,cosThetaM);
+			// compute normal based on theta and phi
+			const Normal m = Vector(sinThetaM * cosPhiM, sinThetaM * sinPhiM, cosThetaM);
 
 			// Perfect specular reflection based on the microsurface normal
 			bRec.wo = 2.0f * dot(bRec.wi, m) * Vector(m) - bRec.wi;
 			bRec.sampledComponent = 0;
 			bRec.sampledType = EGlossyReflection;
 
-	    /* sample diffuse */
+	        /* sample diffuse */
 		} else {
 	   	    bRec.wo = warp::squareToCosineHemisphere(sample);
 		    bRec.sampledComponent = 1;
@@ -213,10 +215,35 @@ public:
 		BSDF::serialize(stream, manager);
 
 		m_diffuseReflectance.serialize(stream);
+		m_specularReflectance.serialize(stream);
 		m_A.serialize(stream);
 		stream->writeFloat( m_B );
 		stream->writeFloat( m_C );
 		stream->writeFloat( m_F0 );
+	}
+
+	Float sampleToSinTheta(const BSDFSamplingRecord& bRec, const Float& x) const {
+		const Float ro = Frame::sinTheta(bRec.wi);
+		const Float MdTail = std::sqrt(1.0f + 2.0f * m_B *(1.0f+ro*ro) + m_B*m_B*(1.0f-ro*ro)*(1.0f-ro*ro));
+		const Float MdA = m_B * INV_PI / (-log10(2.0f) + log10(1.0f+m_B-m_B*ro*ro+MdTail));
+		const Float E = math::fastexp(x*m_B*INV_PI/MdA + log10(2.0f));
+
+		const Float sinThetaM = std::sqrt(std::max((Float) 0.0f, (E-2.0f)*(E+2.0f*m_B*ro*ro)/(2.0f*E*m_B)));
+
+		return sinThetaM;
+	}
+
+	Float sampleToCosPhi(const BSDFSamplingRecord& bRec, const Float& y) const {
+		const Float ri = Frame::sinTheta(bRec.wo);
+		const Float ro = Frame::sinTheta(bRec.wi);
+		const Float tanPhiT = std::tan(y*M_PI)*std::sqrt((1.0f+m_B*(ri+ro)*(ri+ro))/(1.0f+m_B*(ri-ro)*(ri-ro)));
+		const Float tan2PhiT = 2.0f*tanPhiT/(1.0f-tanPhiT*tanPhiT);
+		const Float tanPhiO = Frame::sinPhi(bRec.wi)/Frame::cosPhi(bRec.wi);
+
+		const Float tanPhiM = (tan2PhiT+tanPhiO)/(1.0f-tan2PhiT*tanPhiO);
+		const Float cosPhiM = 1.0f / std::sqrt(1.0f + tanPhiM*tanPhiM);
+
+		return cosPhiM;
 	}
 
 	std::string toString() const {
@@ -241,6 +268,11 @@ private:
 	inline Float fresnel(const Float& F0, const Float& c) const
         {
 	  return F0 + (1.0f - F0)*pow(1.0-c, 5.0f);
+	}
+
+	inline Spectrum sFunc(const Float& fSquare) const
+	{
+	  return  m_A/(pow(1.0f+m_B*fSquare, m_C));
 	}
 
 	// attribtues

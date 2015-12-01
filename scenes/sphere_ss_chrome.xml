@@ -12,7 +12,7 @@
 
 	<shape type="sphere">
 		<float name="radius" value="1"/>
-                <ref id="chrome-smooth-surface"/>
+        <ref id="chrome-smooth-surface"/>
 	</shape>
 
 	<sensor type="perspective" id="Camera-camera">
@@ -32,7 +32,6 @@
 			<integer name="height" value="512"/>
 			<string name="pixelFormat" value="rgb"/>
 			<boolean name="banner" value="false"/>
-
 			<rfilter type="gaussian"/>
 		</film>
 	</sensor>
@@ -40,7 +39,7 @@
 	<emitter type="envmap" id="Area_002-light">
 		<string name="filename" value="grace.exr"/>
 		<transform name="toWorld">
-                        <rotate y="1" angle="-180"/>
+                    <rotate y="1" angle="-180"/>
                 </transform>
 
 	</emitter>
