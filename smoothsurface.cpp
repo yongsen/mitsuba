@@ -276,14 +276,14 @@ private:
 	}
 
 	// attribtues
-    Float m_F0;
-    Float m_C;
-    Float m_B;
-    Spectrum m_A;
-    Spectrum m_diffuseReflectance;
-    Spectrum m_specularReflectance;
+        Float m_F0;
+        Float m_C;
+        Float m_B;
+        Spectrum m_A;
+        Spectrum m_diffuseReflectance;
+        Spectrum m_specularReflectance;
 
-    Float m_specularSamplingWeight;
+        Float m_specularSamplingWeight;
 };
 
 // ================ Hardware shader implementation ================
