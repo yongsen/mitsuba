@@ -39,10 +39,9 @@ public:
 		      sAvg = m_specularReflectance.getLuminance();
 		m_specularSamplingWeight = sAvg / (dAvg + sAvg);
 
-                m_F0 *= 2.0f;
-
 		BSDF::configure();
 
+                // printing debug info.
 		std::cout << toString() << endl;
 	}
 
@@ -215,13 +214,13 @@ public:
 		BSDF::serialize(stream, manager);
 
 		m_diffuseReflectance.serialize(stream);
-		m_specularReflectance.serialize(stream);
 		m_A.serialize(stream);
 		stream->writeFloat( m_B );
 		stream->writeFloat( m_C );
 		stream->writeFloat( m_F0 );
 	}
 
+        // compute sinTheta from random samples
 	Float sampleToSinTheta(const BSDFSamplingRecord& bRec, const Float& x) const {
 		const Float ro = Frame::sinTheta(bRec.wi);
 		const Float MdTail = std::sqrt(1.0f + 2.0f * m_B *(1.0f+ro*ro) + m_B*m_B*(1.0f-ro*ro)*(1.0f-ro*ro));
@@ -233,6 +232,7 @@ public:
 		return sinThetaM;
 	}
 
+        // compute cosPhi from random samples
 	Float sampleToCosPhi(const BSDFSamplingRecord& bRec, const Float& y) const {
 		const Float ri = Frame::sinTheta(bRec.wo);
 		const Float ro = Frame::sinTheta(bRec.wi);
@@ -270,6 +270,7 @@ private:
 	  return F0 + (1.0f - F0)*pow(1.0-c, 5.0f);
 	}
 
+        // compute the S function
 	inline Spectrum sFunc(const Float& fSquare) const
 	{
 	  return  m_A/(pow(1.0f+m_B*fSquare, m_C));

@@ -182,6 +182,7 @@ private:
 	  return F0 + (1.0f - F0)*pow(1.0-c, 5.0f);
 	}
 
+        // compute the S function
 	inline Spectrum sFunc(const Float& fSquare) const
 	{
 	  return  m_A/(pow(1.0f+m_B*fSquare, m_C));
