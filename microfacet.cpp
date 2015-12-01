@@ -42,9 +42,9 @@ public:
 	Spectrum eval(const BSDFSamplingRecord &bRec, EMeasure measure) const {
 	    /* sanity check */
 	    if(measure != ESolidAngle || 
-		   Frame::cosTheta(bRec.wi) <= 0 ||
+	       Frame::cosTheta(bRec.wi) <= 0 ||
 	       Frame::cosTheta(bRec.wo) <= 0)
-			return Spectrum(0.0f);
+	      return Spectrum(0.0f);
 
   	    /* which components to eval */
 		bool hasDiffuse  = (bRec.typeMask & EDiffuseReflection)
@@ -52,8 +52,8 @@ public:
 
 		/* eval spec */
 		Spectrum result(0.0f);
-	    Vector H = normalize(bRec.wo+bRec.wi);
-	    const Float cosThetaH = Frame::cosTheta(H);
+	        Vector H = normalize(bRec.wo+bRec.wi);
+	        const Float cosThetaH = Frame::cosTheta(H);
 		if(cosThetaH > 0.0f)
 		{
 		  // compute the S(f) function
@@ -113,7 +113,7 @@ public:
 	Spectrum sample(BSDFSamplingRecord &bRec, Float &pdf, const Point2 &_sample) const {
 	        Point2 sample(_sample);
 		/* sample specular */
-	    // compute theta
+	        // compute theta
 		Float cosThetaM = 0.0f;
 		if (m_C == 1.0f)
 		  cosThetaM = (1.0f + m_B - math::fastexp(sample.x*log10(1.0f+m_B)))/m_B;
@@ -178,21 +178,21 @@ public:
 private:
 	// helper method
 	inline Float fresnel(const Float& F0, const Float& c) const
-    {
+        {
 	  return F0 + (1.0f - F0)*pow(1.0-c, 5.0f);
 	}
 
 	inline Spectrum sFunc(const Float& fSquare) const
 	{
-		return  m_A/(pow(1.0f+m_B*fSquare, m_C));
+	  return  m_A/(pow(1.0f+m_B*fSquare, m_C));
 	}
 
 	// attribtues
-    Float m_F0;
-    Float m_C;
-    Float m_B;
-    Spectrum m_A;
-    Spectrum m_diffuseReflectance;
+        Float m_F0;
+        Float m_C;
+        Float m_B;
+        Spectrum m_A;
+        Spectrum m_diffuseReflectance;
 };
 
 // ================ Hardware shader implementation ================
